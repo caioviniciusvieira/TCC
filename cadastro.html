@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/cadastro.css">
+</head>
+<body>
+    <div class="form-container">
+        <form method="post" action="cadastro.php">
+            <div class="form-container-tittle">
+                <p>Bem vindo!</p>
+                <h1>Crie sua conta</h1>
+            </div>
+            <div class="form-container-input">
+                <label>Nome:</label>
+                <input type="text" name="nome" class="input-padrao" required>
+                <label>E-mail:</label>
+                <input type="email" name="email" class="input-padrao" required>
+                <label>Senha:</label>
+                <input type="password" name="password" class="input-padrao" required>
+                <label>Confirmar Senha:</label>  
+                <input type="password" name="Confirmpassword" class="input-padrao" required>
+            </div>
+            <div class="form-container-footer">
+                <input type="submit" value="Cadastrar" class="btn-cadastro">
+                <p>Já possui uma conta?</p>
+                <h2 class="login"><a href="login.html">Fazer Login</a></h2>
+                <p>Ao continuar você estará concordando com <br>
+                nossos Termos de Uso de Privacidade.</p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
