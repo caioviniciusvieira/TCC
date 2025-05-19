@@ -13,14 +13,14 @@
     $email = $_POST['email'];
     $senha = $_POST['password'];
 
-    $stmt = $conexao->prepare("SELECT senha FROM usuarios WHERE email = ?");
+    $stmt = $conexao->prepare("SELECT MD5('$senha') AS s, senha FROM usuarios WHERE email = ?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
 
     $result = $stmt->get_result();
     $usuario = $result->fetch_assoc();
         
-    if($senha == $usuario['senha']){
+    if($usuario['s'] == $usuario['senha']){
         echo "Login bem-sucedido! Bem-vindo, $email.";
         header('Location: Loja.html');
     }     
