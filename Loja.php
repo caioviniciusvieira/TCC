@@ -2,13 +2,14 @@
     session_start();
     $conta = 'Crie sua conta';
 
-    if(isset($_SESSION['s'])&& isset($_SESSION['senha'])){
+    if(isset($_SESSION['s']) && isset($_SESSION['senha'])){
        $conta = $_SESSION['s'];
     }
     else{
         echo 'falha na conexão com o banco';
     }
     ?>     
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
