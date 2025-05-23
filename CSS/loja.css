@@ -8,7 +8,7 @@
     padding: 10px;
     margin-top: 180px;
     padding: 10px;
-    display: flex;
+    display: none;
     justify-content: right;
     flex-direction: column;
     position: fixed;
@@ -75,6 +75,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.3rem;
 }
 
 .logo {
@@ -106,6 +107,9 @@ a, ul, li{
 
 .header-navegacao{
     gap: 50px;
+    font-size: 1.3rem;
+
+
 }
 
 .user{
