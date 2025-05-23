@@ -7,6 +7,7 @@
     }
     else{
         echo 'falha na conexão com o banco';
+        $conta = 'Crie sua conta';
     }
     ?>     
 
