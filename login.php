@@ -17,7 +17,7 @@
     $stmt = $conexao->prepare("SELECT MD5('$senha') AS s, senha FROM usuarios WHERE email = ?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
-    
+
     $result = $stmt->get_result();
     $usuario = $result->fetch_assoc();
 
@@ -31,6 +31,7 @@
     else {
         echo "E-mail ou senha incorretos.";
     }
+
 
     $stmt->close();
     $conexao->close();

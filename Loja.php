@@ -1,13 +1,15 @@
     <?php
     session_start();
     $conta = 'Crie sua conta';
+    $elemento = '<li><a href="cadastro.html">Crie sua conta</a></li>';
+    
 
     if(isset($_SESSION['s']) && isset($_SESSION['senha'])){
-       $conta = $_SESSION['s'];
+       $conta = $_SESSION['nome'];
+        $elemento = '';
     }
     else{
         echo 'falha na conexão com o banco';
-        $conta = 'Crie sua conta';
     }
     ?>     
 
@@ -35,7 +37,7 @@
                 <input type="search" placeholder="Pesquisar">
             
             <ul class="header-conta">
-                <li><a href="cadastro.html">Crie sua conta</a></li>
+                <?php echo $elemento; ?>
                 <li class="user" onclick="teste()"></li>
                 <li>Carrinho</li>
             </ul>

@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-    
+    session_start();
     include_once('conexao.php');
 
     $email = $_POST['email'];
@@ -15,7 +15,7 @@
     $nome = $_POST['nome'];
     $confirmarSenha = $_POST['Confirmpassword'];
     
-    
+    $_SESSION['nome'] = $nome;
 
     $inserir = $conexao->prepare("INSERT INTO usuarios (nome, senha, email) VALUES (?, MD5(?),?)");
     $inserir->bind_param("sss", $nome, $senha, $email);
@@ -26,6 +26,7 @@
     else{
         if ($inserir->execute()){
             echo "Usuario cadastrado com sucesso";
+            header('Location: Loja.php');
         }
         else {
             echo "error: ". $inserir->error;
