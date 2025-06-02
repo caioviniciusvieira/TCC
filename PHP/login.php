@@ -22,12 +22,12 @@
     $result = $stmt->get_result();
     $usuario = $result->fetch_assoc();
 
-    $_SESSION['s']; = $email;
+    $_SESSION['s'] = $email;
     $_SESSION['senha'] = $senha; 
         
     if($senha == $usuario['senha']){
         echo "Login bem-sucedido! Bem-vindo, $email.";
-        header('Location: Loja.html');
+        header('Location: Loja.php');
     }     
     else {
         echo "E-mail ou senha incorretos.";
