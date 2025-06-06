@@ -233,17 +233,21 @@ input p{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin: 0;
+    max-width: 1950px;
+    max-height: 450px;
 }
 
 .slide{
     display: none;
-    margin: 0;
-    background-color: black;
+}
+
+.slide-imagem{
+    text-align: center;
     width: 1950px;
     height: 450px;
 }
-
 
 @keyframes deslizar{
     from{transform: translate(50%, 0%);}
@@ -258,7 +262,9 @@ input p{
 .text{
     position: absolute;
     color: white;
-    top: 75%;
+    bottom: 20%;
+    right: -0.2%;
+    width: 100%;
 }
 
 .active{
