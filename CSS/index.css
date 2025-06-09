@@ -126,3 +126,16 @@ input p{
     overflow: hidden;
 }
 }
+
+.principal{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.1rem;
+    margin: 0 10% 0 10%;
+    gap: 1.5rem;
+    background-color: rgb(0, 0, 0);
+    height: max-content;
+    border: black 2rem solid;
+    border-radius: 1rem;
+}
