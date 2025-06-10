@@ -5,6 +5,7 @@
 }
 
 .teste{
+    z-index: 2;
     padding: 10px;
     margin-top: 180px;
     padding: 10px;
@@ -21,6 +22,12 @@
     inset: auto 20;
     border: 1px solid white;
     background-color: black;
+}
+
+.teste li:hover{
+    background-color: white;
+    color: black;
+    transition: 1s;
 }
 
 .flex{
@@ -79,7 +86,7 @@ header{
 }
 
 li:hover {
-     background-color: rgb(0, 0, 0);
+     background-color: black;
      transition: 1s;
 }
 
@@ -91,6 +98,11 @@ li:hover {
 .carrinho{
     height: 3rem;
     width: 3rem;
+}
+
+.carrinho:hover{
+    background-color: white;
+    transition: 1s;
 }
 
 input{
@@ -118,13 +130,23 @@ li {
     gap: 20px;
 }
 
+.header-conta a:hover {
+    color: black;
+    transition: 1s;
+}
+
+.user:hover{
+    background-color: rgb(61, 59, 59);
+    transition: 1s;
+}
+
 .header-navegacao{
     gap: 30px;
     font-size: 1rem;
 }
 
 input{
-        cursor: pointer;
+    cursor: pointer;
     border: 1px solid lightblue;
     width: 750px;
     height:40px;
@@ -158,6 +180,7 @@ input p{
 }
 
 .sub-header-item{
+    color: white;
     cursor: pointer;
     justify-content: center;
     width: 200px;
@@ -182,15 +205,16 @@ input p{
     white-space: nowrap;
     overflow: hidden;
 }
+
 }
 
 .next{
     display: none;
-    background-color: rgba(51, 48, 48, 0);
     border: none;
     text-align: center;
-    width: 100px;
-    height: 450px;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
     cursor: pointer;
     position: absolute;
     right: 0.3%;
@@ -200,11 +224,11 @@ input p{
 
 .prev{
     display: none;
-    background-color: rgba(51, 48, 48, 0);
     border: none;
     text-align: center;
-    width: 100px;
-    height: 450px;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
     cursor: pointer;
     position: absolute;
     left: 0.3%;
@@ -213,7 +237,6 @@ input p{
 }
 
 .prev:hover, .next:hover{
-    background-color: rgba(56, 49, 49, 0.747);
     transition: 1s ease;
 }
 
@@ -237,6 +260,7 @@ input p{
     margin: 0;
     max-width: 1950px;
     max-height: 450px;
+    z-index: 0;
 }
 
 .slide{
@@ -245,7 +269,7 @@ input p{
 
 .slide-imagem{
     text-align: center;
-    width: 1950px;
+    width: 1850px;
     height: 450px;
 }
 
