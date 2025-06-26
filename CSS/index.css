@@ -22,19 +22,13 @@ header{
 }
 
 li:hover {
-     background-color: rgb(219, 219, 219);
-     border-radius: 20px;
+     background-color: rgb(175, 174, 174);
      transition: 1s;
 }
 
-.logo {
+.icon {
     width: 3rem;
     height: 3rem;
-}
-
-.carrinho{
-    height: 3rem;
-    width: 3rem;
 }
 
 input{
@@ -113,44 +107,60 @@ input p{
     transition: 1s;
 }
 
-  @media only screen and (max-width: 1400px) {
-
-.sub-header{
-    gap: 2px;
-    background-color: rgb(48, 48, 48);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    padding: 0 5% 0 5%;
-    white-space: nowrap;
-    overflow: hidden;
+@media only screen and (max-width: 1000px) {
+    .sub-header{
+        gap: 2px;
+        background-color: rgb(48, 48, 48);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        padding: 0 5% 0 5%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .principal {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+    }
 }
-}
 
-.principal{
+.principal {
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 1rem;
     display: flex;
-    padding: 0.1rem;
-    margin: 0 10% 0 10%;
+    padding: 1rem;
     gap: 1.5rem;
     background-color: rgb(0, 0, 0);
     height: max-content;
-    border: black 2rem solid;
     border-radius: 1rem;
 }
 
+
 p{
     color: white;
-    text-align: left;
-    font-size: 8rem;
+    text-align: justify;
+    font-size: clamp(2.5rem, 3vw + 3rem, 2rem);
+
 }
 
 p2{
     color: white;
-    text-align: left;
+    text-align: justify;
+    font-size: clamp(1.0rem, 0.5vw + 1rem, 1rem);
 }
 
-.placamae {
-    height: 20em;
-    width:30;
+.imagem-banner {
+    width: 80%;
+    display: block;
+    overflow: hidden;
+}
+
+h1 {
+    color: white;
+    text-align: center;
 }
