@@ -5,29 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Master Pc</title>
     <link rel="stylesheet" href="CSS/index.css">
-    <script src="JS/carrousel.js"></script>
+    <script src="JS/carrousel.js" defer></script>
+    <script src="JS/menu.js" defer></script>
 </head>
 <body>
     <header>
-        <ul>
+        <div class="header-content">
+            <span id=logo>
+                <img class="icon" src="Imagens/pces.png" alt="Master PC Logo">
+                <h1>MasterPC</h1>
+            </span>
             <ul class="header-navegacao">
-                <img class="logo icon" src="Imagens/pces.png">
+                <li class="nav-item"><a href="index.html">Inicio</a></li>
+                <li class="nav-item">Montar</li>
+                <li class="nav-item"><a href="Loja.html">Loja</a></li>
+            </ul>
+            <div class="header-right">
+                <div class="header-barraPesquisa">
+                    <input type="search" placeholder="Pesquisar">
+                </div>
+                <ul class="header-conta">
+                    <li><a href="cadastro.html">Entrar</a></li>
+                    <li class="user"></li>
+                    <li><img class="carrinho icon" src="Imagens/carrinhos.png" alt="Carrinho de compras"></li>
+                </ul>
+            </div>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <!-- os # na tag "a" devem ser preenchidos com suas paginas -->
                 <li><a href="index.html">Inicio</a></li>
-                <li>Montar</li>
+                <li><a href="#">Montar</a></li>
                 <li><a href="Loja.html">Loja</a></li>
-            </ul>
-            <ul class="header-barraPesquisa">
-                <input type="search" placeholder="Pesquisar">
-            
-            <ul class="header-conta">
                 <li><a href="cadastro.html">Sign Up</a></li>
-                <li class="user" onclick="teste()"></li>
-                <li><img class="carrinho icon" src="Imagens/carrinhos.png"></li>
+                <li><a href="#">Minha Conta</a></li>
+                <li><a href="#">Carrinho</a></li>
+                <li><input type="search" placeholder="Pesquisar"></li>
+                <li class="nav-sub-item">Armazenamento</li>
+                <li class="nav-sub-item">Placa-mãe</li>
+                <li class="nav-sub-item">Placa de video </li>
+                <li class="nav-sub-item">Gabinete</li>
+                <li class="nav-sub-item">Processador</li>
+                <li class="nav-sub-item">Fonte</li>
+                <li class="nav-sub-item">Memória</li>
+                <li class="nav-sub-item">Fans</li>
+                <li class="nav-sub-item">Montar</li>
+                <li class="nav-sub-item">Ajuda</li>
             </ul>
-        </ul>
+        </nav>
     </header>
 
-    <div class="sub-header">
+    <div class="sub-header desktop-only">
         <li class="sub-header-item">Armazenamento</li>
         <li class="sub-header-item">Placa-mãe</li>
         <li class="sub-header-item">Placa de video </li>
@@ -40,14 +73,15 @@
         <li class="sub-header-item">Ajuda</li>
     </div>
 
-   <div class="principal">
-        <div class="principal-text"</div>
-        <h1>Placa-Mãe</h1>
-        <p2>A placa-mãe é a parte principal do computador. Ela serve para conectar e integrar todos os componentes: processador,
-             memória, armazenamento, placa de vídeo, entre outros. Também controla a comunicação entre essas partes, garantindo que
-              tudo funcione junto corretamente.
-        </p2>  
-        </div>    
-    <img src="Imagens/placamaster.webp" class="imagem-banner">
-   </div>
+    <div class="principal">
+        <div class="principal-text">
+            <h1>Placa-Mãe</h1>
+            <p2>A placa-mãe é a parte principal do computador. Ela serve para conectar e integrar todos os componentes: processador,
+                memória, armazenamento, placa de vídeo, entre outros. Também controla a comunicação entre essas partes, garantindo que
+                tudo funcione junto corretamente.
+            </p2>
+        </div>
+        <img src="Imagens/placamaster.webp" class="imagem-banner" alt="Placa-Mãe Master PC">
+    </div>
 </body>
+</html>
