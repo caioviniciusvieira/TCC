@@ -22,6 +22,7 @@
     <title>MASTER PC</title>
     <link rel="stylesheet" href="CSS/loja.css">
     <script src="JS/loja.js"></script>
+    <script src="JS/conta-menu.js"></script>
 </head>
 <body>
     <header>
