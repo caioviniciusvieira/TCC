@@ -21,7 +21,7 @@
     padding: 10px;
     inset: auto 20;
     border: 1px solid white;
-    background-color: black;
+    background-color:  rgb(0, 74, 172);
 }
 
 @keyframes deslizar{
@@ -55,14 +55,14 @@
     margin-bottom: 1rem;
     font-size: 20px;
     color: white;
-    background-color: black;
-    border: 1px solid black;
+    background-color:  rgb(0, 74, 172);
+    border: 1px solid  rgb(0, 74, 172);
     border-bottom: solid 1px white;
 }
 
 .botao-barra-lateral:hover, .fechar:hover{
-    background-color: white;
-    color: black;
+    background-color: rgb(48, 48, 48);
+    color: white;
     transition: 1s;
 }
 
@@ -73,7 +73,7 @@
     height: 3rem;
     font-size: 20px;
     color: white;
-    background-color: black;
+    background-color:  rgb(0, 74, 172);
     border: solid 1px white;
 }
 
@@ -81,6 +81,10 @@
 body {
     background-color: rgba(128, 128, 128, 0.329);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Define a fonte padrão para o corpo do documento */
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Estilos do Cabeçalho Principal (Header) */
@@ -305,6 +309,7 @@ input {
 .sub-header-item {
     cursor: pointer;
     justify-content: center;
+    gap: 10px;
     width: 200px;
     height: 50px; /* Define a altura para cada item do sub-cabeçalho */
 }
@@ -361,33 +366,118 @@ h2 {
 .item-container{
     display: flex;
     align-items: center;
-    gap: 30px;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid; 
     margin: 2rem;
+    width: 102rem;
+    height: 32rem;
+}
+
+.item-imagem-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;   
+    height: 32rem;
+    margin: 0.2rem;
 }
 
 .item_descricao-container{
     display: flex;
     align-items: center;
     text-align: center;
-    margin: 5rem;
+    margin: 0 4rem 4.5rem 4rem;
     flex-direction: column;
-    background-color: grey;
-    width: 80rem;
-    height: 30rem;
+    padding: 0.5rem;
 }
 
 .item_botoes-container{
     display: flex;
-    align-items: left;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
     gap: 30px;
-    margin-top: 16rem;
-    margin-right: 40rem;
+}
+
+.item_preco-container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 150px;
+    margin: 0.2rem;
+    padding: 0.5rem;
+}
+
+.item_preco{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 5rem;
+    gap: 10px;
 }
 
 .botao-item-container{
     background-color: rgb(55, 115, 245);
-    width: 10rem;
-    height: 3rem;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    width: 6rem;
+    height: 2.8rem;
+    padding: 10px;
     border-radius: 5px;
-    border: 1px solid ;
+    border: 1px solid;
+}
+
+.botao-carrinho-item-container{
+    background-color: rgb(55, 115, 245);
+    justify-content: center;
+    color: white;
+    display: flex;
+    text-align: center;
+    width: 3rem;
+    height: 2.8rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+.especificacoes-item-container{
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    width: 80rem;
+    gap: 2rem;
+}
+
+.especificacoes-container{
+    background-color: grey;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 120rem;
+    gap:1rem;
+}
+
+.especificacao-design{
+    background-color: grey; 
+    text-align: center;   
+    width: 40rem;
+    height: 25rem;
+    padding: 1rem;    
+}
+
+.especificacao{
+    width: 18rem;
+    height: 10rem;
+    padding: 1rem;      
+    border: 1px solid;
 }
