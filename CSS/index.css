@@ -247,44 +247,39 @@ input {
 
 /* Container da Seção Principal */
 .principal {
-    max-width: 1200px;
-    margin: auto;
-    margin-top: 1rem;
     display: flex;
-    padding: 1rem;
-    gap: 1rem;
+    margin: auto;
     background-color: rgb(0, 0, 0);
-    height: max-content;
-    border-radius: 1rem; /* Adiciona bordas arredondadas ao container principal */
-    width: 80%;
+    margin-top: 1rem;
+    height: 30%;
+    width: 98%;
+    padding-left: 4%;
+    border: black solid 1px;
+    border-radius: 10px;
+
 }
 
-/* Estilo para Parágrafos (p) */
-p {
-    color: white;
-    text-align: justify;
-    font-size: clamp(2.5rem, 3vw + 3rem, 2rem); /* Define o tamanho da fonte responsivo */
-}
-
-/* Estilo para Parágrafos (p2) - Usado para o texto explicativo */
 p2 {
     color: white;
     text-align: justify;
-    font-size: clamp(1.0rem, 0.5vw + 1rem, 1rem); /* Define o tamanho da fonte responsivo */
+    font-size: 1.1rem; 
 }
 
 /* Imagem do Banner Principal */
 .imagem-banner {
-    width: 80%;
-    display: block;
+    display: flex;
     overflow: hidden; /* Garante que a imagem não vaze do container */
+    border: black solid 1px;
+    border-radius: 10px;
+    
 }
 
 /* Estilo para Títulos (h1) */
 h1 {
     color: white;
-    text-align: left; /* coloca a esquerda o texto dos títulos */
-    font-size: 5rem;
+    text-align: left; 
+    font-size: 3rem;
+    
 }
 
 h2 {
@@ -293,10 +288,24 @@ h2 {
     align-items: center;
     display: flex;
 }
+
+.button {
+    display: flex;
+    gap: 1rem;
+    padding-top: 3rem;
+}
+
+button {
+    background-color: white;
+    height: 2rem;
+    width: 15%;
+    border: solid rgb(0, 0, 0) 1px;
+    border-radius: 10px;
+}
 /* --- Media Queries para Responsividade --- */
 
 /* Estilos Aplicados quando a Largura da Tela é Menor ou Igual a 1000px */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 900px) {
     .header-navegacao,
     .header-barraPesquisa,
     .header-conta {
@@ -322,6 +331,12 @@ h2 {
         align-items: center;
         margin: 1rem; /* Ajusta a margem da seção principal */
     }
+
+    h1 {
+    color: white;
+    text-align: center; /* coloca a esquerda o texto dos títulos */
+    font-size: 1rem;
+    }
 }
 
 /* Estilos Aplicados quando a Largura da Tela é Menor ou Igual a 768px */
@@ -329,4 +344,10 @@ h2 {
     input {
         width: 100%; /* Faz com que a barra de pesquisa ocupe a largura total */
     }
+
+       p {
+    color: rgb(168, 36, 36);
+    text-align: center;
+    font-size: 1px; /* Define o tamanho da fonte responsivo */
+}
 }
