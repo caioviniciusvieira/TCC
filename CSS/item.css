@@ -140,8 +140,7 @@ input {
 
 /* Estilo Básico para Links, Listas e Itens de Lista (geral) */
 a,
-ul,
-li {
+ul {
     text-decoration: none;
     cursor: pointer;
     color: rgb(255, 255, 255);
@@ -306,6 +305,15 @@ input {
     width: 100%; /* Define a largura total para o sub-cabeçalho */
 }
 
+.sub-header li{
+    list-style: none;
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+}
+
 .sub-header-item {
     cursor: pointer;
     justify-content: center;
@@ -369,11 +377,12 @@ h2 {
     justify-content: center;
     text-align: center;
     background-color: white;
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 5px;
     border: 1px solid; 
-    margin: 2rem;
-    width: 102rem;
+    margin: 0.5rem;
+    max-width: 102rem;
+    width: 100%;
     height: 32rem;
 }
 
@@ -394,6 +403,10 @@ h2 {
     margin: 0 4rem 4.5rem 4rem;
     flex-direction: column;
     padding: 0.5rem;
+}
+
+.item_descricao-container p{
+    font-size: 1rem;
 }
 
 .item_botoes-container{
@@ -419,8 +432,9 @@ h2 {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 5rem;
+    width: 8.5rem;
     gap: 10px;
+    font-size: 1.2rem;
 }
 
 .botao-item-container{
@@ -428,11 +442,15 @@ h2 {
     justify-content: center;
     color: white;
     text-align: center;
-    width: 6rem;
+    width: 8rem;
     height: 2.8rem;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid;
+}
+
+.botao-item-container:hover{
+    background-color: rgb(10, 79, 226);  
 }
 
 .botao-carrinho-item-container{
@@ -448,36 +466,116 @@ h2 {
     border: 1px solid;
 }
 
+.botao-carrinho-item-container:hover{
+    background-color: rgb(10, 79, 226);   
+}
+
 .especificacoes-item-container{
     display: flex;
     align-items: left;
     justify-content: center;
-    width: 80rem;
     gap: 2rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    height: 100%;
 }
 
 .especificacoes-container{
-    background-color: grey;
+    background-color: rgba(175, 170, 170, 0.445);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
     justify-content: center;
-    width: 120rem;
-    gap:1rem;
+    border-radius: 5px;
+    max-width: 68rem;
+    width: 100%;
+    gap: 1rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
 }
 
 .especificacao-design{
-    background-color: grey; 
+    border-radius: 5px;
+    background-color: rgba(175, 170, 170, 0.445);
     text-align: center;   
-    width: 40rem;
-    height: 25rem;
+    max-width: 31rem;
+    width: 100%;
+    height: 100%;
     padding: 1rem;    
+    margin: 0.5rem;
+}
+
+.especificacao-design p{
+    padding: 1rem;
+    font-size: 1.3rem;
 }
 
 .especificacao{
-    width: 18rem;
+    max-width: 18.5rem;
+    width: 100%;    
     height: 10rem;
-    padding: 1rem;      
-    border: 1px solid;
+    padding: 1rem;
+    margin: 1rem;     
+}
+
+.especificacao p{
+    font-size: 1.5rem; 
+}
+
+.item-avaliacoes-container{
+    display: flex;
+    text-align: left;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem;    
+}
+
+.avaliacoesPositivas-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgba(175, 170, 170, 0.445);
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    margin: 1rem;
+    gap: 1rem;
+    border-radius: 5px;
+    color: black;
+}
+
+.avaliacoesPositivas-container li{
+    color: black;
+    list-style-type: disc;
+}
+
+.avaliacoesNegativas-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;    
+    background-color: rgba(175, 170, 170, 0.445);
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    margin: 1rem;
+    gap: 1rem;
+    border-radius: 5px;
+    color: black;    
+}
+
+.avaliacoesNegativas-container li{
+    color: black;
+    list-style: disc;
+}
+
+footer{
+    background-color: rgb(46, 46, 46);
+    height: 4rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 1.5rem;
+    color: white;
 }
