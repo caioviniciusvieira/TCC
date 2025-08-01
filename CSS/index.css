@@ -249,14 +249,18 @@ input {
 .principal {
     display: flex;
     margin: auto;
-    background-color: rgb(0, 0, 0);
-    margin-top: 1rem;
-    height: 30%;
+    background-color: black;
+    margin-top: 1.5rem;
+    height: 27%;
     width: 98%;
     padding-left: 4%;
-    border: black solid 1px;
+    border: rgb(73, 72, 72) solid 2px;
     border-radius: 10px;
 
+}
+.principal-text {
+    max-width: 70rem;
+    padding-right: 8rem;
 }
 
 p2 {
@@ -267,10 +271,12 @@ p2 {
 
 /* Imagem do Banner Principal */
 .imagem-banner {
-    display: flex;
+    display: block;
     overflow: hidden; /* Garante que a imagem não vaze do container */
-    border: black solid 1px;
-    border-radius: 10px;
+    min-width: 8rem;
+    height: 30rem;
+    width: 45rem;
+    padding-right: 1rem;
     
 }
 
@@ -279,7 +285,8 @@ h1 {
     color: white;
     text-align: left; 
     font-size: 3rem;
-    
+    padding-top: 4%;
+    padding-bottom: 4%;
 }
 
 h2 {
@@ -292,15 +299,23 @@ h2 {
 .button {
     display: flex;
     gap: 1rem;
-    padding-top: 3rem;
+    padding-top: 10%;
+    padding-bottom: 3%;
 }
 
 button {
-    background-color: white;
-    height: 2rem;
-    width: 15%;
-    border: solid rgb(0, 0, 0) 1px;
-    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    height: 3rem;
+    width: 20%;
+    border-radius: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+button:hover {
+    background-color: rgb(216, 216, 216);
+    color: rgb(70, 70, 70);
+    transition: 1s;
 }
 /* --- Media Queries para Responsividade --- */
 
@@ -350,4 +365,12 @@ button {
     text-align: center;
     font-size: 1px; /* Define o tamanho da fonte responsivo */
 }
+}
+
+footer{
+    background-color: rgb(46, 46, 46);
+    height: 4rem;
+    text-align: center;
+    padding-top: 1.5rem;
+    color: white;
 }
