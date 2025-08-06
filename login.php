@@ -14,7 +14,7 @@
     $email = $_POST['email'];
     $senha = $_POST['password'];
 
-    $stmt = $conexao->prepare("SELECT MD5('$senha') AS s, senha FROM usuarios WHERE email = ?");
+    $stmt = $conexao->prepare("SELECT MD5('$senha') AS s, senha FROM Usuarios WHERE email = ?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
 

@@ -17,7 +17,7 @@
     
     $_SESSION['nome'] = $nome;
 
-    $inserir = $conexao->prepare("INSERT INTO usuarios (nome, senha, email) VALUES (?, MD5(?),?)");
+    $inserir = $conexao->prepare("INSERT INTO Usuarios (nome_completo, senha, email) VALUES (?, MD5(?),?)");
     $inserir->bind_param("sss", $nome, $senha, $email);
     
     if($senha != $confirmarSenha){
