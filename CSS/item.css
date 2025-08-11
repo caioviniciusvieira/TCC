@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.teste{
+.barra-lateral{
     z-index: 2;
     padding: 10px;
     margin-top: 180px;
@@ -34,17 +34,19 @@
     to{transform: translate(120%, 0%);}
 }
 
-.teste li:hover{
-    background-color: white;
+.barra-lateral li:hover{
+    background-color: rgb(48, 48, 48);
     color: black;
     transition: 1s;
 }
 
-.flex{
+.barra-lateral-conta-container{
     display: flex;
     gap: 20px;
+    align-items: center;
     margin-bottom: 1rem;
 }
+
 
 .botao-barra-lateral{
     border-radius: 1%;
@@ -60,13 +62,13 @@
     border-bottom: solid 1px white;
 }
 
-.botao-barra-lateral:hover, .fechar:hover{
+.botao-barra-lateral:hover, .fechar-barra-lateral:hover{
     background-color: rgb(48, 48, 48);
     color: white;
     transition: 1s;
 }
 
-.fechar{
+.fechar-barra-lateral{
     text-align: center;
     margin-top: 4rem;
     width: 10rem;

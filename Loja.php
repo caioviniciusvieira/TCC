@@ -41,18 +41,18 @@
             <ul class="header-conta">
                 <?php echo $elemento; ?> <!-- Cria um elemento no php -->
                 <li class="user" onclick="teste()"></li>
-                <li>Carrinho</li>
+                <li><img class="carrinho icon" src="Imagens/carrinhos.png" alt="Carrinho de compras"></li>
             </ul>
             <ul>
-                <div class="teste">
-                    <div class="flex">
+                <div class="barra-lateral">
+                    <div class="barra-lateral-conta-container">
                         <li class="user"></li>
                         <li><a><?php echo $conta;?></a></li>
                     </div>
                         <br>
-                        <button>Endereços</button>  
-                        <button>Carrinho</button>
-                        <button class="fechar" onclick="fechar()">Fechar</button>
+                        <button class="botao-barra-lateral">Endereços</button>  
+                        <button class="botao-barra-lateral">Carrinho</button>
+                        <button class="fechar-barra-lateral" onclick="fechar()">Fechar</button>
                 </div>
             </ul>
         </ul>
