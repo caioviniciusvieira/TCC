@@ -479,7 +479,7 @@ h2 {
     gap: 2rem;
     margin: 0.5rem;
     padding: 0.5rem;
-    height: 100%;
+
 }
 
 .especificacoes-container{
@@ -491,6 +491,8 @@ h2 {
     justify-content: center;
     border-radius: 5px;
     max-width: 68rem;
+
+    height: 100%;
     width: 100%;
     gap: 1rem;
     margin: 0.5rem;
@@ -502,6 +504,7 @@ h2 {
     background-color: rgba(175, 170, 170, 0.445);
     text-align: center;   
     max-width: 31rem;
+    max-height: 20rem;
     width: 100%;
     height: 100%;
     padding: 1rem;    
@@ -530,12 +533,14 @@ h2 {
     text-align: left;
     gap: 1rem;
     width: 100%;
+    max-width: 105rem;
+    max-height: 40rem;
     height: 100%;
     padding: 0.5rem;
     margin: 0.5rem;    
 }
 
-.avaliacoesPositivas-container{
+.avaliacoesPositivas-container, .avaliacoesNegativas-container{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -549,28 +554,9 @@ h2 {
     color: black;
 }
 
-.avaliacoesPositivas-container li{
+.avaliacoesPositivas-container li , .avaliacoesNegativas-container li{
     color: black;
     list-style-type: disc;
-}
-
-.avaliacoesNegativas-container{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;    
-    background-color: rgba(175, 170, 170, 0.445);
-    width: 100%;
-    height: 100%;
-    padding: 2rem;
-    margin: 1rem;
-    gap: 1rem;
-    border-radius: 5px;
-    color: black;    
-}
-
-.avaliacoesNegativas-container li{
-    color: black;
-    list-style: disc;
 }
 
 footer{
