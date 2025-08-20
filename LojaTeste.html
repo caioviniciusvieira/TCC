@@ -6,8 +6,6 @@
     <link rel="shortcut icon" type="image/icon" href="Imagens/Logo-2 TCC.png">
     <title>Master Pc</title>
     <link rel="stylesheet" href="CSS/loja.css">
-    <script src="JS/carrousel.js"></script>
-    <script src="JS/conta-menu.js"></script>    
 </head>
 <body>
        <header>
@@ -17,31 +15,24 @@
                 <h2>MasterPC</h2>
             </span>
             <ul class="header-navegacao">
-                <li class="nav-item"><a href="index.html">Inicio</a></li>
+                <li class="nav-item"><a href="indexTeste.html">Inicio</a></li>
                 <li class="nav-item">Montar</li>
-                <li class="nav-item"><a href="Loja.html">Loja</a></li>
+                <li class="nav-item"><a href="LojaTeste.html">Loja</a></li>
             </ul>
             <div class="header-right">
                 <div class="header-barraPesquisa">
-                    <input class="pesquisa" type="search" placeholder="Pesquisar">
+                <form autocomplete="off">
+                    <div>
+                    <input type="search" id="input" placeholder="Digite..." />
+                    </div>
+                    <ul class="list"></ul>
+                </form>
                 </div>
                 <ul class="header-conta">
                     <li><a href="cadastro.html">Entrar</a></li>
-                    <li class="user" onclick="teste()"></li>
+                    <li class="user"></li>
                     <li><img class="carrinho icon" src="Imagens/carrinhos.png" alt="Carrinho de compras"></li>
                 </ul>
-                <ul>
-                    <div class="barra-lateral">
-                        <div class="barra-lateral-conta-container">
-                            <li class="user"></li>
-                            <li><a><?php echo "conta";?></a></li>
-                        </div>
-                        <br>
-                        <button class="botao-barra-lateral">Endereços</button>  
-                        <button class="botao-barra-lateral">Carrinho</button>
-                        <button class="fechar-barra-lateral" onclick="fechar()">Fechar</button>
-                    </div>
-                </ul>                
             </div>
             <div class="hamburger-menu">
                 <div class="bar"></div>
@@ -85,15 +76,18 @@
         <li class="sub-header-item">Montar</li>
         <li class="sub-header-item">Ajuda</li>
     </div>
-
+    
+    <!-- Conteudo do site -->
+   <div class="website-content" >
     <!-- começo primeira seção item slider  --> 
-
+    
     <section class="product"> 
         <h2 class="product-category">Melhores Vendas</h2>
-        <button class="pre-btn"><img src="Imagens/Logo Protótipo.png" alt=""></button>
-        <button class="nxt-btn"><img src="Imagens/Logo Protótipo.png" alt=""></button>
+        <button class="pre-btn"><img src="Imagens/Seta-3.png" alt=""></button>
+        <button class="nxt-btn"><img src="Imagens/Seta-3.png" alt=""></button>
         <div class="product-container">
             <div class="product-card">
+               <div class="product-alone">
                 <div class="product-image">
                     <span class="discount-tag">50% off</span>
                     <img src="Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
@@ -103,21 +97,12 @@
                     <h2 class="product-brand">AMD Ryzen 5 5500</h2>
                     <p class="product-short-description">Processador com 6 cor...</p>
                     <span class="price">$500</span><span class="actual-price">$600</span>
+                    <button class="button-buy">Comprar</button>
                 </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
-                    <button class="card-btn">adicionar ao carrinho</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">AMD Ryzen 5 5500</h2>
-                    <p class="product-short-description">Processador com 6 cor...</p>
-                    <span class="price">$500</span><span class="actual-price">$600</span>
-                </div>
+               </div> 
             </div>
               <div class="product-card">
+                <div class="product-alone">
                 <div class="product-image">
                     <span class="discount-tag">50% off</span>
                     <img src="Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
@@ -127,9 +112,12 @@
                     <h2 class="product-brand">AMD Ryzen 5 5500</h2>
                     <p class="product-short-description">Processador com 6 cor...</p>
                     <span class="price">$500</span><span class="actual-price">$600</span>
+                     <button class="button-buy">Comprar</button>
+                </div>
                 </div>
             </div>
             <div class="product-card">
+                <div class="product-alone">
                 <div class="product-image">
                     <span class="discount-tag">50% off</span>
                     <img src="Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
@@ -139,9 +127,12 @@
                     <h2 class="product-brand">AMD Ryzen 5 5500</h2>
                     <p class="product-short-description">Processador com 6 cor...</p>
                     <span class="price">$500</span><span class="actual-price">$600</span>
+                    <button class="button-buy">Comprar</button>
+                </div>
                 </div>
             </div>
              <div class="product-card">
+                <div class="product-alone">
                 <div class="product-image">
                     <span class="discount-tag">50% off</span>
                     <img src="Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
@@ -151,45 +142,12 @@
                     <h2 class="product-brand">AMD Ryzen 5 5500</h2>
                     <p class="product-short-description">Processador com 6 cor...</p>
                     <span class="price">$500</span><span class="actual-price">$600</span>
+                    <button class="button-buy">Comprar</button>
                 </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
-                    <button class="card-btn">adicionar ao carrinho</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">AMD Ryzen 5 5500</h2>
-                    <p class="product-short-description">Processador com 6 cor...</p>
-                    <span class="price">$500</span><span class="actual-price">$600</span>
-                </div>
-            </div>
-             <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
-                    <button class="card-btn">adicionar ao carrinho</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">AMD Ryzen 5 5500</h2>
-                    <p class="product-short-description">Processador com 6 cor...</p>
-                    <span class="price">$500</span><span class="actual-price">$600</span>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="discount-tag">50% off</span>
-                    <img src="Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
-                    <button class="card-btn">adicionar ao carrinho</button>
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">AMD Ryzen 5 5500</h2>
-                    <p class="product-short-description">Processador com 6 cor...</p>
-                    <span class="price">$500</span><span class="actual-price">$600</span>
                 </div>
             </div>
               <div class="product-card">
+               <div class="product-alone">
                 <div class="product-image">
                     <span class="discount-tag">50% off</span>
                     <img src="Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
@@ -199,9 +157,27 @@
                     <h2 class="product-brand">AMD Ryzen 5 5500</h2>
                     <p class="product-short-description">Processador com 6 cor...</p>
                     <span class="price">$500</span><span class="actual-price">$600</span>
+                    <button class="button-buy">Comprar</button>
+                </div>
+               </div> 
+            </div>
+              <div class="product-card">
+                <div class="product-alone">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">adicionar ao carrinho</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">AMD Ryzen 5 5500</h2>
+                    <p class="product-short-description">Processador com 6 cor...</p>
+                    <span class="price">$500</span><span class="actual-price">$600</span>
+                    <button class="button-buy">Comprar</button>
+                </div>
                 </div>
             </div>
             <div class="product-card">
+                <div class="product-alone">
                 <div class="product-image">
                     <span class="discount-tag">50% off</span>
                     <img src="Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
@@ -211,6 +187,53 @@
                     <h2 class="product-brand">AMD Ryzen 5 5500</h2>
                     <p class="product-short-description">Processador com 6 cor...</p>
                     <span class="price">$500</span><span class="actual-price">$600</span>
+                    <button class="button-buy">Comprar</button>
+                </div>
+                </div>
+            </div>
+             <div class="product-card">
+               <div class="product-alone">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">adicionar ao carrinho</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">AMD Ryzen 5 5500</h2>
+                    <p class="product-short-description">Processador com 6 cor...</p>
+                    <span class="price">$500</span><span class="actual-price">$600</span>
+                    <button class="button-buy">Comprar</button>
+                </div>
+               </div> 
+            </div>
+              <div class="product-card">
+                <div class="product-alone">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">adicionar ao carrinho</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">AMD Ryzen 5 5500</h2>
+                    <p class="product-short-description">Processador com 6 cor...</p>
+                    <span class="price">$500</span><span class="actual-price">$600</span>
+                    <button class="button-buy">Comprar</button>
+                </div>
+                </div>
+            </div>
+            <div class="product-last-card">
+                <div class="product-alone">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">adicionar ao carrinho</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">AMD Ryzen 5 5500</h2>
+                    <p class="product-short-description">Processador com 6 cor...</p>
+                    <span class="price">$500</span><span class="actual-price">$600</span>
+                    <button class="button-buy">Comprar</button>
+                </div>
                 </div>
             </div>
         </div>
@@ -220,6 +243,7 @@
 
     <!-- fim primeira seção item slider  --> 
 
-
+    </div>
+    <script src="JS/search-bar.js"></script>
 </body>
 </html>

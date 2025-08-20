@@ -1,671 +1,249 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/icon" href="Imagens/Logo-2 TCC.png">
+    <title>Master Pc</title>
+    <link rel="stylesheet" href="CSS/loja.css">
+</head>
+<body>
+       <header>
+        <div class="header-content">
+            <span id=logo>
+                <img class="icon" src="Imagens/pces.png" alt="Master PC Logo">
+                <h2>MasterPC</h2>
+            </span>
+            <ul class="header-navegacao">
+                <li class="nav-item"><a href="indexTeste.html">Inicio</a></li>
+                <li class="nav-item">Montar</li>
+                <li class="nav-item"><a href="LojaTeste.html">Loja</a></li>
+            </ul>
+            <div class="header-right">
+                <div class="header-barraPesquisa">
+                <form autocomplete="off">
+                    <div>
+                    <input type="search" id="input" placeholder="Digite..." />
+                    </div>
+                    <ul class="list"></ul>
+                </form>
+                </div>
+                <ul class="header-conta">
+                    <li><a href="cadastro.html">Entrar</a></li>
+                    <li class="user"></li>
+                    <li><img class="carrinho icon" src="Imagens/carrinhos.png" alt="Carrinho de compras"></li>
+                </ul>
+            </div>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <!-- os # na tag "a" devem ser preenchidos com suas paginas -->
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Montar</a></li>
+                <li><a href="Loja.html">Loja</a></li>
+                <li><a href="cadastro.html">Sign Up</a></li>
+                <li><a href="#">Minha Conta</a></li>
+                <li><a href="#">Carrinho</a></li>
+                <li><input type="search" placeholder="Pesquisar"></li>
+                <li class="nav-sub-item">Armazenamento</li>
+                <li class="nav-sub-item">Placa-mãe</li>
+                <li class="nav-sub-item">Placa de video </li>
+                <li class="nav-sub-item">Gabinete</li>
+                <li class="nav-sub-item">Processador</li>
+                <li class="nav-sub-item">Fonte</li>
+                <li class="nav-sub-item">Memória</li>
+                <li class="nav-sub-item">Fans</li>
+                <li class="nav-sub-item">Montar</li>
+                <li class="nav-sub-item">Ajuda</li>
+            </ul>
+        </nav>
+    </header>
 
-.barra-lateral{
-    z-index: 2;
-    padding: 10px;
-    margin-top: 180px;
-    padding: 10px;
-    display: none;
-    justify-content: right;
-    flex-direction: column;
-    position: fixed;
-    margin-top: 71rem;
-    width: 45rem;
-    height: 80rem;
-    scale: 0.97;
-    right: -1%;
-    padding: 10px;
-    inset: auto 20;
-    border: 1px solid white;
-    background-color:  rgb(0, 74, 172);
-}
-
-@keyframes deslizar{
-    from{transform: translate(50%, 0%);}
-    to{transform: translate(0%, 0%);}
-}
-
-@keyframes deslizarBack{
-    from{transform: translate(0%, 0%);}
-    to{transform: translate(120%, 0%);}
-}
-
-.barra-lateral li:hover{
-    background-color: rgb(48, 48, 48);
-    color: black;
-    transition: 1s;
-}
-
-.barra-lateral-conta-container{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-
-.botao-barra-lateral{
-    border-radius: 1%;
-    padding: 10px;
-    text-align: left;
-    width: 43rem;
-    height: 3rem;
-    margin-bottom: 1rem;
-    font-size: 20px;
-    color: white;
-    background-color:  rgb(0, 74, 172);
-    border: 1px solid  rgb(0, 74, 172);
-    border-bottom: solid 1px white;
-}
-
-.botao-barra-lateral:hover, .fechar-barra-lateral:hover{
-    background-color: rgb(48, 48, 48);
-    color: white;
-    transition: 1s;
-}
-
-.fechar-barra-lateral{
-    text-align: center;
-    margin-top: 4rem;
-    width: 10rem;
-    height: 3rem;
-    font-size: 20px;
-    color: white;
-    background-color:  rgb(0, 74, 172);
-    border: solid 1px white;
-}
-
-/* Estilos Globais do Corpo da Página */
-body {
-    background-color: rgba(0, 0, 0, 0.329);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Define a fonte padrão para o corpo do documento */
-}
-
-/* Estilos do Cabeçalho Principal (Header) */
-header {
-    width: 100%;
-    height: 5.5rem;
-    background-color: rgb(0, 74, 172);
-    display: flex;
-    justify-content: center;
-    font-size: 1.0rem;
-    flex-wrap: wrap;
-    position: relative; /* Define o posicionamento relativo para o cabeçalho */
-}
-
-/* Conteúdo Interno do Cabeçalho */
-.header-content {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px; /* Adiciona preenchimento lateral ao conteúdo do cabeçalho */
+    <div class="sub-header desktop-only">
+        <li class="sub-header-item">Armazenamento</li>
+        <li class="sub-header-item">Placa-mãe</li>
+        <li class="sub-header-item">Placa de video </li>
+        <li class="sub-header-item">Gabinete</li>
+        <li class="sub-header-item">Processador</li>
+        <li class="sub-header-item">Fonte</li>
+        <li class="sub-header-item">Memória</li>
+        <li class="sub-header-item">Fans</li>
+        <li class="sub-header-item">Montar</li>
+        <li class="sub-header-item">Ajuda</li>
+    </div>
     
-}
-
-/* Agrupamento de elementos à direita no cabeçalho */
-.header-right {
-    display: flex;
-    gap: 1rem; /* Define o espaçamento entre os elementos */
-}
-
-/* Efeito de Hover para Itens de Lista (li) */
-li:hover {
-    text-decoration: underline;
-}
-
-/* Estilo para Ícones */
-.icon {
-    width: 3rem;
-    height: 3rem; /* Define a altura padrão para elementos com a classe 'icon' */
-}
-
-/* Estilo para a logo da barra de navegação */
-#logo {
-    display: flex;
-    gap: 1rem;
-}
-
-/* Estilo Básico para Inputs (geral) */
-input {
-    border-radius: 50px; /* Aplica bordas arredondadas a todos os inputs */
-}
-
-/* Estilo Básico para Links, Listas e Itens de Lista (geral) */
-a,
-ul,
-li {
-    text-decoration: none;
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
-    list-style: none; /* Remove os marcadores de lista */
-}
-
-/* Navegação Principal no Cabeçalho (Desktop) */
-.header-navegacao {
-    gap: 30px;
-    font-size: 1rem;
-    display: flex;
-    align-items: center; /* Alinha os itens verticalmente ao centro */  
-}
-
-.header-navegacao:hover {
-     text-decoration: underline;
-}
-
-.header-navegacao li {
-    padding: 10px; /* Adiciona preenchimento interno aos itens de navegação */
-}
-
-/* Barra de Pesquisa no Cabeçalho */
-.header-barraPesquisa {
-    gap: 20px;
-    display: flex;
-    align-items: center; /* Alinha os itens verticalmente ao centro */
-}
-
-/* Seção da Conta no Cabeçalho */
-.header-conta {
-    gap: 20px;
-    display: flex;
-    align-items: center; /* Alinha os itens verticalmente ao centro */
-}
-
-/* Estilo Específico para o Input de Pesquisa */
-input {
-    cursor: pointer;
-    border: 1px solid lightblue;
-    width: 30rem;
-    height: 2.3rem;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    padding: 10px; /* Adiciona preenchimento interno ao input de pesquisa */
-}
-
-/* Estilo para o Ícone de Usuário (User) */
-.user {
-    background-color: grey;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Centraliza o conteúdo do ícone de usuário */
-}
-
-/* --- Menu Hamburguer --- */
-
-/* Estilos do Ícone do Menu Hamburguer */
-.hamburger-menu {
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 25px;
-    cursor: pointer;
-    z-index: 20; /* Garante que o ícone esteja acima de outros elementos */
-}
-
-/* Estilos das Barras do Menu Hamburguer */
-.hamburger-menu .bar {
-    width: 100%;
-    height: 3px;
-    background-color: white;
-    transition: all 0.3s ease-in-out; /* Adiciona uma transição suave para as barras */
-}
-
-/* Animação do Menu Hamburguer para 'X' (Estado Ativo) */
-.hamburger-menu.active .bar:nth-child(1) {
-    transform: translateY(11px) rotate(45deg); /* Move e gira a primeira barra */
-}
-
-.hamburger-menu.active .bar:nth-child(2) {
-    opacity: 0; /* Torna a barra do meio transparente */
-}
-
-.hamburger-menu.active .bar:nth-child(3) {
-    transform: translateY(-11px) rotate(-45deg); /* Move e gira a terceira barra */
-}
-
-/* --- Navegação Mobile (Menu Hamburguer Aberto) --- */
-
-/* Estilos do Menu de Navegação Mobile */
-.mobile-nav {
-    display: none;
-    position: absolute;
-    top: 5.5rem;
-    left: 0;
-    width: 100%;
-    background-color: rgb(0, 74, 172);
-    z-index: 10;
-    padding: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-height: calc(100vh - 5.5rem);
-    overflow-y: auto; /* Adiciona uma barra de rolagem vertical se o conteúdo exceder a altura máxima */
-}
-
-/* Estado Ativo do Menu Mobile */
-.mobile-nav.active {
-    display: block; /* Torna o menu visível */
-}
-
-/* Lista de Itens do Menu Mobile */
-.mobile-nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px; /* Define o espaçamento entre os itens da lista */
-}
-
-/* Itens de Lista Individual do Menu Mobile */
-.mobile-nav ul li {
-    width: 100%;
-    text-align: center;
-    padding: 10px 0; /* Adiciona preenchimento interno aos itens da lista */
-}
-
-/* Links e Input de Pesquisa no Menu Mobile */
-.mobile-nav ul li a,
-.mobile-nav ul li input {
-    width: 80%;
-    margin: 0 auto;
-    display: block;
-    text-align: center; /* Centraliza o texto dentro dos links/inputs */
-}
-
-/* --- Sub-cabeçalho no Menu Mobile --- */
-.mobile-nav ul .nav-sub-item {
-    background-color: rgb(48, 48, 48);
-    color: white;
-    font-size: 0.9rem;
-    padding: 1rem 1rem 1rem 3rem; /* Define o preenchimento para os itens do sub-cabeçalho */
-}
-
-.mobile-nav ul .nav-sub-item:hover {
-    background-color: rgb(0, 0, 0); /* Define a cor de fundo ao passar o mouse */
-}
-
-/* --- Sub-cabeçalho (Desktop) --- */
-.sub-header {
-    gap: 2px;
-    background-color: rgb(48, 48, 48);
-    display: flex;
-    justify-content: center;
-    color: white;
-    padding: 0 16% 0 16%;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 100%; /* Define a largura total para o sub-cabeçalho */
-}
-
-.sub-header-item {
-    cursor: pointer;
-    justify-content: center;
-    width: 200px;
-    height: 50px; /* Define a altura para cada item do sub-cabeçalho */
-}
-
-.sub-header-item:hover {
-    background-color: rgb(0, 0, 0);
-    transition: .1s; /* Adiciona uma transição rápida ao passar o mouse */
-    text-decoration: none;
-}
-h2 {
-    text-align: center;
-    color: white;
-    align-items: center;
-    display: flex;
-}
-/* --- Media Queries para Responsividade --- */
-
-/* Estilos Aplicados quando a Largura da Tela é Menor ou Igual a 1000px */
-@media only screen and (max-width: 1200px) {
-    .header-navegacao,
-    .header-barraPesquisa,
-    .header-conta {
-        display: none; /* Esconde os elementos de navegação de desktop */
-    }
-
-    .hamburger-menu {
-        display: flex; /* Mostra o menu hamburguer */
-    }
-
-    .header-content {
-        justify-content: space-between; /* Ajusta o alinhamento do conteúdo do cabeçalho */
-    }
-
-    .sub-header.desktop-only {
-        display: none; /* Esconde o sub-cabeçalho de desktop */
-    }
-
-    .principal {
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        margin: 1rem; /* Ajusta a margem da seção principal */
-    }
-}
-
-/* Estilos Aplicados quando a Largura da Tela é Menor ou Igual a 768px */
-@media only screen and (max-width: 768px) {
-    input {
-        width: 100%; /* Faz com que a barra de pesquisa ocupe a largura total */
-    }
-}
-
-/* ìnicio da seção de vendas do produto */
-
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Mulish", sans-serif;
-}
-
-.banner {
-  width: 100%;
-  height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url(./images/banner.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.navbar {
-  width: 85%;
-  margin: auto;
-  padding: 35px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  width: 500px;
-  cursor: pointer;
-}
-
-.navbar ul li {
-  list-style: none;
-  display: inline-block;
-  margin: 0 20px;
-  position: relative;
-}
-
-.navbar ul li a {
-  text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
-}
-
-.navbar ul li::after {
-  content: "";
-  height: 3px;
-  width: 0;
-  background: #009688;
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  transition: 0.5s;
-}
-
-.navbar ul li:hover::after {
-  width: 100%;
-}
-
-.content {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
-  color: #fff;
-}
-
-.content h1 {
-  font-size: 70px;
-  margin-top: 80px;
-}
-
-.content p {
-  margin: 20px auto;
-  font-weight: 100;
-  line-height: 25px;
-}
-
-.login-btn {
-  width: 200px;
-  padding: 15px 0;
-  text-align: center;
-  margin: 20px 10px;
-  border-radius: 25px;
-  font-weight: bold;
-  border: 2px solid #009688;
-  background: transparent;
-  color: white;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
-
-.signup-btn {
-  width: 200px;
-  padding: 15px 0;
-  text-align: center;
-  margin: 20px 10px;
-  border-radius: 25px;
-  font-weight: bold;
-  border: 2px solid #009688;
-  background: transparent;
-  color: white;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
-
-.cover {
-  background: #009688;
-  height: 100%;
-  width: 0%;
-  border-radius: 25px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-  transition: 0.5s;
-}
-
-button:hover span {
-  width: 100%;
-}
-
-button:hover {
-  border: none;
-}
-
-/* PRODUCTS */
-.product {
-  position: relative;
-  overflow: hidden;
-  padding: 20px;
-}
-
-.product-category {
-  padding: 0 10vw;
-  font-size: 30px;
-  font-weight: 500;
-  margin-bottom: 40px;
-  text-transform: capitalize;
-}
-
-.product-container {
-  padding: 0 10vw;
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-}
-
-.product-container::-webkit-scrollbar {
-  display: none;
-}
-
-.product-card {
-  flex: 0 0 auto;
-  width: 250px;
-  height: 450px;
-  margin-right: 40px;
-}
-
-.product-image {
-  position: relative;
-  width: 100%;
-  height: 350px;
-  overflow: hidden;
-}
-
-.product-thumb {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.discount-tag {
-  position: absolute;
-  background: #fff;
-  padding: 5px;
-  border-radius: 5px;
-  color: #ff7d7d;
-  right: 10px;
-  top: 10px;
-  text-transform: capitalize;
-}
-
-.card-btn {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px;
-  width: 90%;
-  text-transform: capitalize;
-  border: none;
-  outline: none;
-  background: #fff;
-  border-radius: 5px;
-  transition: 0.5s;
-  cursor: pointer;
-  opacity: 0;
-}
-
-.product-card:hover .card-btn {
-  opacity: 1;
-}
-
-.card-btn:hover {
-  background: #ff7d7d;
-  color: #fff;
-}
-
-.product-info {
-  width: 100%;
-  height: 100px;
-  padding-top: 10px;
-}
-
-.product-brand {
-  text-transform: uppercase;
-}
-
-.product-short-description {
-  width: 100%;
-  height: 20px;
-  line-height: 20px;
-  overflow: hidden;
-  opacity: 0.5;
-  text-transform: capitalize;
-  margin: 5px 0;
-}
-
-.price {
-  font-weight: 900;
-  font-size: 20px;
-}
-
-.actual-price {
-  margin-left: 20px;
-  opacity: 0.5;
-  text-decoration: line-through;
-}
-
-.pre-btn,
-.nxt-btn {
-  border: none;
-  width: 10vw;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
-  cursor: pointer;
-  z-index: 8;
-}
-
-.pre-btn {
-  left: 0;
-  transform: rotate(180deg);
-}
-
-.nxt-btn {
-  right: 0;
-}
-
-.pre-btn img,
-.nxt-btn img {
-  opacity: 0.2;
-}
-
-.pre-btn:hover img,
-.nxt-btn:hover img {
-  opacity: 1;
-}
-
-.collection-container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
-}
-
-.collection {
-  position: relative;
-}
-
-.collection img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.collection p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff;
-  font-size: 50px;
-  text-transform: capitalize;
-}
-
-.collection:nth-child(3) {
-  grid-column: span 2;
-  margin-bottom: 10px;
-}
+    <!-- Conteudo do site -->
+   <div class="website-content" >
+    <!-- começo primeira seção item slider  --> 
+    
+    <section class="product"> 
+        <h2 class="product-category">Melhores Vendas</h2>
+        <button class="pre-btn"><img src="Imagens/Seta-3.png" alt=""></button>
+        <button class="nxt-btn"><img src="Imagens/Seta-3.png" alt=""></button>
+        <div class="product-container">
+            <div class="product-card">
+               <div class="product-alone">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">adicionar ao carrinho</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">AMD Ryzen 5 5500</h2>
+                    <p class="product-short-description">Processador com 6 cor...</p>
+                    <span class="price">$500</span><span class="actual-price">$600</span>
+                    <button class="button-buy">Comprar</button>
+                </div>
+               </div> 
+            </div>
+              <div class="product-card">
+                <div class="product-alone">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">adicionar ao carrinho</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">AMD Ryzen 5 5500</h2>
+                    <p class="product-short-description">Processador com 6 cor...</p>
+                    <span class="price">$500</span><span class="actual-price">$600</span>
+                     <button class="button-buy">Comprar</button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-alone">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">adicionar ao carrinho</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">AMD Ryzen 5 5500</h2>
+                    <p class="product-short-description">Processador com 6 cor...</p>
+                    <span class="price">$500</span><span class="actual-price">$600</span>
+                    <button class="button-buy">Comprar</button>
+                </div>
+                </div>
+            </div>
+             <div class="product-card">
+                <div class="product-alone">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">adicionar ao carrinho</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">AMD Ryzen 5 5500</h2>
+                    <p class="product-short-description">Processador com 6 cor...</p>
+                    <span class="price">$500</span><span class="actual-price">$600</span>
+                    <button class="button-buy">Comprar</button>
+                </div>
+                </div>
+            </div>
+              <div class="product-card">
+               <div class="product-alone">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">adicionar ao carrinho</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">AMD Ryzen 5 5500</h2>
+                    <p class="product-short-description">Processador com 6 cor...</p>
+                    <span class="price">$500</span><span class="actual-price">$600</span>
+                    <button class="button-buy">Comprar</button>
+                </div>
+               </div> 
+            </div>
+              <div class="product-card">
+                <div class="product-alone">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">adicionar ao carrinho</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">AMD Ryzen 5 5500</h2>
+                    <p class="product-short-description">Processador com 6 cor...</p>
+                    <span class="price">$500</span><span class="actual-price">$600</span>
+                    <button class="button-buy">Comprar</button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-alone">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">adicionar ao carrinho</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">AMD Ryzen 5 5500</h2>
+                    <p class="product-short-description">Processador com 6 cor...</p>
+                    <span class="price">$500</span><span class="actual-price">$600</span>
+                    <button class="button-buy">Comprar</button>
+                </div>
+                </div>
+            </div>
+             <div class="product-card">
+               <div class="product-alone">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">adicionar ao carrinho</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">AMD Ryzen 5 5500</h2>
+                    <p class="product-short-description">Processador com 6 cor...</p>
+                    <span class="price">$500</span><span class="actual-price">$600</span>
+                    <button class="button-buy">Comprar</button>
+                </div>
+               </div> 
+            </div>
+              <div class="product-card">
+                <div class="product-alone">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">adicionar ao carrinho</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">AMD Ryzen 5 5500</h2>
+                    <p class="product-short-description">Processador com 6 cor...</p>
+                    <span class="price">$500</span><span class="actual-price">$600</span>
+                    <button class="button-buy">Comprar</button>
+                </div>
+                </div>
+            </div>
+            <div class="product-last-card">
+                <div class="product-alone">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">adicionar ao carrinho</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">AMD Ryzen 5 5500</h2>
+                    <p class="product-short-description">Processador com 6 cor...</p>
+                    <span class="price">$500</span><span class="actual-price">$600</span>
+                    <button class="button-buy">Comprar</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="JS/item-slider.js"></script>
+
+    <!-- fim primeira seção item slider  --> 
+
+    </div>
+    <script src="JS/search-bar.js"></script>
+</body>
+</html>
