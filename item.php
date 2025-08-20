@@ -15,16 +15,15 @@
         echo "Produto não encontrado";
     }
 
-    $conta = 'Crie sua conta';
-    $elemento2 = '<li><a><?php echo $conta;?></a></li>';
+    $usuario = 'Crie sua conta';
+    $link = 'conta.html';
 
     if (isset($_SESSION['s']) && isset($_SESSION['senha'])) {
-        $conta = $_SESSION['nome'];
-        $elemento = '';
+        $usuario = $_SESSION['nome'];
     } else {
-        $elemento = '<li><a href="cadastro.html">Crie sua conta</a></li>';
-        $elemento2 = $elemento;
-        echo 'Falha na conexão com o usuario';
+        $link2 = 'cadastro.html';
+        $link = $link2;
+        echo 'falha na conexão com o banco';
     }
 ?>  
 
@@ -57,7 +56,6 @@
                 </div>
                 <ul class="header-conta">
                     <li><a href="cadastro.html">Entrar</a></li>
-                    <?php echo $elemento; ?> <!-- Cria um elemento no php -->
                     <li class="user" onclick="teste()"></li>
                     <li><img class="carrinho icon" src="Imagens/carrinhos.png" alt="Carrinho de compras"></li>
                 </ul>
@@ -65,7 +63,7 @@
                 <div class="barra-lateral">
                     <div class="barra-lateral-conta-container">
                         <li class="user"></li>
-                        <li><a><?php echo "conta";?></a></li>
+                        <li><a href="<?php echo $link;?>"><?php echo $usuario;?></a></li>
                     </div>
                         <br>
                         <button class="botao-barra-lateral">Endereços</button>  
@@ -116,7 +114,7 @@
         <li class="sub-header-item">Montar</li>
         <li class="sub-header-item">Ajuda</li>
     </div>
-
+    
 <div class="item-container" id="<?php echo $id; ?>">
     <div class="item-imagem-container">
         <img src="<?php echo $produtos['imagem']; ?>" width="400rem" height="350rem">
@@ -173,7 +171,7 @@
     <div class="especificacao-design">
         <h1>Design</h1>
         <br>
-        <p><?php echo $produtos['design'];?><p>  
+        <p><?php echo $produtos['design'];?><p>
     </div>  
 </div>
 <div class="item-avaliacoes-container">

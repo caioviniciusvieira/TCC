@@ -11,15 +11,14 @@
         echo $query_clientes->error;
     }
 
-    $conta = 'Crie sua conta';
-    $elemento2 = '<li><a><?php echo $conta;?></a></li>';
+    $usuario = 'Crie sua conta';
+    $link = 'conta.html';
 
     if (isset($_SESSION['s']) && isset($_SESSION['senha'])) {
-        $conta = $_SESSION['nome'];
-        $elemento = '';
+        $usuario = $_SESSION['nome'];
     } else {
-        $elemento = '<li><a href="cadastro.html">Crie sua conta</a></li>';
-        $elemento2 = $elemento;
+        $link2 = 'cadastro.html';
+        $link = $link2;
         echo 'falha na conexão com o banco';
     }
 ?>     
@@ -29,46 +28,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MASTER PC</title>
+    <link rel="shortcut icon" type="image/icon" href="Imagens/Logo-2 TCC.png">
+    <title>Master Pc</title>
     <link rel="stylesheet" href="CSS/loja.css">
-    <script src="JS/loja.js"></script>
-    <script src="JS/conta-menu.js"></script>
+    <script src="JS/carrousel.js"></script>
+    <script src="JS/conta-menu.js"></script>    
 </head>
 <body>
-    <header>
-        <ul>
+       <header>
+        <div class="header-content">
+            <span id=logo>
+                <img class="icon" src="Imagens/Logo-2 TCC.png" alt="Master PC Logo">
+                <h2>MasterPC</h2>
+            </span>
             <ul class="header-navegacao">
-                <img class="logo" src="Imagens/pces.png">
-                <br><br>
-                <li>Inicio</li>
-                <li>Montar</li>
-                <li>Loja</li>
+                <li class="nav-item"><a href="index.html">Inicio</a></li>
+                <li class="nav-item">Montar</li>
+                <li class="nav-item"><a href="Loja.html">Loja</a></li>
             </ul>
-            <ul class="header-barraPesquisa">
-                <input type="search" placeholder="Pesquisar">
-            </ul>
-            <ul class="header-conta">
-                <?php echo $elemento; ?> <!-- Cria um elemento no php -->
-                <li class="user" onclick="teste()"></li>
-                <li><img class="carrinho icon" src="Imagens/carrinhos.png" alt="Carrinho de compras"></li>
-            </ul>
-            <ul>
-                <div class="barra-lateral">
-                    <div class="barra-lateral-conta-container">
-                        <li class="user"></li>
-                        <li><a><?php echo $conta;?></a></li>
-                    </div>
-                    <br>
-                    <button class="botao-barra-lateral">Endereços</button>  
-                    <button class="botao-barra-lateral">Carrinho</button>
-                    <button class="fechar-barra-lateral" onclick="fechar()">Fechar</button>
+            <div class="header-right">
+                <div class="header-barraPesquisa">
+                    <input class="pesquisa" type="search" placeholder="Pesquisar">
                 </div>
+                <ul class="header-conta">
+                    <li><a href="cadastro.html">Entrar</a></li>
+                    <li class="user" onclick="teste()"></li>
+                    <li><img class="carrinho icon" src="Imagens/carrinhos.png" alt="Carrinho de compras"></li>
+                </ul>
+                <ul>
+                    <div class="barra-lateral">
+                        <div class="barra-lateral-conta-container">
+                            <li class="user"></li>
+                            <li><a href="<?php echo $link;?>"><?php echo $usuario;?></a></li>
+                        </div>
+                        <br>
+                        <button class="botao-barra-lateral">Endereços</button>  
+                        <button class="botao-barra-lateral">Carrinho</button>
+                        <button class="fechar-barra-lateral" onclick="fechar()">Fechar</button>
+                    </div>
+                </ul>                
+            </div>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <!-- os # na tag "a" devem ser preenchidos com suas paginas -->
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Montar</a></li>
+                <li><a href="Loja.html">Loja</a></li>
+                <li><a href="cadastro.html">Sign Up</a></li>
+                <li><a href="#">Minha Conta</a></li>
+                <li><a href="#">Carrinho</a></li>
+                <li><input type="search" placeholder="Pesquisar"></li>
+                <li class="nav-sub-item">Armazenamento</li>
+                <li class="nav-sub-item">Placa-mãe</li>
+                <li class="nav-sub-item">Placa de video </li>
+                <li class="nav-sub-item">Gabinete</li>
+                <li class="nav-sub-item">Processador</li>
+                <li class="nav-sub-item">Fonte</li>
+                <li class="nav-sub-item">Memória</li>
+                <li class="nav-sub-item">Fans</li>
+                <li class="nav-sub-item">Montar</li>
+                <li class="nav-sub-item">Ajuda</li>
             </ul>
-            </ul>
-        </ul>
+        </nav>
     </header>
 
-    <div class="sub-header">
+    <div class="sub-header desktop-only">
         <li class="sub-header-item">Armazenamento</li>
         <li class="sub-header-item">Placa-mãe</li>
         <li class="sub-header-item">Placa de video </li>
