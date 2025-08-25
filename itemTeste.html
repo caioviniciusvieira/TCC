@@ -17,13 +17,20 @@
                 <h2>MasterPC</h2>
             </span>
             <ul class="header-navegacao">
-                <li class="nav-item"><a href="index.html">Inicio</a></li>
-                <li class="nav-item">Montar</li>
-                <li class="nav-item"><a href="Loja.html">Loja</a></li>
+               <ul class="header-navegacao">
+                <li class="nav-item"><a class="style" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="style" href="itemTeste.html">Item</a></li>
+                <li class="nav-item"><a class="style" href="LojaTeste.html">Loja</a></li>
+            </ul>
             </ul>
             <div class="header-right">
                 <div class="header-barraPesquisa">
-                    <input type="search" placeholder="Pesquisar">
+                <form class="autocomplete" autocomplete="off">
+                    <div>
+                    <input type="text" id="input" placeholder="Digite..." />
+                    </div>
+                    <ul class="list"></ul>
+                </form>
                 </div>
                 <ul class="header-conta">
                     <li><a href="cadastro.html">Entrar</a></li>
@@ -200,5 +207,6 @@
     <footer>
         @2025 MikaelL e CaioV. Todos os Direitos Reservados. 
     </footer>
+      <script src="JS/search-bar2.js"></script>
 </body>
 </html>

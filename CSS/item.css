@@ -135,18 +135,12 @@ li:hover {
     gap: 1rem;
 }
 
-/* Estilo Básico para Inputs (geral) */
-input {
-    border-radius: 50px; /* Aplica bordas arredondadas a todos os inputs */
-}
-
 /* Estilo Básico para Links, Listas e Itens de Lista (geral) */
 a,
 ul {
     text-decoration: none;
     cursor: pointer;
     color: rgb(255, 255, 255);
-    display: flex;
     align-items: center;
     list-style: none; /* Remove os marcadores de lista */
 }
@@ -174,22 +168,69 @@ ul {
     align-items: center; /* Alinha os itens verticalmente ao centro */
 }
 
+input[type="text"]:focus,
+input[type="text"]:hover {
+    outline: none;
+}
+
+
+/* Estilo Específico para o Input de Pesquisa */
+input[type="text"] {
+    cursor: pointer;
+    width: 30rem;
+    height: 2.3rem;
+    background-color: rgb(255, 255, 255);
+    padding: 10px; /* Adiciona preenchimento interno ao input de pesquisa */
+    border:  rgb(0, 0, 0) solid 1px;
+    border-radius: 5px;
+}
+
+/*dropdown barra de pesquisa*/
+
+.autocomplete {
+  position: relative; /* base para o posicionamento absoluto da lista */
+  display: inline-block;
+}
+
+.list {
+  position: absolute;
+  top: 100%; /* aparece logo abaixo do input */
+  left: 0;
+  right: 0;
+  background-color: rgb(175, 175, 175);
+  z-index: 1000; /* fica acima do header */
+  max-height: 200px; /* limite de altura */
+  overflow-y: auto; /* rolagem se tiver muitas opções */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-radius: 5px;
+}
+
+.list-items {
+  padding: 10px 5px;
+  cursor: pointer;
+  color: black;
+}
+
+.list-items:hover {
+  background-color: #e9e7e7;
+}
+
+.list-items:hover {
+   text-decoration: none;
+}
+
+ul.list{
+border: none;
+}
+
+
 /* Seção da Conta no Cabeçalho */
 .header-conta {
     gap: 20px;
     display: flex;
     align-items: center; /* Alinha os itens verticalmente ao centro */
-}
-
-/* Estilo Específico para o Input de Pesquisa */
-input {
-    cursor: pointer;
-    border: 1px solid lightblue;
-    width: 30rem;
-    height: 2.3rem;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    padding: 10px; /* Adiciona preenchimento interno ao input de pesquisa */
 }
 
 /* Estilo para o Ícone de Usuário (User) */
@@ -319,7 +360,7 @@ input {
 .sub-header-item {
     cursor: pointer;
     justify-content: center;
-    gap: 10px;
+    display: flex;
     width: 200px;
     height: 50px; /* Define a altura para cada item do sub-cabeçalho */
 }
