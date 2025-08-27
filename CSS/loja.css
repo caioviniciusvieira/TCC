@@ -209,7 +209,6 @@ h2 {
   background-color: white;
   margin-left: 5%;      
   margin-right: 5%;
-  padding-top: 5%;
   height: 100vh;
 }
 
@@ -227,6 +226,7 @@ h2 {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   margin-left: 15%;
   margin-right: 15%;
+  margin-top: 5%;
   
 }
 
@@ -474,6 +474,189 @@ h2 {
     }
 }
 
+/* Parte Image Slider */
+
+/* Container principal do slider */
+
+.img-slider{
+   position: relative;
+     width: 100%;/* Agora ocupa 100% do contêiner pai */
+      aspect-ratio: 16 / 9; /* Mantém proporção (opcional) */ 
+      max-height: 500px; /* Altura máxima opcional */ 
+      overflow: hidden; /* Evita que a imagem vaze para fora */ 
+      background: #1D212B; 
+      margin: 0;
+ 
+}
+
+.img-slider .slide{
+ z-index: 1;
+ position: absolute;
+ clip-path: circle(0% at 0 50%);
+  width: 100%;
+  height: 100%;
+}
+
+
+.img-slider .slide.active{
+ clip-path: circle(150% at 0 50%);
+ transition: 2s;
+ transition-property: clip-path;
+}
+
+/* Imagens do slide */
+.img-slider .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Preenche o contêiner sem deformar, pode usar 'contain' se preferir */
+  border-radius: 5px;
+}
+
+
+/* Informações do slide (título e texto) */
+.img-slider .slide .info {
+  position: absolute;
+  top: 0;
+  padding: 15px 30px; /* Espaçamento interno */
+}
+
+/* Título do slide */
+.img-slider .slide .info h2 {
+  color: #fff;
+  font-size: 45px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* Texto descritivo do slide */
+.img-slider .slide .info p {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.1); /* Fundo semi-transparente */
+  font-size: 16px;
+  width: 60%; /* Largura do texto */
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* Navegação do slider (bolinhas) */
+.img-slider .navigation {
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+}
+
+/* Botões da navegação */
+.img-slider .navigation .btn {
+  background: rgba(255, 255, 255, 0.5); /* Cor com transparência */
+  width: 12px;
+  height: 12px;
+  margin: 10px;
+  border-radius: 50%; /* Formato circular */
+  cursor: pointer;
+}
+
+/* Botão ativo (slide atual) */
+.img-slider .navigation .btn.active {
+  background: #2696E9; /* Cor azul destaque */
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Sombra leve */
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
+
+/* Telas até 820px */
+@media (max-width: 820px) {
+  .img-slider {
+    width: 600px;
+    height: 375px;
+  }
+
+  .img-slider .slide .info {
+    padding: 10px 25px;
+  }
+
+  .img-slider .slide .info h2 {
+    font-size: 35px;
+  }
+
+  .img-slider .slide .info p {
+    width: 70%;
+    font-size: 15px;
+  }
+
+  .img-slider .navigation {
+    bottom: 25px;
+  }
+
+  .img-slider .navigation .btn {
+    width: 10px;
+    height: 10px;
+    margin: 8px;
+  }
+}
+
+/* Telas até 620px */
+@media (max-width: 620px) {
+  .img-slider {
+    width: 400px;
+    height: 250px;
+  }
+
+  .img-slider .slide .info {
+    padding: 10px 20px;
+  }
+
+  .img-slider .slide .info h2 {
+    font-size: 30px;
+  }
+
+  .img-slider .slide .info p {
+    width: 80%;
+    font-size: 13px;
+  }
+
+  .img-slider .navigation {
+    bottom: 15px;
+  }
+
+  .img-slider .navigation .btn {
+    width: 8px;
+    height: 8px;
+    margin: 6px;
+  }
+}
+
+/* Telas até 420px */
+@media (max-width: 420px) {
+  .img-slider {
+    width: 320px;
+    height: 200px;
+  }
+
+  .img-slider .slide .info {
+    padding: 5px 10px;
+  }
+
+  .img-slider .slide .info h2 {
+    font-size: 25px;
+  }
+
+  .img-slider .slide .info p {
+    width: 90%;
+    font-size: 11px;
+  }
+
+  .img-slider .navigation {
+    bottom: 10px;
+  }
+}
+
+/* Fim Image Slider */
+
+
 
 /* Estilos Aplicados quando a Largura da Tela é Menor ou Igual a 768px */
 
@@ -574,13 +757,4 @@ h2 {
 
 .mobile-nav ul .nav-sub-item:hover {
     background-color: rgb(0, 0, 0); /* Define a cor de fundo ao passar o mouse */
-}
-
-footer{
-    background-color: rgb(46, 46, 46);
-    height: 4rem;
-    width: 100%;
-    text-align: center;
-    padding-top: 1.5rem;
-    color: white;
 }
