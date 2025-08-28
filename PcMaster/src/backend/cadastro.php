@@ -26,7 +26,7 @@
     else{
         if ($inserir->execute()){
             echo "Usuario cadastrado com sucesso";
-            header('Location: Loja.php');
+            header('Location: /Pcmaster/assest/Imagens/Loja.php');
         }
         else {
             echo "error: ". $inserir->error;

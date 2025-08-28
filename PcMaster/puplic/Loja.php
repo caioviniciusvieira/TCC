@@ -1,5 +1,5 @@
 <?php
-    include_once("conexao.php");
+    include_once("/PcMaster/src/backend/conexao.php");
     session_start();
 
     $sql_produto = "SELECT codigo_produto, imagem, nome, valor, quantidade FROM Produtos";

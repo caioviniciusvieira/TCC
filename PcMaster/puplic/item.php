@@ -1,5 +1,5 @@
 <?php
-    include_once('conexao.php');
+    include_once('/PcMaster/src/backend/conexao.php');
     session_start();
 
     $id = $_GET['id'];
@@ -16,7 +16,7 @@
     }
 
     $usuario = 'Crie sua conta';
-    $link = 'conta.html';
+    $link = '/PcMaster/public/conta.html';
 
     if (isset($_SESSION['s']) && isset($_SESSION['senha'])) {
         $usuario = $_SESSION['nome'];
@@ -32,32 +32,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/icon" href="Imagens/Logo-2 TCC.png">
+    <link rel="shortcut icon" type="image/icon" href="/PcMaster/assets/Imagens/Logo-2 TCC.png">
     <title>MASTER PC</title>
-    <link rel="stylesheet" href="CSS/item.css">
-    <script src="JS/menu.js" defer></script>
-    <script src="JS/conta-menu.js" defer></script>
+    <link rel="stylesheet" href="/PcMaster/src/CSS/item.css">
+    <script src="/PcMaster/scripts/JS/menu.js" defer></script>
+    <script src="/PcMaster/scripts/JS/conta-menu.js" defer></script>
 </head>
 <body>
     <header>
         <div class="header-content">
             <span id=logo>
-                <img class="icon" src="Imagens/Logo-2 TCC.png" alt="Master PC Logo">
+                <img class="icon" src="/PcMaster/assets/Imagens/Logo-2 TCC.png" alt="Master PC Logo">
                 <h2>MasterPC</h2>
             </span>
             <ul class="header-navegacao">
-                <li class="nav-item"><a href="index.html">Inicio</a></li>
+                <li class="nav-item"><a href="/PcMaster/public/index.html">Inicio</a></li>
                 <li class="nav-item">Montar</li>
-                <li class="nav-item"><a href="Loja.html">Loja</a></li>
+                <li class="nav-item"><a href="/PcMaster/public/Loja.html">Loja</a></li>
             </ul>
             <div class="header-right">
                 <div class="header-barraPesquisa">
                     <input type="search" placeholder="Pesquisar">
                 </div>
                 <ul class="header-conta">
-                    <li><a href="cadastro.html">Entrar</a></li>
+                    <li><a href="/PcMaster/public/cadastro.html">Entrar</a></li>
                     <li class="user" onclick="teste()"></li>
-                    <li><img class="carrinho icon" src="Imagens/carrinhos.png" alt="Carrinho de compras"></li>
+                    <li><img class="carrinho icon" src="/PcMaster/assets/Imagens/carrinhos.png" alt="Carrinho de compras"></li>
                 </ul>
                 <ul>
                 <div class="barra-lateral">
@@ -125,7 +125,7 @@
             </div>
             <div class="item_botoes-container">
                 <button class="botao-item-container">Comprar</button>
-                <button class="botao-carrinho-item-container"><img src="Imagens/carrinhos.png" alt="Carrinho imagem"  width="30px" height="30px"></button>
+                <button class="botao-carrinho-item-container"><img src="/PcMaster/assets/Imagens/carrinhos.png" alt="Carrinho imagem"  width="30px" height="30px"></button>
             </div>
         </div>    
     </div>    

@@ -26,7 +26,7 @@
         
     if($usuario['s'] == $usuario['senha']){
         echo "Login bem-sucedido! Bem-vindo, $email.";
-        header('Location: Loja.php');
+        header('Location: /Pcmaster/assest/Imagens/Loja.php');
     }     
     else {
         echo "E-mail ou senha incorretos.";
