@@ -20,12 +20,13 @@
                 <label>E-mail:</label>
                 <input type="email" name="email" class="input-padrao" required>
                 <label>Senha:</label>
-                <input type="password" name="password" class="input-padrao" required>
+                <span id="validacao"></span>
+                <input type="password" id="senha" name="password" class="input-padrao" required>
                 <label>Confirmar Senha:</label>  
-                <input type="password" name="Confirmpassword" class="input-padrao" required>
+                <input type="password" id="Confirmar" name="Confirmpassword" class="input-padrao" required>
             </div>
             <div class="form-container-footer">
-                <input type="submit" value="Cadastrar" class="btn-cadastro">
+                <input onclick="senh()" type="submit" value="Cadastrar" class="btn-cadastro">
                 <p>Já possui uma conta?</p>
                 <h2 class="login"><a href="login.html">Fazer Login</a></h2>
                 <p>Ao continuar você estará concordando com <br>
@@ -33,5 +34,6 @@
             </div>
         </form>
     </div>
+        <script src="/PcMaster/scripts/JS/confirmar-senha.js"></script>
 </body>
 </html>
