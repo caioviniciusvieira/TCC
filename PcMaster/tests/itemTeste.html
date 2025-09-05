@@ -1,212 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/icon" href="/PcMaster/assets/Imagens/Logo-2 TCC.png">
-    <title>MASTER PC</title>
-    <link rel="stylesheet" href="/PcMaster/src/CSS/item.css">
-    <script src="/PcMaster/scripts/JS/menu.js" defer></script>
-    <script src="/PcMaster/scripts/JS/conta-menu.js" defer></script>
-</head>
-<body>
-    <header>
-        <div class="header-content">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" type="image/icon" href="/PcMaster/assets/Imagens/Logo-2 TCC.png">
+      <title>Master Pc</title>
+      <link rel="stylesheet" href="/PcMaster/src/CSS/loja.css">
+   </head>
+   <body>
+      <header>
+         <div class="header-content">
             <span id=logo>
-                <img class="icon" src="/PcMaster/assets/Imagens/Logo-2 TCC.png" alt="Master PC Logo">
-                <h2>MasterPC</h2>
+               <img class="icon" src="/PcMaster/assets/Imagens/pces.png" alt="Master PC Logo">
+               <h2>MasterPC</h2>
             </span>
             <ul class="header-navegacao">
-               <ul class="header-navegacao">
-                <li class="nav-item"><a class="style" href="/PcMaster/puplic/index.html">Inicio</a></li>
-                <li class="nav-item"><a class="style" href="/PcMaster/tests/itemTeste.html">Item</a></li>
-                <li class="nav-item"><a class="style" href="/PcMaster/tests/LojaTeste.html">Loja</a></li>
-            </ul>
+               <li class="nav-item"><a class="style" href="/PcMaster/puplic/index.html">Inicio</a></li>
+               <li class="nav-item"><a class="style" href="/PcMaster/tests/montagem.html">Montagem</a></li>
+               <li class="nav-item"><a class="style" href="/PcMaster/tests/LojaTeste.html">Loja</a></li>
             </ul>
             <div class="header-right">
-                <div class="header-barraPesquisa">
-                <form class="autocomplete" autocomplete="off">
-                    <div>
-                    <input type="text" id="input" placeholder="Digite..." />
-                    </div>
-                    <ul class="list"></ul>
-                </form>
-                </div>
-                <ul class="header-conta">
-                    <li><a href="/PcMaster/puplic/cadastro.html">Entrar</a></li>
-                    <?php echo $elemento; ?> <!-- Cria um elemento no php -->
-                    <li class="user" onclick="teste()"></li>
-                    <li><img class="carrinho icon" src="/PcMaster/assets/Imagens/carrinhos.png" alt="Carrinho de compras"></li>
-                </ul>
-                <ul>
-                <div class="barra-lateral">
-                    <div class="barra-lateral-conta-container">
-                        <li class="user"></li>
-                        <li><a><?php echo "conta";?></a></li>
-                    </div>
-                        <br>
-                        <button class="botao-barra-lateral">Endereços</button>  
-                        <button class="botao-barra-lateral">Carrinho</button>
-                        <button class="fechar-barra-lateral" onclick="fechar()">Fechar</button>
-                </div>
-            </ul>
+               <div class="header-barraPesquisa">
+                  <form class="autocomplete" autocomplete="off">
+                     <div>
+                        <input type="text" id="input" placeholder="Digite..." />
+                     </div>
+                     <ul class="list"></ul>
+                  </form>
+               </div>
+               <ul class="header-conta">
+                  <li><a href="/PcMaster/puplic/cadastro.html">Entrar</a></li>
+                  <li class="user"></li>
+                  <li><img class="carrinho icon" src="/PcMaster/assets/Imagens/carrinhos.png" alt="Carrinho de compras"></li>
+               </ul>
             </div>
             <div class="hamburger-menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+               <div class="bar"></div>
+               <div class="bar"></div>
+               <div class="bar"></div>
             </div>
-        </div>
-        <nav class="mobile-nav">
+         </div>
+         <nav class="mobile-nav">
             <ul>
-                <!-- os # na tag "a" devem ser preenchidos com suas paginas -->
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="#">Montar</a></li>
-                <li><a href="Loja.html">Loja</a></li>
-                <li><a href="cadastro.html">Sign Up</a></li>
-                <li><a href="#">Minha Conta</a></li>
-                <li><a href="#">Carrinho</a></li>
-                <li><input type="search" placeholder="Pesquisar"></li>
-                <li class="nav-sub-item">Armazenamento</li>
-                <li class="nav-sub-item">Placa-mãe</li>
-                <li class="nav-sub-item">Placa de video </li>
-                <li class="nav-sub-item">Gabinete</li>
-                <li class="nav-sub-item">Processador</li>
-                <li class="nav-sub-item">Fonte</li>
-                <li class="nav-sub-item">Memória</li>
-                <li class="nav-sub-item">Fans</li>
-                <li class="nav-sub-item">Montar</li>
-                <li class="nav-sub-item">Ajuda</li>
+               <!-- os # na tag "a" devem ser preenchidos com suas paginas -->
+               <li><a href="index.html">Inicio</a></li>
+               <li><a href="#">Montar</a></li>
+               <li><a href="Loja.html">Loja</a></li>
+               <li><a href="cadastro.html">Sign Up</a></li>
+               <li><a href="#">Minha Conta</a></li>
+               <li><a href="#">Carrinho</a></li>
+               <li><input type="search" placeholder="Pesquisar"></li>
+               <li class="nav-sub-item">Armazenamento</li>
+               <li class="nav-sub-item">Placa-mãe</li>
+               <li class="nav-sub-item">Placa de video </li>
+               <li class="nav-sub-item">Gabinete</li>
+               <li class="nav-sub-item">Processador</li>
+               <li class="nav-sub-item">Fonte</li>
+               <li class="nav-sub-item">Memória</li>
+               <li class="nav-sub-item">Fans</li>
+               <li class="nav-sub-item">Montar</li>
+               <li class="nav-sub-item">Ajuda</li>
             </ul>
-        </nav>
-    </header>
-
-    <div class="sub-header desktop-only">
-        <li class="sub-header-item">Armazenamento</li>
-        <li class="sub-header-item">Placa-mãe</li>
-        <li class="sub-header-item">Placa de video </li>
-        <li class="sub-header-item">Gabinete</li>
-        <li class="sub-header-item">Processador</li>
-        <li class="sub-header-item">Fonte</li>
-        <li class="sub-header-item">Memória</li>
-        <li class="sub-header-item">Fans</li>
-        <li class="sub-header-item">Montar</li>
-        <li class="sub-header-item">Ajuda</li>
-    </div>
-
-<div class="item-container">
-    <div class="item-imagem-container">
-        <img src="/PcMaster/assets/Imagens/Memória RAM Kingston Fury Beast 8GB DIMM DDR4 3600MHz.webp" width="400rem" height="350rem">
-        <div class="item_preco-container">
-            <div class="item_preco">
-                <p>R$ 199,00</p>
-                <p>Ver na loja</p>
+         </nav>
+      </header>
+      <div class="sub-header desktop-only">
+         <li class="sub-header-item">Armazenamento</li>
+         <li class="sub-header-item">Placa-mãe</li>
+         <li class="sub-header-item">Placa de video </li>
+         <li class="sub-header-item">Gabinete</li>
+         <li class="sub-header-item">Processador</li>
+         <li class="sub-header-item">Fonte</li>
+         <li class="sub-header-item">Memória</li>
+         <li class="sub-header-item">Fans</li>
+         <li class="sub-header-item">Montar</li>
+         <li class="sub-header-item">Ajuda</li>
+      </div>
+      <div class="img-slider">
+         <!-- Slide 01 (ativo por padrão) -->
+         <div class="slide active">
+            <img class="Image-slider"src="/PcMaster/assets/Imagens/Memória RAM XPG Gammix D35 DDR4 3200MHz.png" alt="">
+            <div class="info">
+               <h2>Memoria Ram XPG XPG Gammix D35 DDR4 3200MHz</h2>
+               <p>A memória RAM XPG GAMMIX D35 DDR4 3200MHz é ideal para gamers e profissionais que buscam alta performance e estabilidade.
+                  Com tecnologia DDR4, oferece velocidade de 3200MHz e baixa latência CL16, garantindo rapidez e resposta eficiente em tarefas exigentes.
+                  Seu design compacto com dissipador de calor de baixo perfil facilita a instalação em diferentes tipos de gabinetes, mantendo a memória fria mesmo em uso intenso.
+               </p>
             </div>
-            <div class="item_botoes-container">
-                <button class="botao-item-container">Comprar</button>
-                <button class="botao-carrinho-item-container"><img src="/PcMaster/assets/Imagens/carrinhos.png" alt="Carrinho imagem"  width="30px" height="30px"></button>
+         </div>
+         <!-- Slide 02 -->
+         <div class="slide">
+            <img class="Image-slider" src="/PcMaster/assets/Imagens/Banner 1.png" alt="">
+            <div class="info">
+               <h2>Memoria 02</h2>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.
+               </p>
             </div>
-        </div>    
-    </div>    
-    <div class="item_descricao-container">
-        <h1>Memória RAM Kingston Fury Beast 8GB DIMM DDR4 3600MHz</h1>
-        <br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla eget ligula at pretium. In a sodales ex, at laoreet nulla. Praesent sed erat
-            ullamcorper, sollicitudin nisi sit amet, rhoncus justo. Etiam consectetur, turpis at pretium rhoncus, tellus tellus varius eros, a maximus ante magna ac
-            orci. Quisque id dignissim odio, eget bibendum augue. Mauris nisl dui, facilisis ac sodales convallis, consectetur at arcu. Proin augue lorem, feugiat
-            accumsan elementum facilisis, pharetra nec nisi. Maecenas congue vitae est id tempor. Morbi ultrices vulputate auctor. Aenean non felis dictum turpis 
-            ultricies laoreet. Sed scelerisque tellus arcu, in volutpat felis interdum eget. Etiam placerat semper nisl ac efficitur. Quisque at placerat odio. Ut
-            facilisis dignissim porta. Nam auctor ligula non pretium lobortis. Cras non sagittis dui. Vivamus eu turpis nec elit malesuada molestie sit amet eget
-            enim. Donec lacus eros, bibendum et dictum eu, convallis ac tortor. Quisque cursus justo vitae diam vestibulum, ut fermentum nisl scelerisque. Donec
-            non vehicula eros. Donec egestas nec magna a elementum. Nulla vel ligula ut augue convallis iaculis at sit amet diam. Pellentesque sollicitudin rutrum 
-            erat vitae blandit.Ut porttitor ullamcorper elementum. Sed leo nulla, ornare eu ultricies vel, iaculis ac diam. Suspendisse in suscipit lacus.
-            Aliquam erat volutpat. Ut luctus ex a augue mattis, eu placerat purus faucibus. Proin blandit, tellus tincidunt hendrerit hendrerit, nulla eros porttitor
-            lorem, imperdiet porta orci nisi a ex. Cras commodo, lorem nec rutrum porta, est arcu mollis nisi, sed pulvinar ante dui a enim. In semper condimentum suscipit.
-            Ut nulla eros, interdum eu tellus sit amet, suscipit mollis arcu. Nam ornare cursus erat in laoreet. Integer feugiat magna eget ante luctus viverra. Donec sit
-            amet diam quis lectus dictum fermentum at quis odio. Quisque porttitor leo.
-        </p>
-    </div>   
-</div>
-<div class="especificacoes-item-container">
-    <div class="especificacoes-container">
-        <div class="especificacao">
-            <h1>Versão</h1>
-            <br>
-            <p>DDR4</p>
-        </div>
-        <div class="especificacao" style="    border-right: 1px solid;
-    border-left: 1px solid;">
-            <h1>Formato</h1>
-            <br>
-            <p>DIMM (desktops)</p>
-        </div>
-        <div class="especificacao">
-            <h1>Compatibilidade</h1>
-            <br>
-            <p>Intel e AMD</p>
-        </div>
-        <div class="especificacao">
-            <h1>Latência</h1>
-            <br>
-            <p>CL16</p>
-        </div>
-        <div class="especificacao" style="border-right: 1px solid; border-left: 1px solid;">
-            <h1>Velocidade</h1>
-            <br>
-            <p>3200MHz</p>
-        </div>
-        <div class="especificacao">
-            <h1>Capacidade</h1>
-            <br>
-            <p>8GB</p>
-        </div>                                
-    </div>
-    <div class="especificacao-design">
-        <h1>Design</h1>
-        <br>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, est blanditiis, 
-            consectetur error maxime tempore exercitationem aperiam quisquam,
-             modi excepturi ex iste dignissimos laudantium praesentium cumque ad fuga. Vel, tenetur!</p>  
-    </div>  
-</div>
-<div class="item-avaliacoes-container">
-    <ul class="avaliacoesPositivas-container">
-        <h1>Pontos Positivos</h1>
-        <br>
-        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas nihil rerum autem. Nobis aut placeat
-            quaerat odio, obcaecati ducimus porro et ipsum, cumque autem laudantium adipisci veniam facere accusantium vel!</li>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam repellendus est cum,
-            vero quae distinctio possimus corrupti tempore corporis. 
-            Quam aut, magnam esse quasi ducimus neque facilis velit tempore.</li>
-        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus praesentium odio sint cum
-            iste inventore consequatur corporis nostrum ipsam explicabo porro, pariatur illum amet. Neque dolorum 
-            facilis quas culpa corporis?</li>
-        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eligendi ipsa rem repellat doloremque, quod,
-            fugit, consequuntur aperiam minima ut tempora neque illum fugiat harum porro nostrum vitae ea voluptatibus?</li>
-        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem quas quasi expedita. Illo officia ullam tempore magni
-            error earum doloremque sunt porro, quod hic, ratione adipisci corrupti. Iusto, quidem perspiciatis.</li>
-    </ul>
-    <ul class="avaliacoesNegativas-container">
-        <h1>Pontos Negativos</h1>
-        <br>
-        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas nihil rerum autem. Nobis aut placeat
-            quaerat odio, obcaecati ducimus porro et ipsum, cumque autem laudantium adipisci veniam facere accusantium vel!</li>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam repellendus est cum,
-            vero quae distinctio possimus corrupti tempore corporis. 
-            Quam aut, magnam esse quasi ducimus neque facilis velit tempore.</li>
-        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus praesentium odio sint cum
-            iste inventore consequatur corporis nostrum ipsam explicabo porro, pariatur illum amet. Neque dolorum 
-            facilis quas culpa corporis?</li>
-        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eligendi ipsa rem repellat doloremque, quod,
-            fugit, consequuntur aperiam minima ut tempora neque illum fugiat harum porro nostrum vitae ea voluptatibus?</li>
-        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem quas quasi expedita. Illo officia ullam tempore magni
-            error earum doloremque sunt porro, quod hic, ratione adipisci corrupti. Iusto, quidem perspiciatis.</li>
-    </ul>    
-</div>
-<br>
-    <footer>
-        @2025 MikaelL e CaioV. Todos os Direitos Reservados. 
-    </footer>
+         </div>
+         <!-- Slide 03 -->
+         <div class="slide">
+            <img class="Image-slider" src="/PcMaster/assets/Imagens/placamaster.webp" alt="">
+            <div class="info">
+               <h2>Memoria 03</h2>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.
+               </p>
+            </div>
+         </div>
+         <!-- Slide 04 -->
+         <div class="slide">
+            <img class="Image-slider" src="/PcMaster/assets/Imagens/Memória RAM XPG Gammix D35 DDR4 3200MHz.png" alt="">
+            <div class="info">
+               <h2>Memoria 04</h2>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.
+               </p>
+            </div>
+         </div>
+         <!-- Slide 05 -->
+         <div class="slide">
+            <img class="Image-slider" src="/PcMaster/assets/Imagens/Memória RAM XPG Gammix D35 DDR4 3200MHz.png" alt="">
+            <div class="info">
+               <h2>Memoria 05</h2>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.
+               </p>
+            </div>
+         </div>
+         <!-- Botões de navegação -->
+         <div class="navigation">
+            <div class="btn active"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+         </div>
+      </div>
+      <!-- fim seção seção item slider  --> 
+      <!-- Conteudo do site -->
+      <div class="website-content" >
+      <section class="product">
+         <h2 class="product-category">Melhores Vendas</h2>
+         <button class="pre-btn"><img src="/PcMaster/assets/Imagens/Seta-3.png" alt=""></button>
+         <button class="nxt-btn"><img src="/PcMaster/assets/Imagens/Seta-3.png" alt=""></button>
+         <div class="product-container">
+            <div class="product-card">
+               <div class="product-alone">
+                  <div class="product-image">
+                     <img src="/PcMaster/assets/Imagens/Ryzen-5600gt.webp" class="product-thumb" alt="">
+                  </div>
+                  <div class="product-info">
+                     <h2 class="product-brand">AMD Ryzen 5 5600GT</h2>
+                     <p class="product-short-description">Confira aqui o processador AMD Ryzen 5 5600GT com 6 núcleos, 12 threads e DDR4-3200 que garantem boa performance!</p>
+                     <span class="price">$700.99</span>
+                     <button class="button-buy">Comprar</button>
+                  </div>
+               </div>
+            </div>
+            <div class="product-card">
+               <div class="product-alone">
+                  <div class="product-image">
+                     <img src="/PcMaster/assets/Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
+                  </div>
+                  <div class="product-info">
+                     <h2 class="product-brand">AMD Ryzen 5 5500</h2>
+                     <p class="product-short-description">Processador AMD Ryzen 5 5500, 3.6GHz (4.2GHz Max Turbo), Cache 19MB, AM4, Sem Vídeo - 100-100000457BOX</p>
+                     <span class="price">$500.99</span>
+                     <button class="button-buy">Comprar</button>
+                  </div>
+               </div>
+            </div>
+            <div class="product-card">
+               <div class="product-alone">
+                  <div class="product-image">
+                     <img src="/PcMaster/assets/Imagens/Processador Intel Core i5-12400F 6 Núcleos.webp" class="product-thumb" alt="">
+                  </div>
+                  <div class="product-info">
+                     <h2 class="product-brand">Intel Core i5-12400F</h2>
+                     <p class="product-short-description">Processador de 12ª geração com 6 núcleos e 12 threads, clock base de 2.5GHz e turbo de até 4.4GHz.
+                        Arquitetura Intel Alder Lake, compatível com placas-mãe LGA 1700.
+                     </p>
+                     <span class="price">$1.100.99</span>
+                     <button class="button-buy">Comprar</button>
+                  </div>
+               </div>
+            </div>
+            <div class="product-card">
+               <div class="product-alone">
+                  <div class="product-image">
+                     <img src="/PcMaster/assets/Imagens/MonitorAOC100hz.jpg" class="product-thumb" alt="">
+                  </div>
+                  <div class="product-info">
+                     <h2 class="product-brand">Monitor AOC 24" 100Hz 1ms Gaming HDMI</h2>
+                     <p class="product-short-description">Tela de 23,8" com resolução Full HD (1920x1080) e proporção 16:9. Conta com painel antirreflexo e suporte VESA 100x100 mm.
+                        Acompanha cabo de força, cabo HDMI, certificado de garantia, base e monitor. Ideal para uso doméstico ou profissional.
+                     </p>
+                     <span class="price">$1.229.99</span>
+                     <button class="button-buy">Comprar</button>
+                  </div>
+               </div>
+            </div>
+            <div class="product-card">
+               <div class="product-alone">
+                  <div class="product-image">
+                     <img src="/PcMaster/assets/Imagens/FonteGS600.webp" class="product-thumb" alt="">
+                  </div>
+                  <div class="product-info">
+                     <h2 class="product-brand">Fonte Gamemax GS600 80 Plus White</h2>
+                     <p class="product-short-description">Com certificação 80 Plus White, oferece eficiência energética e menor consumo.
+                        Conta com proteções contra curto-circuito, sobretensão, sobrecarga, subtensão e sobrecorrente.
+                     </p>
+                     <span class="price">$259.99</span>
+                     <button class="button-buy">Comprar</button>
+                  </div>
+               </div>
+            </div>
+            <div class="product-card">
+               <div class="product-alone">
+                  <div class="product-image">
+                     <img src="/PcMaster/assets/Imagens/WatercoolerAquaElite.jpg" class="product-thumb" alt="">
+                  </div>
+                  <div class="product-info">
+                     <h2 class="product-brand">THERMALRIGHT Aqua Elite 360 V3 Aio Water Cooler, 360 Liquid Cooling Radiator</h2>
+                     <p class="product-short-description">Refrigeramento Eficiente: O THERMALRIGHT Aqua Elite 360 V3 utiliza água para proporcionar um resfriamento eficiente
+                        e silencioso para o seu sistema.
+                     </p>
+                     <span class="price">$504.99</span>
+                     <button class="button-buy">Comprar</button>
+                  </div>
+               </div>
+            </div>
+            <div class="product-card">
+               <div class="product-alone">
+                  <div class="product-image">
+                     <img src="/PcMaster/assets/Imagens/B450mGigabyte.webp"  class="product-thumb" alt="">
+                  </div>
+                  <div class="product-info">
+                     <h2 class="product-brand">Placa-mãe Gigabyte B450m Gaming 2xddr4 Matx</h2>
+                     <p class="product-short-description">Compatível com processadores AMD no socket AM4,
+                        suporta memórias DDR4 e vem com chipset B450M. Ideal para setups de desempenho com bom custo-benefício.
+                     </p>
+                     <span class="price">$650.34</span>
+                     <button class="button-buy">Comprar</button>
+                  </div>
+               </div>
+            </div>
+            <div class="product-card">
+               <div class="product-alone">
+                  <div class="product-image">
+                     <img src="/PcMaster/assets/Imagens/Teclado-Logitech-G915.webp" class="product-thumb" alt="">
+                  </div>
+                  <div class="product-info">
+                     <h2 class="product-brand">Logitech G915 TKL</h2>
+                     <p class="product-short-description">Melhor teclado em desempenho. Possui switches precisos e funcionamento sem fio, ideal para uso em jogos competitivos</p>
+                     <span class="price">$999.99</span>
+                     <button class="button-buy">Comprar</button>
+                  </div>
+               </div>
+            </div>
+            <div class="product-card">
+               <div class="product-alone">
+                  <div class="product-image">
+                     <img src="/PcMaster/assets/Imagens/cadeira-ergonomica.jpg" class="product-thumb" alt="">
+                  </div>
+                  <div class="product-info">
+                     <h2 class="product-brand">Cadeira Ergonômica Python Fly XHOCB07</h2>
+                     <p class="product-short-description"> Capacidade máxima: 200 kg Dimensão: 65L x 53P cm Altura máxima: 120 cm Estofamento de malha</p>
+                     <span class="price">$500</span>
+                     <button class="button-buy">Comprar</button>
+                  </div>
+               </div>
+            </div>
+            <div class="product-last-card">
+               <div class="product-alone">
+                  <div class="product-image">
+                     <img src="/PcMaster/assets/Imagens/5060-windforce.webp" class="product-thumb" alt="">
+                     <button class="card-btn">adicionar ao carrinho</button>
+                  </div>
+                  <div class="product-info">
+                     <h2 class="product-brand">Placa de Vídeo Gigabyte RTX 5060 WINDFORCE OC 8G NVIDIA GeForce, 8GB GDDR7, 128bits, DLSS, Ray Tracing - GV-N5060WF2OC-8GD</h2>
+                     <p class="product-short-description">Arquitetura Blackwell com alto desempenho para games e criação de conteúdo.
+                        Compatível com PCIe e tecnologias atuais. Sistema WINDFORCE garante refrigeração eficiente com baixo consumo de energia
+                     </p>
+                     <span class="price">$2.650.72</span><span class="actual-price">$2.711.12</span>
+                     <button class="button-buy">Comprar</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <script src="/PcMaster/scripts/JS/image-slider.js"> </script>
+      <script src="/PcMaster/scripts/JS/item-slider.js"></script>
+      <!-- fim primeira seção item slider  --> 
       <script src="/PcMaster/scripts/JS/search-bar2.js"></script>
-</body>
+   </body>
 </html>
