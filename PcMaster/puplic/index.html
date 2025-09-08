@@ -31,11 +31,21 @@
                     <ul class="list"></ul>
                 </form>
                 </div>
-                <ul class="header-conta">
+               <ul class="header-conta">
                     <li><a href="/PcMaster/puplic/cadastro.html">Entrar</a></li>
-                    <li class="user"></li>
-                    <li><img class="carrinho icon" src="/PcMaster/assets/Imagens/carrinhos.png" alt="Carrinho de compras"></li>
-                </ul>
+                     <div class="user-dropdown-container">
+                      <div class="user" id="user-btn">
+                        <img src="/PcMaster/assets/Imagens/Perfil.png" alt="perfil"> </div>
+                              <ul class="user-dropdown-menu">
+                           <li><a href="#">Configurações</a></li>
+                           <li><a href="#">Carrinho</a></li>
+                           <li><a href="#">Endereço</a></li>
+                           <li><a href="#">Ajuda</a></li>
+                        </ul>
+                     </div>
+                  </li>
+                  <li><img class="carrinho icon" src="/PcMaster/assets/Imagens/carrinhos.png" alt="Carrinho de compras"></li>
+               </ul>
             </div>
             <div class="hamburger-menu">
                 <div class="bar"></div>
@@ -196,5 +206,6 @@
         @2025 MikaelL e CaioV. Todos os Direitos Reservados. 
     </footer>
       <script src="/PcMaster/scripts/JS/search-bar2.js"></script>
+      <script src="/PcMaster/scripts/JS/dropdown.js"></script>
 </body>
 </html>

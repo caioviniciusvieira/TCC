@@ -23,14 +23,25 @@
                <div class="header-barraPesquisa">
                   <form class="autocomplete" autocomplete="off">
                      <div>
-                        <input type="text" id="input" placeholder="Digite..." />
+                        <input type="text" id="input" placeholder="Digite..."/>
                      </div>
                      <ul class="list"></ul>
                   </form>
                </div>
                <ul class="header-conta">
-                  <li><a href="/PcMaster/puplic/cadastro.html">Entrar</a></li>
-                  <li class="user"></li>
+                    <li><a href="/PcMaster/puplic/cadastro.html">Entrar</a></li>
+                     <div class="user-dropdown-container">
+                        
+                        <div class="user" id="user-btn">
+                        <img src="/PcMaster/assets/Imagens/Perfil.png" alt="perfil"> </div>
+                              <ul class="user-dropdown-menu">
+                           <li><a href="#">Configurações</a></li>
+                           <li><a href="#">Carrinho</a></li>
+                           <li><a href="#">Endereço</a></li>
+                           <li><a href="#">Ajuda</a></li>
+                        </ul>
+                     </div>
+                  </li>
                   <li><img class="carrinho icon" src="/PcMaster/assets/Imagens/carrinhos.png" alt="Carrinho de compras"></li>
                </ul>
             </div>
@@ -40,6 +51,8 @@
                <div class="bar"></div>
             </div>
          </div>
+         <li>
+
          <nav class="mobile-nav">
             <ul>
                <!-- os # na tag "a" devem ser preenchidos com suas paginas -->
@@ -77,19 +90,20 @@
       </div>
       <div class="img-slider">
          <div class="slide active">
-            <img class="Image-slider"src="/PcMaster/assets/Imagens/Memória RAM XPG Gammix D35 DDR4 3200MHz.png" alt="">
+            <img class="Image-slider"src="/PcMaster/assets/Imagens/Banner 1.png" alt="">
             <div class="info">
-               <h2>Monte Seu Próprio PC: Mais Fácil do Que Você Imagina</h2>
+               <h2>Monte Seu Próprio PC</h2>
                <p>
                   Descubra passo a passo como montar um computador incrível, sem precisar ser expert em tecnologia — e sinta a satisfação de criar algo do zero!
                </p>
             </div>
          </div>
       </div>
+
       <!--+++++++++++++++++++++++Conteudo do site++++++++++++++++-->
+
       <div class="website-content">
-         <div class="website-left-content">
-            <div class="start-subtitle">
+            <div class="start-subtitle-first">
                <p>
                   Montar seu próprio computador pode parecer um projeto desafiador, especialmente pela primeira vez. Você pode achar que é muito complexo, muito caro ou muito demorado, mas não precisa ser!
                </p>
@@ -100,22 +114,38 @@
                   Leia nosso guia para obter instruções fáceis de serem seguidas ou assista aos nossos vídeos de instalação para ver demonstrações visuais.
                </p>
             </div>
-            <div class="Title">
+            
+            <div class="title">
                <h1>Pra que você realmente quer usar?</h1>
+                <div class="start-subtitle">
                <p>Hoje, as pessoas buscam um computador para diversas finalidades, seja elas
                   trabalhar, estudar, jogar, criar conteúdo ou simplesmente navegar na internet.
                </p>
-               <p>Cada usuário tem necessidades específicas, desde desempenho mais potente, para programas, jogos pesados, edições 3D e coisas onde que se precidsa de mais desempenho, desde um uso leve, como ver videos, jogos leves e fazer ações simples.
-                  Existem vários tipos de computadores, como desktops potentes para jogos e edição, notebooks versáteis para uso diário e ultrabooks para quem prioriza leveza.
+               <p>Cada usuário tem necessidades específicas, desde desempenho mais potente, para programas, jogos pesados, edições 3D e coisas onde se precisa de mais desempenho e velocidade,
+                   até um uso leve, como ver videos, jogos leves e fazer ações simples como ver redes sociais.</p>               
+               <p>Existem vários tipos de computadores, como desktops potentes para jogos e edição, notebooks versáteis para uso diário e ultrabooks para quem prioriza leveza.
                   Entender o que você realmente quer fazer ajuda a escolher o modelo ideal, evitando gastos desnecessários e garantindo uma experiência eficiente e satisfatória.
                </p>
+
+
+                <h1>1. Placa Mãe</h1>
+                <div class="start-subtitle">
+               <p>Hoje, as pessoas buscam um computador para diversas finalidades, seja elas
+                  trabalhar, estudar, jogar, criar conteúdo ou simplesmente navegar na internet.
+               </p>
+               <p>Cada usuário tem necessidades específicas, desde desempenho mais potente, para programas, jogos pesados, edições 3D e coisas onde se precisa de mais desempenho e velocidade,
+                   até um uso leve, como ver videos, jogos leves e fazer ações simples como ver redes sociais.</p>               
+               <p>Existem vários tipos de computadores, como desktops potentes para jogos e edição, notebooks versáteis para uso diário e ultrabooks para quem prioriza leveza.
+                  Entender o que você realmente quer fazer ajuda a escolher o modelo ideal, evitando gastos desnecessários e garantindo uma experiência eficiente e satisfatória.
+               </p>
+               <img class="img-right" src="/PcMaster/assets/Imagens/placa-montagem.jpg" alt="">
+
+             </div>
             </div>
          </div>
-         <div class="website-right-content">
-            <img class="img-right" src="/PcMaster/assets/Imagens/placa-montagem.jpg" alt="">
-            <p></p>
-         </div>
       </div>
+
       <script src="/PcMaster/scripts/JS/search-bar2.js"></script>
+      <script src="/PcMaster/scripts/JS/dropdown.js"></script>
    </body>
 </html>
