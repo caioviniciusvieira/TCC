@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/icon" href="/PcMaster/assets/Imagens/Logo-2 TCC.png">
+    <title>Master Pc</title>
+    <link rel="stylesheet" href="/PcMaster/src/CSS/confirmado.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <span id=logo>
+                <img class="icon" src="/PcMaster/assets/Imagens/pces.png" alt="Master PC Logo">
+                <h2>MasterPC</h2>
+            </span>
+            <ul class="header-navegacao">
+                <li class="nav-item"><a class="style" href="/PcMaster/tests/hardware.html">Explorar</a></li>
+                <li class="nav-item"><a class="style" href="/PcMaster/tests/montagem.html">Montagem</a></li>
+                <li class="nav-item"><a class="style" href="/PcMaster/tests/index.html">Loja</a></li>
+            </ul>
+            <div class="header-right">
+                <div class="header-barraPesquisa">
+                    <form class="autocomplete" autocomplete="off">
+                        <div>
+                            <input type="text" id="input" placeholder="Digite..." />
+                        </div>
+                        <ul class="list"></ul>
+                    </form>
+                </div>
+                <ul class="header-conta">
+                    <li><a href="/PcMaster/puplic/cadastro.html">Entrar</a></li>
+                    <div class="user-dropdown-container">
+                        <div class="user" id="user-btn">
+                            <img src="/PcMaster/assets/Imagens/Perfil.png" alt="perfil"> </div>
+                        <ul class="user-dropdown-menu">
+                            <li><a href="#">Configurações</a></li>
+                            <li><a href="#">Carrinho</a></li>
+                            <li><a href="#">Endereço</a></li>
+                            <li><a href="#">Ajuda</a></li>
+                        </ul>
+                    </div>
+                    </li>
+                    <li><img class="carrinho icon" src="/PcMaster/assets/Imagens/carrinhos.png" alt="Carrinho de compras"></li>
+                </ul>
+            </div>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <!-- os # na tag "a" devem ser preenchidos com suas paginas -->
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Montar</a></li>
+                <li><a href="Loja.html">Loja</a></li>
+                <li><a href="cadastro.html">Sign Up</a></li>
+                <li><a href="#">Minha Conta</a></li>
+                <li><a href="#">Carrinho</a></li>
+                <li><input type="search" placeholder="Pesquisar"></li>
+                <li class="nav-sub-item">Armazenamento</li>
+                <li class="nav-sub-item">Placa-mãe</li>
+                <li class="nav-sub-item">Placa de video </li>
+                <li class="nav-sub-item">Gabinete</li>
+                <li class="nav-sub-item">Processador</li>
+                <li class="nav-sub-item">Fonte</li>
+                <li class="nav-sub-item">Memória</li>
+                <li class="nav-sub-item">Fans</li>
+                <li class="nav-sub-item">Montar</li>
+                <li class="nav-sub-item">Ajuda</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="sub-header desktop-only">
+        <li class="sub-header-item">Armazenamento</li>
+        <li class="sub-header-item">Placa-mãe</li>
+        <li class="sub-header-item">Placa de video </li>
+        <li class="sub-header-item">Gabinete</li>
+        <li class="sub-header-item">Processador</li>
+        <li class="sub-header-item">Fonte</li>
+        <li class="sub-header-item">Memória</li>
+        <li class="sub-header-item">Fans</li>
+        <li class="sub-header-item">Montar</li>
+        <li class="sub-header-item">Ajuda</li>
+    </div>
+
+    <main class="container">
+        <h1>Pagamento Realizado com Sucesso!</h1>
+        <p class="sub-title">Obrigado por sua compra! Seu pedido está sendo processado.</p>
+
+        <div class="section order-status" id="status-pedido">
+            <!-- Status será inserido pelo JS -->
+        </div>
+
+        <div class="section">
+            <h2>Detalhes do Produto</h2>
+            <div class="order-details">
+                <img id="produto-img" src="/PcMaster/assets/Imagens/Memória RAM Kingston Fury Beast 8GB DIMM DDR4 3600MHz.webp" alt="Imagem do Produto" />
+                <div class="product-info">
+                    <h3 id="produto-nome"></h3>
+                    <p>Quantidade: <span id="produto-quantidade"></span></p>
+                    <p>Preço unitário: R$ <span id="produto-preco"></span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Endereço de Entrega</h2>
+            <div class="address" id="endereco-entrega">
+                <!-- Dados preenchidos via JS -->
+            </div>
+        </div>
+
+        <div class="section payment-summary">
+            <div>Valor Produtos:<span id="valor-produtos"></span></div>
+            <div>Frete:<span id="valor-frete"></span></div>
+            <div>Total:<span id="valor-total"></span></div>
+        </div>
+
+        <a href="/PcMaster/tests/index.html" class="btn-home">Voltar para a Página Inicial</a>
+    </main>
+
+    <script>
+    // Exemplo de status de pedido - você pode ajustar conforme quiser
+    const statusPedido = "Seu pedido está em processamento e será enviado em breve.";
+
+    // Simula dados do produto (você pode alterar para pegar do localStorage)
+    const produto = {
+        nome: "Pc Master G10 Pro",
+        imagem: "/PcMaster/assets/Imagens/pc_master_g10pro.png",
+        quantidade: 1,
+        preco: "399,90"
+    };
+
+    // Função para carregar dados do localStorage e preencher a página
+    function carregarDados() {
+        // Status do pedido
+        document.getElementById("status-pedido").textContent = statusPedido;
+
+        // Produto
+        document.getElementById("produto-img").src = produto.imagem;
+        document.getElementById("produto-img").alt = produto.nome;
+        document.getElementById("produto-nome").textContent = produto.nome;
+        document.getElementById("produto-quantidade").textContent = produto.quantidade;
+        document.getElementById("produto-preco").textContent = produto.preco;
+
+        // Endereço de entrega (do localStorage)
+        const enderecoCampos = [
+            "rua", "numero", "complemento", "bairro", "cidade", "estado", "cep"
+        ];
+
+        let enderecoHTML = "";
+        enderecoCampos.forEach(campo => {
+            let valor = localStorage.getItem(campo);
+            if (valor && valor.trim() !== "") {
+                if (campo === "cep") {
+                    enderecoHTML += `<p><strong>CEP:</strong> ${valor}</p>`;
+                } else if (campo === "numero") {
+                    enderecoHTML += `<p><strong>Número:</strong> ${valor}</p>`;
+                } else if (campo === "complemento") {
+                    enderecoHTML += `<p><strong>Complemento:</strong> ${valor}</p>`;
+                } else {
+                    // Para rua, bairro, cidade, estado
+                    const label = campo.charAt(0).toUpperCase() + campo.slice(1);
+                    enderecoHTML += `<p><strong>${label}:</strong> ${valor}</p>`;
+                }
+            }
+        });
+
+        document.getElementById("endereco-entrega").innerHTML = enderecoHTML;
+
+        // Valores da compra
+        document.getElementById("valor-produtos").textContent = "R$ " + (localStorage.getItem("valorProdutos") || "399,90");
+        document.getElementById("valor-frete").textContent = "R$ " + (localStorage.getItem("valorFrete") || "30,00");
+        document.getElementById("valor-total").textContent = "R$ " + (localStorage.getItem("valorTotal") || "429,90");
+    }
+
+    window.onload = carregarDados;
+    </script>
+    <script src="/PcMaster/scripts/JS/dropdown.js"></script>
+    <script src="/PcMaster/scripts/JS/search-bar2.js"></script>
+</body>
+
+</html>

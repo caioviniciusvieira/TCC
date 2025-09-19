@@ -104,14 +104,14 @@ li {
 }
 
 
-input[type="text"]:focus,
-input[type="text"]:hover {
+.pesquisa #input:focus,
+.pesquisa #input:hover {
     outline: none;
 }
 
 
 /* Estilo Específico para o Input de Pesquisa */
-input[type="text"] {
+.pesquisa #input{
     cursor: pointer;
     width: 30rem;
     height: 2.3rem;
@@ -222,375 +222,140 @@ h2 {
     display: flex;
 }
 
-/* ìnicio da seção de vendas do produto */
-
-.website-content {
-  background-color: white;
-  margin-left: 5%;      
-  margin-right: 5%;
-  height: 100%;
-  padding-top: 5%;
-  overflow: hidden;
-}
-
-/* PRODUCTOS */
-
-.product {
-  position: relative;
-  overflow: hidden;
-  border-radius: 5px;
-  padding-bottom: 2vh;
-  padding-top: 1vh;
-  background-color: rgb(202, 202, 202);
-  padding-left: 5%;
-  padding-right: 5%;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  margin-left: 3%;
-  margin-right: 3%;
-  height: auto;
-  
-}
+/* ------------------------- */
 
 
-.product2 {
-  position: relative;
-  overflow: hidden;
-  border-radius: 5px;
-  margin-top: 8%;
-  padding-top: 1%;
-  padding-bottom: 2%;
-  background-color: rgb(202, 202, 202);
-  padding-left: 5%;
-  padding-right: 5%;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  margin-left: 3%;
-  margin-right: 3%;
-  margin-bottom: 5%;
-  overflow: hidden;
-  
-  
-}
+    .form-wrapper {
+      display: flex;
+      justify-content: center;
+      padding: 5%;
+    }
 
-.product-alone {
-  padding: 2%;
-  width: 100%;
-}
+    .form-container {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 2rem;
+      width: 100%;
+      max-width: 700px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
 
-.product-category {
-  text-align: left;
-  font-size: 2.4rem;
-  font-weight: 1500;
-  margin-bottom: 1rem;
-  text-transform: capitalize;
-}
+    .form-title {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
 
-.product-container {
-  display: flex;
-  scroll-behavior: smooth;
-  overflow-y: hidden;
-  
-}
+    .form-title h1 {
+      font-size: 2rem;
+      color: #0077cc;
+    }
 
-.product-container::-webkit-scrollbar {
-  display: none;
-}
+    .form-title p {
+      color: #333;
+    }
 
-.product-card {
-  flex: 0 0 auto;
-  width: 20%;
-  height: 20%;
-  margin-right: 2%;
-  
-}
+    form {
+      display: flex;
+      flex-direction: column;
+    }
 
-.product-last-card {
-  flex: 0 0 auto;
-  width: 20%;
-  height: 20%;
-}
+    label {
+      margin-top: 1rem;
+      font-weight: 500;
+      color: #333;
+    }
 
-.product-image {
-  width: 100%;
-  height: 200px; /* define a altura dos moldes */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden; /* esconde o que passar do molde */
-  background-color: #ffffff; /* opcional, pra padronizar o fundo */
-  border-radius: 8px;
-}
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
 
-.product-thumb {
-  height: 100%;
-  width: auto;
-  object-fit: contain; /* mantém proporção */
-}
+    input:focus,
+    select:focus {
+      border-color: #0077cc;
+      outline: none;
+    }
 
+    input:valid {
+      border-color: rgb(90, 90, 90);
+    }
 
-.discount-tag {
-  position: absolute;
-  background: #fff;
-  padding: 5px;
-  border-radius: 5px;
-  color: #ff7d7d;
-  right: 10px;
-  top: 10px;
-  text-transform: capitalize;
-}
+    input:invalid {
+      border-color: #0077cc;
+    }
 
-.card-btn {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px;
-  width: 90%;
-  text-transform: capitalize;
-  border: none;
-  outline: none;
-  background: #949494;
-  border-radius: 5px;
-  transition: 0.5s;
-  cursor: pointer;
-  opacity: 0;
-  height: auto;
-}
+    .optional {
+      font-size: 0.85rem;
+      color: gray;
+      font-style: italic;
+    }
 
-.button-buy {
-  margin-top: 5%;
-  padding: 4%;
-  width: 100%;
-  text-transform: capitalize;
-  border: none;
-  outline: none;
-  background: #fff;
-  border-radius: 8px;
-  cursor: pointer;
+    .form-section {
+      margin-top: 2rem;
+    }
 
-}
+    .form-section h2 {
+      font-size: 1.3rem;
+      color: #0077cc;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
 
-.button-buy:hover {
-  background-color: cornflowerblue;
-  transition: 0.8s;
+    .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
 
-}
+    .form-group {
+      flex: 1;
+      min-width: 45%;
+    }
 
-.product-card:hover .card-btn {
-  opacity: 1;
-}
+    .btn-submit {
+      margin-top: 2rem;
+      background-color: #0077cc;
+      color: white;
+      padding: 12px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
 
-.card-btn:hover {
-  background: #ff7d7d;
-  color: #fff;
-}
+    .btn-submit:hover {
+      background-color: #005fa3;
+    }
 
-.product-info {
-  width: 100%;
-  height: 100%;
-  padding-top: 10px;
-}
+    @media (max-width: 600px) {
+      .form-row {
+        flex-direction: column;
+      }
 
-.product-brand {
-  text-transform: capitalize;
-  color: black;
-  font-size: 1rem;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 1; /* Limita a 2 linhas */
-  -webkit-box-orient: vertical;
-}
+      .form-group {
+        min-width: 100%;
+      }
 
-.product-short-description {
-  width: 100%;
-  font-size: 0.7rem;
-  line-height: 1rem;
-  overflow: hidden;
-  opacity: 0.5;
-  text-transform: capitalize;
-  display: -webkit-box;
-  -webkit-line-clamp: 3; /* Limita a 2 linhas */
-  -webkit-box-orient: vertical;
-}
+      .form-container {
+        padding: 1.5rem;
+      }
+    }
 
-.price {
-  font-weight: 900;
-  font-size: 20px;
-}
-
-.actual-price {
-  margin-left: 20px;
-  opacity: 0.5;
-  text-decoration: line-through;
-}
-
-.pre-btn,
-.nxt-btn {
-  border: none;
-  width: 3%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0);
-  cursor: pointer;
-  z-index: 8;
-}
-
-.pre-btn {
-  left: 0;
-  transform: rotate(180deg);
-}
-
-.nxt-btn {
-  right: 0;
-}
-
-.pre-btn img{
-  height: 10%;
-  Width: 40%;
-  opacity: 0.5;
-
-
-}
-.nxt-btn img {
-    height: 10%;
-    Width: 40%;
-    opacity: 0.5;
-}
-
-.pre-btn:hover img,
-.nxt-btn:hover img {
-  opacity: 1;
-  transition: 0.8s;
-}
-
-.collection-container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
-}
-
-.collection {
-  position: relative;
-}
-
-.collection img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.collection p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff;
-  font-size: 50px;
-  text-transform: capitalize;
-}
-
-.collection:nth-child(3) {
-  grid-column: span 2;
-  margin-bottom: 10px;
-}
-
-/* Parte Image Slider */
-
-/* Container principal do slider */
-
-.img-slider{
-   position: relative;
-     width: 100%;/* Agora ocupa 100% do contêiner pai */
-      aspect-ratio: 16 / 9; /* Mantém proporção (opcional) */ 
-      max-height: 500px; /* Altura máxima opcional */ 
-      overflow: hidden; /* Evita que a imagem vaze para fora */ 
-      background: #1D212B; 
-      margin: 0;
- 
-}
-
-.img-slider .slide{
- z-index: 1;
- position: absolute;
- clip-path: circle(0% at 0 50%);
-  width: 100%;
-  height: 100%;
-}
-
-
-.img-slider .slide.active{
- clip-path: circle(150% at 0 50%);
- transition: 2s;
- transition-property: clip-path;
-}
-
-/* Imagens do slide */
-.img-slider .slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Preenche o contêiner sem deformar, pode usar 'contain' se preferir */
-  border-radius: 5px;
-}
-
-
-/* Informações do slide (título e texto) */
-.img-slider .slide .info {
-  position: absolute;
-  top: 0;
-  padding: 15px 30px; /* Espaçamento interno */
-}
-
-/* Título do slide */
-.img-slider .slide .info h2 {
-  color: #fff;
-  font-size: 45px;
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
-
-/* Texto descritivo do slide */
-.img-slider .slide .info p {
-  color: #fff;
-  background: rgba(0, 0, 0, 0.1); /* Fundo semi-transparente */
-  font-size: 16px;
-  width: 60%; /* Largura do texto */
-  padding: 10px;
-  border-radius: 4px;
-}
-
-/* Navegação do slider (bolinhas) */
-.img-slider .navigation {
-  z-index: 2;
-  position: absolute;
-  display: flex;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%); /* Centraliza horizontalmente */
-}
-
-/* Botões da navegação */
-.img-slider .navigation .btn {
-  background: rgba(255, 255, 255, 0.5); /* Cor com transparência */
-  width: 12px;
-  height: 12px;
-  margin: 10px;
-  border-radius: 50%; /* Formato circular */
-  cursor: pointer;
-}
-
-/* Botão ativo (slide atual) */
-.img-slider .navigation .btn.active {
-  background: #2696E9; /* Cor azul destaque */
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Sombra leve */
-}
-
+    
 /* Container do dropdown de usuário */
+
+
+
 .user-dropdown-container {
     position: relative;
     display: flex;
@@ -637,7 +402,23 @@ h2 {
     display: block;
 }
 
-/* ---------- RESPONSIVIDADE ---------- */
+
+
+
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .user-dropdown-menu {
+        right: 0;
+        left: auto;
+        width: 100vw;
+        max-width: 300px;
+    }
+}
+
+
+
 
 /* Telas até 820px */
 @media (max-width: 820px) {
@@ -848,6 +629,7 @@ h2 {
 
     .header-content {
         justify-content: space-between; /* Ajusta o alinhamento do conteúdo do cabeçalho */
+        margin: 0;
     }
 
     .sub-header.desktop-only {

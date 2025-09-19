@@ -1,151 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="shortcut icon" type="image/icon" href="/PcMaster/assets/Imagens/Logo-2 TCC.png">
-      <title>Master Pc</title>
-      <link rel="stylesheet" href="/PcMaster/src/CSS/montagem.css">
-   </head>
-   <body>
-      <header>
-         <div class="header-content">
-            <span id=logo>
-               <img class="icon" src="/PcMaster/assets/Imagens/pces.png" alt="Master PC Logo">
-               <h2>MasterPC</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/icon" href="/PcMaster/assets/Imagens/Logo-2 TCC.png">
+    <title>Master Pc</title>
+    <link rel="stylesheet" href="/PcMaster/src/CSS/montagem.css">
+</head>
+<body>
+
+    <!-- Header Principal -->
+    <header>
+        <div class="header-content">
+            <span id="logo">
+                <img class="icon" src="/PcMaster/assets/Imagens/pces.png" alt="Master PC Logo">
+                <h2>MasterPC</h2>
             </span>
+
             <ul class="header-navegacao">
-               <li class="nav-item"><a class="style" href="/PcMaster/puplic/index.html">Inicio</a></li>
-               <li class="nav-item"><a class="style" href="/PcMaster/tests/montagem.html">Montagem</a></li>
-               <li class="nav-item"><a class="style" href="/PcMaster/tests/LojaTeste.html">Loja</a></li>
+                <li class="nav-item"><a class="style" href="/PcMaster/puplic/hardware.html">Hardware</a></li>
+                <li class="nav-item"><a class="style" href="/PcMaster/tests/montagem.html">Montagem</a></li>
+                <li class="nav-item"><a class="style" href="/PcMaster/tests/index.html">Loja</a></li>
             </ul>
+
             <div class="header-right">
-               <div class="header-barraPesquisa">
-                  <form class="autocomplete" autocomplete="off">
-                     <div>
+                <!-- Barra de Pesquisa -->
+                <div class="header-barraPesquisa">
+                    <form class="autocomplete" autocomplete="off">
                         <input type="text" id="input" placeholder="Digite..."/>
-                     </div>
-                     <ul class="list"></ul>
-                  </form>
-               </div>
-               <ul class="header-conta">
+                        <ul class="list"></ul>
+                    </form>
+                </div>
+
+                <!-- Conta do Usuário -->
+                <ul class="header-conta">
                     <li><a href="/PcMaster/puplic/cadastro.html">Entrar</a></li>
-                     <div class="user-dropdown-container">
-                        
-                        <div class="user" id="user-btn">
-                        <img src="/PcMaster/assets/Imagens/Perfil.png" alt="perfil"> </div>
-                              <ul class="user-dropdown-menu">
-                           <li><a href="#">Configurações</a></li>
-                           <li><a href="#">Carrinho</a></li>
-                           <li><a href="#">Endereço</a></li>
-                           <li><a href="#">Ajuda</a></li>
-                        </ul>
-                     </div>
-                  </li>
-                  <li><img class="carrinho icon" src="/PcMaster/assets/Imagens/carrinhos.png" alt="Carrinho de compras"></li>
-               </ul>
+                    <li>
+                        <div class="user-dropdown-container">
+                            <div class="user" id="user-btn">
+                                <img src="/PcMaster/assets/Imagens/Perfil.png" alt="Perfil">
+                            </div>
+                            <ul class="user-dropdown-menu">
+                                <li><a href="#">Configurações</a></li>
+                                <li><a href="#">Carrinho</a></li>
+                                <li><a href="#">Endereço</a></li>
+                                <li><a href="#">Ajuda</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><img class="carrinho icon" src="/PcMaster/assets/Imagens/carrinhos.png" alt="Carrinho de compras"></li>
+                </ul>
             </div>
+
+            <!-- Menu Hamburger Mobile -->
             <div class="hamburger-menu">
-               <div class="bar"></div>
-               <div class="bar"></div>
-               <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
-         </div>
-         <li>
+        </div>
 
-         <nav class="mobile-nav">
+        <!-- Navegação Mobile -->
+        <nav class="mobile-nav">
             <ul>
-               <!-- os # na tag "a" devem ser preenchidos com suas paginas -->
-               <li><a href="index.html">Inicio</a></li>
-               <li><a href="#">Montar</a></li>
-               <li><a href="Loja.html">Loja</a></li>
-               <li><a href="cadastro.html">Sign Up</a></li>
-               <li><a href="#">Minha Conta</a></li>
-               <li><a href="#">Carrinho</a></li>
-               <li><input type="search" placeholder="Pesquisar"></li>
-               <li class="nav-sub-item">Armazenamento</li>
-               <li class="nav-sub-item">Placa-mãe</li>
-               <li class="nav-sub-item">Placa de video </li>
-               <li class="nav-sub-item">Gabinete</li>
-               <li class="nav-sub-item">Processador</li>
-               <li class="nav-sub-item">Fonte</li>
-               <li class="nav-sub-item">Memória</li>
-               <li class="nav-sub-item">Fans</li>
-               <li class="nav-sub-item">Montar</li>
-               <li class="nav-sub-item">Ajuda</li>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#">Montar</a></li>
+                <li><a href="Loja.html">Loja</a></li>
+                <li><a href="cadastro.html">Sign Up</a></li>
+                <li><a href="#">Minha Conta</a></li>
+                <li><a href="#">Carrinho</a></li>
+                <li><input type="search" placeholder="Pesquisar"></li>
+                <li class="nav-sub-item">Armazenamento</li>
+                <li class="nav-sub-item">Placa-mãe</li>
+                <li class="nav-sub-item">Placa de vídeo</li>
+                <li class="nav-sub-item">Gabinete</li>
+                <li class="nav-sub-item">Processador</li>
+                <li class="nav-sub-item">Fonte</li>
+                <li class="nav-sub-item">Memória</li>
+                <li class="nav-sub-item">Fans</li>
+                <li class="nav-sub-item">Montar</li>
+                <li class="nav-sub-item">Ajuda</li>
             </ul>
-         </nav>
-      </header>
-      <div class="sub-header desktop-only">
-         <li class="sub-header-item">Armazenamento</li>
-         <li class="sub-header-item">Placa-mãe</li>
-         <li class="sub-header-item">Placa de video </li>
-         <li class="sub-header-item">Gabinete</li>
-         <li class="sub-header-item">Processador</li>
-         <li class="sub-header-item">Fonte</li>
-         <li class="sub-header-item">Memória</li>
-         <li class="sub-header-item">Fans</li>
-         <li class="sub-header-item">Montar</li>
-         <li class="sub-header-item">Ajuda</li>
-      </div>
-      <div class="img-slider">
-         <div class="slide active">
-            <img class="Image-slider"src="/PcMaster/assets/Imagens/Banner 1.png" alt="">
+        </nav>
+    </header>
+
+    <!-- Sub-header Desktop -->
+    <div class="sub-header desktop-only">
+        <li class="sub-header-item">Armazenamento</li>
+        <li class="sub-header-item">Placa-mãe</li>
+        <li class="sub-header-item">Placa de vídeo</li>
+        <li class="sub-header-item">Gabinete</li>
+        <li class="sub-header-item">Processador</li>
+        <li class="sub-header-item">Fonte</li>
+        <li class="sub-header-item">Memória</li>
+        <li class="sub-header-item">Fans</li>
+        <li class="sub-header-item">Montar</li>
+        <li class="sub-header-item">Ajuda</li>
+    </div>
+
+    <!-- Slider de Imagem -->
+    <div class="img-slider">
+        <div class="slide active">
+            <img class="Image-slider" src="/PcMaster/assets/Imagens/Banner 1.png" alt="Banner">
             <div class="info">
-               <h2>Monte Seu Próprio PC</h2>
-               <p>
-                  Descubra passo a passo como montar um computador incrível, sem precisar ser expert em tecnologia — e sinta a satisfação de criar algo do zero!
-               </p>
+                <h2>Monte Seu Próprio PC</h2>
+                <p>
+                    Descubra passo a passo como montar um computador incrível, sem precisar ser expert em tecnologia — e sinta a satisfação de criar algo do zero!
+                </p>
             </div>
-         </div>
-      </div>
+        </div>
+    </div>
 
-      <!--+++++++++++++++++++++++Conteudo do site++++++++++++++++-->
+    <!-- Conteúdo do Site -->
+    <div class="website-content">
 
-      <div class="website-content">
-            <div class="start-subtitle-first">
-               <p>
-                  Montar seu próprio computador pode parecer um projeto desafiador, especialmente pela primeira vez. Você pode achar que é muito complexo, muito caro ou muito demorado, mas não precisa ser!
-               </p>
-               <p>
-                  Neste guia, explicaremos como construir um computador passo a passo. Primeiro vamos entender de que seu computador precisa, explorando as diferentes peças e orientando você no seu processo de montagem.
-               </p>
-               <p>
-                  Leia nosso guia para obter instruções fáceis de serem seguidas ou assista aos nossos vídeos de instalação para ver demonstrações visuais.
-               </p>
+        <div class="start-subtitle-first">
+            <p>
+                Montar seu próprio computador pode parecer um projeto desafiador, especialmente pela primeira vez. Você pode achar que é muito complexo, muito caro ou muito demorado, mas não precisa ser!
+            </p>
+            <p>
+                Neste guia, explicaremos como construir um computador passo a passo. Primeiro vamos entender de que seu computador precisa, explorando as diferentes peças e orientando você no seu processo de montagem.
+            </p>
+            <p>
+                Leia nosso guia para obter instruções fáceis de serem seguidas ou assista aos nossos vídeos de instalação para ver demonstrações visuais.
+            </p>
+        </div>
+
+        <div class="title">
+            <h1>Pra que você realmente quer usar?</h1>
+            <div class="start-subtitle">
+                <p>
+                    Hoje, as pessoas buscam um computador para diversas finalidades, seja trabalhar, estudar, jogar, criar conteúdo ou simplesmente navegar na internet.
+                </p>
+                <p>
+                    Cada usuário tem necessidades específicas, desde desempenho mais potente, para programas, jogos pesados, edições 3D, até uso leve, como ver vídeos ou redes sociais.
+                </p>
+                <p>
+                    Existem vários tipos de computadores: desktops potentes para jogos e edição, notebooks versáteis para uso diário e ultrabooks para quem prioriza leveza. Entender suas necessidades ajuda a escolher o modelo ideal.
+                </p>
             </div>
-            
-            <div class="title">
-               <h1>Pra que você realmente quer usar?</h1>
-                <div class="start-subtitle">
-               <p>Hoje, as pessoas buscam um computador para diversas finalidades, seja elas
-                  trabalhar, estudar, jogar, criar conteúdo ou simplesmente navegar na internet.
-               </p>
-               <p>Cada usuário tem necessidades específicas, desde desempenho mais potente, para programas, jogos pesados, edições 3D e coisas onde se precisa de mais desempenho e velocidade,
-                   até um uso leve, como ver videos, jogos leves e fazer ações simples como ver redes sociais.</p>               
-               <p>Existem vários tipos de computadores, como desktops potentes para jogos e edição, notebooks versáteis para uso diário e ultrabooks para quem prioriza leveza.
-                  Entender o que você realmente quer fazer ajuda a escolher o modelo ideal, evitando gastos desnecessários e garantindo uma experiência eficiente e satisfatória.
-               </p>
 
-
-                <h1>1. Placa Mãe</h1>
-                <div class="start-subtitle">
-               <p>Hoje, as pessoas buscam um computador para diversas finalidades, seja elas
-                  trabalhar, estudar, jogar, criar conteúdo ou simplesmente navegar na internet.
-               </p>
-               <p>Cada usuário tem necessidades específicas, desde desempenho mais potente, para programas, jogos pesados, edições 3D e coisas onde se precisa de mais desempenho e velocidade,
-                   até um uso leve, como ver videos, jogos leves e fazer ações simples como ver redes sociais.</p>               
-               <p>Existem vários tipos de computadores, como desktops potentes para jogos e edição, notebooks versáteis para uso diário e ultrabooks para quem prioriza leveza.
-                  Entender o que você realmente quer fazer ajuda a escolher o modelo ideal, evitando gastos desnecessários e garantindo uma experiência eficiente e satisfatória.
-               </p>
-               <img class="img-right" src="/PcMaster/assets/Imagens/placa-montagem.jpg" alt="">
-
-             </div>
+            <h1>1. Placa Mãe</h1>
+            <div class="start-subtitle">
+                <p>
+                    A escolha da placa-mãe é essencial para a compatibilidade e desempenho do seu computador. Ela conecta todos os componentes e determina limites de expansão.
+                </p>
+                <p>
+                    Analise recursos como slots de memória, suporte a processadores, portas USB e recursos extras, como Wi-Fi integrado ou iluminação RGB.
+                </p>
+                <img class="img-start" src="/PcMaster/assets/Imagens/placa-montagem.jpg" alt="Placa Mãe">
             </div>
-         </div>
-      </div>
+        </div>
+    </div>
 
-      <script src="/PcMaster/scripts/JS/search-bar2.js"></script>
-      <script src="/PcMaster/scripts/JS/dropdown.js"></script>
-   </body>
+    <script src="/PcMaster/scripts/JS/search-bar2.js"></script>
+    <script src="/PcMaster/scripts/JS/dropdown.js"></script>
+
+</body>
 </html>

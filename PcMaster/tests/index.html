@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/icon" href="/PcMaster/assets/Imagens/Logo-2 TCC.png">
+    <title>Master Pc</title>
+    <link rel="stylesheet" href="/PcMaster/src/CSS/index.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <span id=logo>
+                <img class="icon" src="/PcMaster/assets/Imagens/pces.png" alt="Master PC Logo">
+                <h2>MasterPC</h2>
+            </span>
+            <ul class="header-navegacao">
+                <li class="nav-item"><a class="style" href="/PcMaster/puplic/">Explorar</a></li>
+                <li class="nav-item"><a class="style" href="/PcMaster/tests/montagem.html">Montagem</a></li>
+                <li class="nav-item"><a class="style" href="/PcMaster/tests/index.html">Loja</a></li>
+            </ul>
+            <div class="header-right">
+                <div class="header-barraPesquisa">
+                    <form class="autocomplete" autocomplete="off">
+                        <div>
+                            <input type="text" id="input" placeholder="Digite..." />
+                        </div>
+                        <ul class="list"></ul>
+                    </form>
+                </div>
+                <ul class="header-conta">
+                    <li><a href="/PcMaster/puplic/cadastro.html">Cadastrar</a></li>
+                    <div class="user-dropdown-container">
+                        <div class="user" id="user-btn">
+                            <img src="/PcMaster/assets/Imagens/Perfil.png" alt="perfil"> </div>
+                        <ul class="user-dropdown-menu">
+                            <li><a href="#">Configurações</a></li>
+                            <li><a href="#">Carrinho</a></li>
+                            <li><a href="#">Endereço</a></li>
+                            <li><a href="#">Ajuda</a></li>
+                        </ul>
+                    </div>
+                    </li>
+                    <li><img class="carrinho icon" src="/PcMaster/assets/Imagens/carrinhos.png" alt="Carrinho de compras"></li>
+                </ul>
+            </div>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <!-- os # na tag "a" devem ser preenchidos com suas paginas -->
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Montar</a></li>
+                <li><a href="Loja.html">Loja</a></li>
+                <li><a href="cadastro.html">Sign Up</a></li>
+                <li><a href="#">Minha Conta</a></li>
+                <li><a href="#">Carrinho</a></li>
+                <li><input type="search" placeholder="Pesquisar"></li>
+                <li class="nav-sub-item">Armazenamento</li>
+                <li class="nav-sub-item">Placa-mãe</li>
+                <li class="nav-sub-item">Placa de video </li>
+                <li class="nav-sub-item">Gabinete</li>
+                <li class="nav-sub-item">Processador</li>
+                <li class="nav-sub-item">Fonte</li>
+                <li class="nav-sub-item">Memória</li>
+                <li class="nav-sub-item">Fans</li>
+                <li class="nav-sub-item">Montar</li>
+                <li class="nav-sub-item">Ajuda</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="sub-header desktop-only">
+        <li class="sub-header-item">Armazenamento</li>
+        <li class="sub-header-item">Placa-mãe</li>
+        <li class="sub-header-item">Placa de video </li>
+        <li class="sub-header-item">Gabinete</li>
+        <li class="sub-header-item">Processador</li>
+        <li class="sub-header-item">Fonte</li>
+        <li class="sub-header-item">Memória</li>
+        <li class="sub-header-item">Fans</li>
+        <li class="sub-header-item">Montar</li>
+        <li class="sub-header-item">Ajuda</li>
+    </div>
+    <div class="img-slider">
+        <!-- Slide 01 (ativo por padrão) -->
+        <div class="slide active">
+            <img class="Image-slider" src="/PcMaster/assets/Imagens/Memória RAM XPG Gammix D35 DDR4 3200MHz.png" alt="">
+            <div class="info">
+                <h2>Memoria Ram XPG XPG Gammix D35 DDR4 3200MHz</h2>
+                <p>A memória RAM XPG GAMMIX D35 DDR4 3200MHz é ideal para gamers e profissionais que buscam alta performance e estabilidade.
+                    Com tecnologia DDR4, oferece velocidade de 3200MHz e baixa latência CL16, garantindo rapidez e resposta eficiente em tarefas exigentes.
+                    Seu design compacto com dissipador de calor de baixo perfil facilita a instalação em diferentes tipos de gabinetes, mantendo a memória fria mesmo em uso intenso.
+                </p>
+            </div>
+        </div>
+        <!-- Slide 02 -->
+        <div class="slide">
+            <img class="Image-slider" src="/PcMaster/assets/Imagens/Banner-1.png" alt="">
+            <div class="info">
+                <h2>Memoria 02</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.
+                </p>
+            </div>
+        </div>
+        <!-- Slide 03 -->
+        <div class="slide">
+            <img class="Image-slider" src="/PcMaster/assets/Imagens/placamaster.webp" alt="">
+            <div class="info">
+                <h2>Memoria 03</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.
+                </p>
+            </div>
+        </div>
+        <!-- Slide 04 -->
+        <div class="slide">
+            <img class="Image-slider" src="/PcMaster/assets/Imagens/Memória RAM XPG Gammix D35 DDR4 3200MHz.png" alt="">
+            <div class="info">
+                <h2>Memoria 04</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.
+                </p>
+            </div>
+        </div>
+        <!-- Slide 05 -->
+        <div class="slide">
+            <img class="Image-slider" src="/PcMaster/assets/Imagens/Memória RAM XPG Gammix D35 DDR4 3200MHz.png" alt="">
+            <div class="info">
+                <h2>Memoria 05</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.
+                </p>
+            </div>
+        </div>
+        <!-- Botões de navegação -->
+        <div class="navigation">
+            <div class="btn active"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+        </div>
+    </div>
+    <!-- fim seção seção item slider  -->
+    <!-- Conteudo do site -->
+    <div class="website-content">
+        <section class="product">
+            <h2 class="product-category">Melhores Vendas</h2>
+            <button class="pre-btn"><img src="/PcMaster/assets/Imagens/Seta-3.png" alt=""></button>
+            <button class="nxt-btn"><img src="/PcMaster/assets/Imagens/Seta-3.png" alt=""></button>
+            <div class="product-container">
+                <div class="product-card">
+                    <div class="product-alone">
+                        <div class="product-image">
+                            <img src="/PcMaster/assets/Imagens/Memória RAM Kingston Fury Beast 8GB DIMM DDR4 3600MHz.webp" class="product-thumb" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2 class="product-brand">Memoria Ram</h2>
+                            <p class="product-short-description">Aumente a velocidade do seu computador com esta memória RAM
+                                de 16GB DDR4. Ideal para jogos, multitarefa pesada e softwares profissionais, ela oferece desempenho rápido,
+                                baixo consumo de energia e resposta imediata para tudo que você precisa.
+                                Compatível com a maioria das placas-mãe modernas, é o upgrade perfeito para dar nova vida ao seu PC.</p>
+
+                            <span class="price">110.99</span>
+                            <button onclick="comprar()" class="button-buy" href="/PcMaster/tests/dadospagamento.html"> Comprar </button>
+                            <script>
+                            function comprar() {
+                                window.location.href = "/PcMaster/tests/itemTeste.html";
+                            }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-alone">
+                        <div class="product-image">
+                            <img src="/PcMaster/assets/Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2 class="product-brand">AMD Ryzen 5 5500</h2>
+                            <p class="product-short-description">Processador AMD Ryzen 5 5500, 3.6GHz (4.2GHz Max Turbo), Cache 19MB, AM4, Sem Vídeo - 100-100000457BOX</p>
+                            <span class="price">$500.99</span>
+                            <button class="button-buy">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-alone">
+                        <div class="product-image">
+                            <img src="/PcMaster/assets/Imagens/Processador Intel Core i5-12400F 6 Núcleos.webp" class="product-thumb" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2 class="product-brand">Intel Core i5-12400F</h2>
+                            <p class="product-short-description">Processador de 12ª geração com 6 núcleos e 12 threads, clock base de 2.5GHz e turbo de até 4.4GHz.
+                                Arquitetura Intel Alder Lake, compatível com placas-mãe LGA 1700.
+                            </p>
+                            <span class="price">$1.100.99</span>
+                            <button class="button-buy">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-alone">
+                        <div class="product-image">
+                            <img src="/PcMaster/assets/Imagens/MonitorAOC100hz.jpg" class="product-thumb" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2 class="product-brand">Monitor AOC 24" 100Hz 1ms Gaming HDMI</h2>
+                            <p class="product-short-description">Tela de 23,8" com resolução Full HD (1920x1080) e proporção 16:9. Conta com painel antirreflexo e suporte VESA 100x100 mm.
+                                Acompanha cabo de força, cabo HDMI, certificado de garantia, base e monitor. Ideal para uso doméstico ou profissional.
+                            </p>
+                            <span class="price">$1.229.99</span>
+                            <button class="button-buy">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-alone">
+                        <div class="product-image">
+                            <img src="/PcMaster/assets/Imagens/FonteGS600.webp" class="product-thumb" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2 class="product-brand">Fonte Gamemax GS600 80 Plus White</h2>
+                            <p class="product-short-description">Com certificação 80 Plus White, oferece eficiência energética e menor consumo.
+                                Conta com proteções contra curto-circuito, sobretensão, sobrecarga, subtensão e sobrecorrente.
+                            </p>
+                            <span class="price">$259.99</span>
+                            <button class="button-buy">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-alone">
+                        <div class="product-image">
+                            <img src="/PcMaster/assets/Imagens/WatercoolerAquaElite.jpg" class="product-thumb" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2 class="product-brand">THERMALRIGHT Aqua Elite 360 V3 Aio Water Cooler, 360 Liquid Cooling Radiator</h2>
+                            <p class="product-short-description">Refrigeramento Eficiente: O THERMALRIGHT Aqua Elite 360 V3 utiliza água para proporcionar um resfriamento eficiente
+                                e silencioso para o seu sistema.
+                            </p>
+                            <span class="price">$504.99</span>
+                            <button class="button-buy">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-alone">
+                        <div class="product-image">
+                            <img src="/PcMaster/assets/Imagens/B450mGigabyte.webp" class="product-thumb" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2 class="product-brand">Placa-mãe Gigabyte B450m Gaming 2xddr4 Matx</h2>
+                            <p class="product-short-description">Compatível com processadores AMD no socket AM4,
+                                suporta memórias DDR4 e vem com chipset B450M. Ideal para setups de desempenho com bom custo-benefício.
+                            </p>
+                            <span class="price">$650.34</span>
+                            <button class="button-buy">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-alone">
+                        <div class="product-image">
+                            <img src="/PcMaster/assets/Imagens/Teclado-Logitech-G915.webp" class="product-thumb" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2 class="product-brand">Logitech G915 TKL</h2>
+                            <p class="product-short-description">Melhor teclado em desempenho. Possui switches precisos e funcionamento sem fio, ideal para uso em jogos competitivos</p>
+                            <span class="price">$999.99</span>
+                            <button class="button-buy">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-alone">
+                        <div class="product-image">
+                            <img src="/PcMaster/assets/Imagens/cadeira-ergonomica.jpg" class="product-thumb" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2 class="product-brand">Cadeira Ergonômica Python Fly XHOCB07</h2>
+                            <p class="product-short-description"> Capacidade máxima: 200 kg Dimensão: 65L x 53P cm Altura máxima: 120 cm Estofamento de malha</p>
+                            <span class="price">$500</span>
+                            <button class="button-buy">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-last-card">
+                    <div class="product-alone">
+                        <div class="product-image">
+                            <img src="/PcMaster/assets/Imagens/5060-windforce.webp" class="product-thumb" alt="">
+                            <button class="card-btn">adicionar ao carrinho</button>
+                        </div>
+                        <div class="product-info">
+                            <h2 class="product-brand">Placa de Vídeo Gigabyte RTX 5060 WINDFORCE OC 8G NVIDIA GeForce, 8GB GDDR7, 128bits, DLSS, Ray Tracing - GV-N5060WF2OC-8GD</h2>
+                            <p class="product-short-description">Arquitetura Blackwell com alto desempenho para games e criação de conteúdo.
+                                Compatível com PCIe e tecnologias atuais. Sistema WINDFORCE garante refrigeração eficiente com baixo consumo de energia
+                            </p>
+                            <span class="price">$2.650.72</span><span class="actual-price">$2.711.12</span>
+                            <button class="button-buy">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="product2">
+            <h2 class="product-category">Melhores Vendas</h2>
+            <button class="pre-btn"><img src="/PcMaster/assets/Imagens/Seta-3.png" alt=""></button>
+            <button class="nxt-btn"><img src="/PcMaster/assets/Imagens/Seta-3.png" alt=""></button>
+            <div class="product-container">
+                <div class="product-card">
+                    <div class="product-alone">
+                        <div class="product-image">
+                            <img src="/PcMaster/assets/Imagens/Ryzen-5600gt.webp" class="product-thumb" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2 class="product-brand">AMD Ryzen 5 5600GT</h2>
+                            <p class="product-short-description">Confira aqui o processador AMD Ryzen 5 5600GT com 6 núcleos, 12 threads e DDR4-3200 que garantem boa performance!</p>
+                            <span class="price">$700.99</span>
+                            <button class="button-buy">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-alone">
+                        <div class="product-image">
+                            <img src="/PcMaster/assets/Imagens/Processador AMD Ryzen 5 5500   6-Core.jpg" class="product-thumb" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2 class="product-brand">AMD Ryzen 5 5500</h2>
+                            <p class="product-short-description">Processador AMD Ryzen 5 5500, 3.6GHz (4.2GHz Max Turbo), Cache 19MB, AM4, Sem Vídeo - 100-100000457BOX</p>
+                            <span class="price">$500.99</span>
+                            <button class="button-buy">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-alone">
+                        <div class="product-image">
+                            <img src="/PcMaster/assets/Imagens/Processador Intel Core i5-12400F 6 Núcleos.webp" class="product-thumb" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2 class="product-brand">Intel Core i5-12400F</h2>
+                            <p class="product-short-description">Processador de 12ª geração com 6 núcleos e 12 threads, clock base de 2.5GHz e turbo de até 4.4GHz.
+                                Arquitetura Intel Alder Lake, compatível com placas-mãe LGA 1700.
+                            </p>
+                            <span class="price">$1.100.99</span>
+                            <button class="button-buy">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-alone">
+                        <div class="product-image">
+                            <img src="/PcMaster/assets/Imagens/MonitorAOC100hz.jpg" class="product-thumb" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2 class="product-brand">Monitor AOC 24" 100Hz 1ms Gaming HDMI</h2>
+                            <p class="product-short-description">Tela de 23,8" com resolução Full HD (1920x1080) e proporção 16:9. Conta com painel antirreflexo e suporte VESA 100x100 mm.
+                                Acompanha cabo de força, cabo HDMI, certificado de garantia, base e monitor. Ideal para uso doméstico ou profissional.
+                            </p>
+                            <span class="price">$1.229.99</span>
+                            <button class="button-buy">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-alone">
+                        <div class="product-image">
+                            <img src="/PcMaster/assets/Imagens/FonteGS600.webp" class="product-thumb" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2 class="product-brand">Fonte Gamemax GS600 80 Plus White</h2>
+                            <p class="product-short-description">Com certificação 80 Plus White, oferece eficiência energética e menor consumo.
+                                Conta com proteções contra curto-circuito, sobretensão, sobrecarga, subtensão e sobrecorrente.
+                            </p>
+                            <span class="price">$259.99</span>
+                            <button class="button-buy">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-alone">
+                        <div class="product-image">
+                            <img src="/PcMaster/assets/Imagens/WatercoolerAquaElite.jpg" class="product-thumb" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2 class="product-brand">THERMALRIGHT Aqua Elite 360 V3 Aio Water Cooler, 360 Liquid Cooling Radiator</h2>
+                            <p class="product-short-description">Refrigeramento Eficiente: O THERMALRIGHT Aqua Elite 360 V3 utiliza água para proporcionar um resfriamento eficiente
+                                e silencioso para o seu sistema.
+                            </p>
+                            <span class="price">$504.99</span>
+                            <button class="button-buy">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-alone">
+                        <div class="product-image">
+                            <img src="/PcMaster/assets/Imagens/B450mGigabyte.webp" class="product-thumb" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2 class="product-brand">Placa-mãe Gigabyte B450m Gaming 2xddr4 Matx</h2>
+                            <p class="product-short-description">Compatível com processadores AMD no socket AM4,
+                                suporta memórias DDR4 e vem com chipset B450M. Ideal para setups de desempenho com bom custo-benefício.
+                            </p>
+                            <span class="price">$650.34</span>
+                            <button class="button-buy">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-alone">
+                        <div class="product-image">
+                            <img src="/PcMaster/assets/Imagens/Teclado-Logitech-G915.webp" class="product-thumb" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2 class="product-brand">Logitech G915 TKL</h2>
+                            <p class="product-short-description">Melhor teclado em desempenho. Possui switches precisos e funcionamento sem fio, ideal para uso em jogos competitivos</p>
+                            <span class="price">$999.99</span>
+                            <button class="button-buy">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-alone">
+                        <div class="product-image">
+                            <img src="/PcMaster/assets/Imagens/cadeira-ergonomica.jpg" class="product-thumb" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2 class="product-brand">Cadeira Ergonômica Python Fly XHOCB07</h2>
+                            <p class="product-short-description"> Capacidade máxima: 200 kg Dimensão: 65L x 53P cm Altura máxima: 120 cm Estofamento de malha</p>
+                            <span class="price">$500</span>
+                            <button class="button-buy">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-last-card">
+                    <div class="product-alone">
+                        <div class="product-image">
+                            <img src="/PcMaster/assets/Imagens/5060-windforce.webp" class="product-thumb" alt="">
+                            <button class="card-btn">adicionar ao carrinho</button>
+                        </div>
+                        <div class="product-info">
+                            <h2 class="product-brand">Placa de Vídeo Gigabyte RTX 5060 WINDFORCE OC 8G NVIDIA GeForce, 8GB GDDR7, 128bits, DLSS, Ray Tracing - GV-N5060WF2OC-8GD</h2>
+                            <p class="product-short-description">Arquitetura Blackwell com alto desempenho para games e criação de conteúdo.
+                                Compatível com PCIe e tecnologias atuais. Sistema WINDFORCE garante refrigeração eficiente com baixo consumo de energia
+                            </p>
+                            <span class="price">$2.650.72</span><span class="actual-price">$2.711.12</span>
+                            <button class="button-buy">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="/PcMaster/scripts/JS/image-slider.js"> </script>
+            <script src="/PcMaster/scripts/JS/item-slider.js"></script>
+            <!-- fim primeira seção item slider  -->
+            <script src="/PcMaster/scripts/JS/search-bar2.js"></script>
+            <script src="/PcMaster/scripts/JS/dropdown.js"></script>
+</body>
+
+</html>

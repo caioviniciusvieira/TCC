@@ -1,55 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/icon" href="/PcMaster/assets/Imagens/Logo-2 TCC.png">
-    <title>MASTER PC</title>
+    <title>Master Pc</title>
     <link rel="stylesheet" href="/PcMaster/src/CSS/item.css">
-    <script src="/PcMaster/scripts/JS/menu.js" defer></script>
-    <script src="/PcMaster/scripts/JS/conta-menu.js" defer></script>
 </head>
+
 <body>
     <header>
         <div class="header-content">
             <span id=logo>
-                <img class="icon" src="/PcMaster/assets/Imagens/Logo-2 TCC.png" alt="Master PC Logo">
+                <img class="icon" src="/PcMaster/assets/Imagens/pces.png" alt="Master PC Logo">
                 <h2>MasterPC</h2>
             </span>
             <ul class="header-navegacao">
-               <ul class="header-navegacao">
-                <li class="nav-item"><a class="style" href="/PcMaster/puplic/index.html">Inicio</a></li>
-                <li class="nav-item"><a class="style" href="/PcMaster/tests/itemTeste.html">Item</a></li>
-                <li class="nav-item"><a class="style" href="/PcMaster/tests/LojaTeste.html">Loja</a></li>
-            </ul>
+                <li class="nav-item"><a class="style" href="/PcMaster/puplic/hardware.html">Explorar</a></li>
+                <li class="nav-item"><a class="style" href="/PcMaster/tests/montagem.html">Montar</a></li>
+                <li class="nav-item"><a class="style" href="/PcMaster/tests/index.html">Loja</a></li>
             </ul>
             <div class="header-right">
                 <div class="header-barraPesquisa">
-                <form class="autocomplete" autocomplete="off">
-                    <div>
-                    <input type="text" id="input" placeholder="Digite..." />
-                    </div>
-                    <ul class="list"></ul>
-                </form>
+                    <form class="autocomplete" autocomplete="off">
+                        <div>
+                            <input type="text" id="input" placeholder="Digite..." />
+                        </div>
+                        <ul class="list"></ul>
+                    </form>
                 </div>
                 <ul class="header-conta">
                     <li><a href="/PcMaster/puplic/cadastro.html">Entrar</a></li>
-                    <?php echo $elemento; ?> <!-- Cria um elemento no php -->
-                    <li class="user" onclick="teste()"></li>
-                    <li><img class="carrinho icon" src="/PcMaster/assets/Imagens/carrinhos.png" alt="Carrinho de compras"></li>
-                    
-                </ul>
+                    <div class="user-dropdown-container">
 
-                <ul>
-                <div class="barra-lateral">
-                    <div class="barra-lateral-conta-container">
+                        <div class="user" id="user-btn">
+                            <img src="/PcMaster/assets/Imagens/Perfil.png" alt="perfil"> </div>
+                        <ul class="user-dropdown-menu">
+                            <li><a href="#">Configurações</a></li>
+                            <li><a href="#">Carrinho</a></li>
+                            <li><a href="#">Endereço</a></li>
+                            <li><a href="#">Ajuda</a></li>
+                        </ul>
                     </div>
-                        <br>
-                        <button class="botao-barra-lateral">Endereços</button>  
-                        <button class="botao-barra-lateral">Carrinho</button>
-                        <button class="fechar-barra-lateral" onclick="fechar()">Fechar</button>
-                </div>
-            </ul>
+                    </li>
+                    <li><img class="carrinho icon" src="/PcMaster/assets/Imagens/carrinhos.png" alt="Carrinho de compras"></li>
+                </ul>
             </div>
             <div class="hamburger-menu">
                 <div class="bar"></div>
@@ -57,30 +53,31 @@
                 <div class="bar"></div>
             </div>
         </div>
-        <nav class="mobile-nav">
-            <ul>
-                <!-- os # na tag "a" devem ser preenchidos com suas paginas -->
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="#">Montar</a></li>
-                <li><a href="Loja.html">Loja</a></li>
-                <li><a href="cadastro.html">Sign Up</a></li>
-                <li><a href="#">Minha Conta</a></li>
-                <li><a href="#">Carrinho</a></li>
-                <li><input type="search" placeholder="Pesquisar"></li>
-                <li class="nav-sub-item">Armazenamento</li>
-                <li class="nav-sub-item">Placa-mãe</li>
-                <li class="nav-sub-item">Placa de video </li>
-                <li class="nav-sub-item">Gabinete</li>
-                <li class="nav-sub-item">Processador</li>
-                <li class="nav-sub-item">Fonte</li>
-                <li class="nav-sub-item">Memória</li>
-                <li class="nav-sub-item">Fans</li>
-                <li class="nav-sub-item">Montar</li>
-                <li class="nav-sub-item">Ajuda</li>
-            </ul>
-        </nav>
-    </header>
+        <li>
 
+            <nav class="mobile-nav">
+                <ul>
+                    <!-- os # na tag "a" devem ser preenchidos com suas paginas -->
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Montar</a></li>
+                    <li><a href="Loja.html">Loja</a></li>
+                    <li><a href="cadastro.html">Sign Up</a></li>
+                    <li><a href="#">Minha Conta</a></li>
+                    <li><a href="#">Carrinho</a></li>
+                    <li><input type="search" placeholder="Pesquisar"></li>
+                    <li class="nav-sub-item">Armazenamento</li>
+                    <li class="nav-sub-item">Placa-mãe</li>
+                    <li class="nav-sub-item">Placa de video </li>
+                    <li class="nav-sub-item">Gabinete</li>
+                    <li class="nav-sub-item">Processador</li>
+                    <li class="nav-sub-item">Fonte</li>
+                    <li class="nav-sub-item">Memória</li>
+                    <li class="nav-sub-item">Fans</li>
+                    <li class="nav-sub-item">Montar</li>
+                    <li class="nav-sub-item">Ajuda</li>
+                </ul>
+            </nav>
+    </header>
     <div class="sub-header desktop-only">
         <li class="sub-header-item">Armazenamento</li>
         <li class="sub-header-item">Placa-mãe</li>
@@ -94,120 +91,124 @@
         <li class="sub-header-item">Ajuda</li>
     </div>
 
-<div class="item-container">
-    <div class="item-imagem-container">
-        <img src="/PcMaster/assets/Imagens/Memória RAM Kingston Fury Beast 8GB DIMM DDR4 3600MHz.webp" width="400rem" height="350rem">
-        <div class="item_preco-container">
-            <div class="item_preco">
-                <p>R$ 199,00</p>
-                <p>Ver na loja</p>
+    <div class="item-container">
+        <div class="item-imagem-container">
+            <img src="/PcMaster/assets/Imagens/Memória RAM Kingston Fury Beast 8GB DIMM DDR4 3600MHz.webp" width="400rem" height="350rem">
+            <div class="item_preco-container">
+                <div class="item_preco">
+                    <p>R$ 199,00</p>
+                    <p>Ver na loja</p>
+                </div>
+                <div class="item_botoes-container">
+
+                    <button onclick="comprar()" class="botao-item-container">Comprar</button>
+
+                    <script>
+                    function comprar() {
+                        window.location.href = "/PcMaster/tests/dadospagamento.html";
+                    }
+                    </script>
+
+                    <button class="botao-carrinho-item-container"><img src="/PcMaster/assets/Imagens/carrinhos.png" alt="Carrinho imagem" width="30px" height="30px"></button>
+                </div>
             </div>
-            <div class="item_botoes-container">
-                <button class="botao-item-container">Comprar</button>
-                <button class="botao-carrinho-item-container"><img src="/PcMaster/assets/Imagens/carrinhos.png" alt="Carrinho imagem"  width="30px" height="30px"></button>
-            </div>
-        </div>    
-    </div>    
-    <div class="item_descricao-container">
-        <h1>Memória RAM Kingston Fury Beast 8GB DIMM DDR4 3600MHz</h1>
-        <br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla eget ligula at pretium. In a sodales ex, at laoreet nulla. Praesent sed erat
-            ullamcorper, sollicitudin nisi sit amet, rhoncus justo. Etiam consectetur, turpis at pretium rhoncus, tellus tellus varius eros, a maximus ante magna ac
-            orci. Quisque id dignissim odio, eget bibendum augue. Mauris nisl dui, facilisis ac sodales convallis, consectetur at arcu. Proin augue lorem, feugiat
-            accumsan elementum facilisis, pharetra nec nisi. Maecenas congue vitae est id tempor. Morbi ultrices vulputate auctor. Aenean non felis dictum turpis 
-            ultricies laoreet. Sed scelerisque tellus arcu, in volutpat felis interdum eget. Etiam placerat semper nisl ac efficitur. Quisque at placerat odio. Ut
-            facilisis dignissim porta. Nam auctor ligula non pretium lobortis. Cras non sagittis dui. Vivamus eu turpis nec elit malesuada molestie sit amet eget
-            enim. Donec lacus eros, bibendum et dictum eu, convallis ac tortor. Quisque cursus justo vitae diam vestibulum, ut fermentum nisl scelerisque. Donec
-            non vehicula eros. Donec egestas nec magna a elementum. Nulla vel ligula ut augue convallis iaculis at sit amet diam. Pellentesque sollicitudin rutrum 
-            erat vitae blandit.Ut porttitor ullamcorper elementum. Sed leo nulla, ornare eu ultricies vel, iaculis ac diam. Suspendisse in suscipit lacus.
-            Aliquam erat volutpat. Ut luctus ex a augue mattis, eu placerat purus faucibus. Proin blandit, tellus tincidunt hendrerit hendrerit, nulla eros porttitor
-            lorem, imperdiet porta orci nisi a ex. Cras commodo, lorem nec rutrum porta, est arcu mollis nisi, sed pulvinar ante dui a enim. In semper condimentum suscipit.
-            Ut nulla eros, interdum eu tellus sit amet, suscipit mollis arcu. Nam ornare cursus erat in laoreet. Integer feugiat magna eget ante luctus viverra. Donec sit
-            amet diam quis lectus dictum fermentum at quis odio. Quisque porttitor leo.
-        </p>
-    </div>   
-</div>
-<div class="especificacoes-item-container">
-    <div class="especificacoes-container">
-        <div class="especificacao">
-            <h1>Versão</h1>
-            <br>
-            <p>DDR4</p>
         </div>
-        <div class="especificacao" style="    border-right: 1px solid;
-    border-left: 1px solid;">
-            <h1>Formato</h1>
+        <div class="item_descricao-container">
+            <h1>Memória RAM Kingston Fury Beast 8GB DIMM DDR4 3600MHz</h1>
             <br>
-            <p>DIMM (desktops)</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla eget ligula at pretium. In a sodales ex, at laoreet nulla. Praesent sed erat
+                ullamcorper, sollicitudin nisi sit amet, rhoncus justo. Etiam consectetur, turpis at pretium rhoncus, tellus tellus varius eros, a maximus ante magna ac
+                orci. Quisque id dignissim odio, eget bibendum augue. Mauris nisl dui, facilisis ac sodales convallis, consectetur at arcu. Proin augue lorem, feugiat
+                accumsan elementum facilisis, pharetra nec nisi. Maecenas congue vitae est id tempor. Morbi ultrices vulputate auctor. Aenean non felis dictum turpis
+                ultricies laoreet. Sed scelerisque tellus arcu, in volutpat felis interdum eget. Etiam placerat semper nisl ac efficitur. Quisque at placerat odio. Ut
+                facilisis dignissim porta. Nam auctor ligula non pretium lobortis. Cras non sagittis dui. Vivamus eu turpis nec elit malesuada molestie sit amet eget
+                enim. Donec lacus eros, bibendum et dictum eu, convallis ac tortor. Quisque cursus justo vitae diam vestibulum, ut fermentum nisl scelerisque. Donec
+                non vehicula eros. Donec egestas nec magna a elementum. Nulla vel ligula ut augue convallis iaculis at sit amet diam. Pellentesque sollicitudin rutrum
+                erat vitae blandit.Ut porttitor ullamcorper elementum. Sed leo nulla, ornare eu ultricies vel, iaculis ac diam. Suspendisse in suscipit lacus.
+                Aliquam erat volutpat. Ut luctus ex a augue mattis, eu placerat purus faucibus. Proin blandit, tellus tincidunt hendrerit hendrerit, nulla eros porttitor
+                lorem, imperdiet porta orci nisi a ex. Cras commodo, lorem nec rutrum porta, est arcu mollis nisi, sed pulvinar ante dui a enim. In semper condimentum suscipit.
+                Ut nulla eros, interdum eu tellus sit amet, suscipit mollis arcu. Nam ornare cursus erat in laoreet. Integer feugiat magna eget ante luctus viverra. Donec sit
+                amet diam quis lectus dictum fermentum at quis odio. Quisque porttitor leo.
+            </p>
         </div>
-        <div class="especificacao">
-            <h1>Compatibilidade</h1>
-            <br>
-            <p>Intel e AMD</p>
-        </div>
-        <div class="especificacao">
-            <h1>Latência</h1>
-            <br>
-            <p>CL16</p>
-        </div>
-        <div class="especificacao" style="border-right: 1px solid; border-left: 1px solid;">
-            <h1>Velocidade</h1>
-            <br>
-            <p>3200MHz</p>
-        </div>
-        <div class="especificacao">
-            <h1>Capacidade</h1>
-            <br>
-            <p>8GB</p>
-        </div>                                
     </div>
-    <div class="especificacao-design">
-        <h1>Design</h1>
-        <br>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, est blanditiis, 
-            consectetur error maxime tempore exercitationem aperiam quisquam,
-             modi excepturi ex iste dignissimos laudantium praesentium cumque ad fuga. Vel, tenetur!</p>  
-    </div>  
-</div>
+    <div class="especificacoes-item-container">
+        <div class="especificacoes-container">
+            <div class="especificacao">
+                <h1>Versão</h1>
+                <br>
+                <p>DDR4</p>
+            </div>
+            <div class="especificacao" style="    border-right: 1px solid;
+    border-left: 1px solid;">
+                <h1>Formato</h1>
+                <br>
+                <p>DIMM (desktops)</p>
+            </div>
+            <div class="especificacao">
+                <h1>Compatibilidade</h1>
+                <br>
+                <p>Intel e AMD</p>
+            </div>
+            <div class="especificacao">
+                <h1>Latência</h1>
+                <br>
+                <p>CL16</p>
+            </div>
+            <div class="especificacao" style="border-right: 1px solid; border-left: 1px solid;">
+                <h1>Velocidade</h1>
+                <br>
+                <p>3200MHz</p>
+            </div>
+            <div class="especificacao">
+                <h1>Capacidade</h1>
+                <br>
+                <p>8GB</p>
+            </div>
+        </div>
+        <div class="especificacao-design">
+            <h1>Design</h1>
+            <br>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, est blanditiis,
+                consectetur error maxime tempore exercitationem aperiam quisquam,
+                modi excepturi ex iste dignissimos laudantium praesentium cumque ad fuga. Vel, tenetur!</p>
+        </div>
+    </div>
+    <!-- AVALIAÇÕES -->
 <div class="item-avaliacoes-container">
-    <ul class="avaliacoesPositivas-container">
+    <div class="avaliacoesPositivas-container">
         <h1>Pontos Positivos</h1>
-        <br>
-        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas nihil rerum autem. Nobis aut placeat
-            quaerat odio, obcaecati ducimus porro et ipsum, cumque autem laudantium adipisci veniam facere accusantium vel!</li>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam repellendus est cum,
-            vero quae distinctio possimus corrupti tempore corporis. 
-            Quam aut, magnam esse quasi ducimus neque facilis velit tempore.</li>
-        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus praesentium odio sint cum
-            iste inventore consequatur corporis nostrum ipsam explicabo porro, pariatur illum amet. Neque dolorum 
-            facilis quas culpa corporis?</li>
-        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eligendi ipsa rem repellat doloremque, quod,
-            fugit, consequuntur aperiam minima ut tempora neque illum fugiat harum porro nostrum vitae ea voluptatibus?</li>
-        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem quas quasi expedita. Illo officia ullam tempore magni
-            error earum doloremque sunt porro, quod hic, ratione adipisci corrupti. Iusto, quidem perspiciatis.</li>
-    </ul>
-    <ul class="avaliacoesNegativas-container">
+        <div class="avaliacao-texto">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas nihil rerum autem...
+        </div>
+        <div class="avaliacao-texto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam repellendus...
+        </div>
+        <div class="avaliacao-texto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus praesentium odio sint...
+        </div>
+    </div>
+
+    <div class="avaliacoesNegativas-container">
         <h1>Pontos Negativos</h1>
-        <br>
-        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas nihil rerum autem. Nobis aut placeat
-            quaerat odio, obcaecati ducimus porro et ipsum, cumque autem laudantium adipisci veniam facere accusantium vel!</li>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam repellendus est cum,
-            vero quae distinctio possimus corrupti tempore corporis. 
-            Quam aut, magnam esse quasi ducimus neque facilis velit tempore.</li>
-        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus praesentium odio sint cum
-            iste inventore consequatur corporis nostrum ipsam explicabo porro, pariatur illum amet. Neque dolorum 
-            facilis quas culpa corporis?</li>
-        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eligendi ipsa rem repellat doloremque, quod,
-            fugit, consequuntur aperiam minima ut tempora neque illum fugiat harum porro nostrum vitae ea voluptatibus?</li>
-        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem quas quasi expedita. Illo officia ullam tempore magni
-            error earum doloremque sunt porro, quod hic, ratione adipisci corrupti. Iusto, quidem perspiciatis.</li>
-    </ul>    
+        <div class="avaliacao-texto">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas nihil rerum autem...
+        </div>
+        <div class="avaliacao-texto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam repellendus...
+        </div>
+        <div class="avaliacao-texto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus praesentium odio sint...
+        </div>
+    </div>
 </div>
-<br>
+
+    <br>
     <footer>
-        @2025 MikaelL e CaioV. Todos os Direitos Reservados. 
+        @2025 MikaelL e CaioV. Todos os Direitos Reservados.
     </footer>
-      <script src="/PcMaster/scripts/JS/search-bar2.js"></script>
-           <script src="/PcMaster/scripts/JS/dropdown.js"></script>
+    <script src="/PcMaster/scripts/JS/search-bar2.js"></script>
+    <script src="/PcMaster/scripts/JS/dropdown.js"></script>
 </body>
+
 </html>

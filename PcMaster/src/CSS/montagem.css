@@ -6,8 +6,9 @@
 
 /* Estilos Globais do Corpo da Página */
 body {
-    background-color: rgb(255, 255, 255);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Define a fonte padrão para o corpo do documento */
+    background-color: rgb(224, 224, 224);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* Define a fonte padrão para o corpo do documento */
 }
 
 /* Estilos do Cabeçalho Principal (Header) */
@@ -19,7 +20,8 @@ header {
     justify-content: center;
     font-size: 1.0rem;
     flex-wrap: wrap;
-    position: relative; /* Define o posicionamento relativo para o cabeçalho */
+    position: relative;
+    /* Define o posicionamento relativo para o cabeçalho */
 }
 
 /* Conteúdo Interno do Cabeçalho */
@@ -29,14 +31,16 @@ header {
     max-width: 1200px;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px; /* Adiciona preenchimento lateral ao conteúdo do cabeçalho */
-    
+    padding: 0 20px;
+    /* Adiciona preenchimento lateral ao conteúdo do cabeçalho */
+
 }
 
 /* Agrupamento de elementos à direita no cabeçalho */
 .header-right {
     display: flex;
-    gap: 1rem; /* Define o espaçamento entre os elementos */
+    gap: 1rem;
+    /* Define o espaçamento entre os elementos */
 }
 
 /* Efeito de Hover para Itens de Lista (li) */
@@ -47,7 +51,8 @@ li:hover {
 /* Estilo para Ícones */
 .icon {
     width: 3rem;
-    height: 3rem; /* Define a altura padrão para elementos com a classe 'icon' */
+    height: 3rem;
+    /* Define a altura padrão para elementos com a classe 'icon' */
 }
 
 /* Estilo para a logo da barra de navegação */
@@ -64,7 +69,8 @@ li {
     cursor: pointer;
     color: rgb(255, 255, 255);
     align-items: center;
-    list-style: none; /* Remove os marcadores de lista */
+    list-style: none;
+    /* Remove os marcadores de lista */
 }
 
 /* Navegação Principal no Cabeçalho (Desktop) */
@@ -72,37 +78,41 @@ li {
     gap: 30px;
     font-size: 1rem;
     display: flex;
-    align-items: center; /* Alinha os itens verticalmente ao centro */  
+    align-items: center;
+    /* Alinha os itens verticalmente ao centro */
 }
 
 .header-navegacao:hover {
-     text-decoration: underline;
+    text-decoration: underline;
 }
 
 .header-navegacao li {
-    padding: 10px; /* Adiciona preenchimento interno aos itens de navegação */
+    padding: 10px;
+    /* Adiciona preenchimento interno aos itens de navegação */
 }
 
 /* Barra de Pesquisa no Cabeçalho */
 .header-barraPesquisa {
     gap: 20px;
     display: flex;
-    align-items: center; /* Alinha os itens verticalmente ao centro */
+    align-items: center;
+    /* Alinha os itens verticalmente ao centro */
 }
 
 /* imagem lupa e usuario */
 
-  #input {
-      background-image: url('/PcMaster/assets/Imagens/lupa.png');
-      background-repeat: no-repeat;
-      background-position: right 10px center;
-      background-size: 16px 16px;
-      padding-right: 30px; /* Espaço para o ícone à direita */
-   }
+#input {
+    background-image: url('/PcMaster/assets/Imagens/lupa.png');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px 16px;
+    padding-right: 30px;
+    /* Espaço para o ícone à direita */
+}
 
-   .user img {
-  width: 100%;
-  height: 100%;
+.user img {
+    width: 100%;
+    height: 100%;
 }
 
 input[type="text"]:focus,
@@ -117,48 +127,54 @@ input[type="text"] {
     width: 30rem;
     height: 2.3rem;
     background-color: rgb(255, 255, 255);
-    padding: 10px; /* Adiciona preenchimento interno ao input de pesquisa */
-    border:  rgb(0, 0, 0) solid 1px;
+    padding: 10px;
+    /* Adiciona preenchimento interno ao input de pesquisa */
+    border: rgb(0, 0, 0) solid 1px;
     border-radius: 5px;
 }
 
 
 .autocomplete {
-  position: relative; /* base para o posicionamento absoluto da lista */
-  display: inline-block;
+    position: relative;
+    /* base para o posicionamento absoluto da lista */
+    display: inline-block;
 }
 
 .list {
-  position: absolute;
-  top: 100%; /* aparece logo abaixo do input */
-  left: 0;
-  right: 0;
-  background-color: rgb(175, 175, 175);
-  z-index: 1000; /* fica acima do header */
-  max-height: 200px; /* limite de altura */
-  overflow-y: auto; /* rolagem se tiver muitas opções */
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  border-radius: 5px;
+    position: absolute;
+    top: 100%;
+    /* aparece logo abaixo do input */
+    left: 0;
+    right: 0;
+    background-color: rgb(175, 175, 175);
+    z-index: 1000;
+    /* fica acima do header */
+    max-height: 200px;
+    /* limite de altura */
+    overflow-y: auto;
+    /* rolagem se tiver muitas opções */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border-radius: 5px;
 }
 
 .list-items {
-  padding: 10px 5px;
-  cursor: pointer;
-  color: black;
+    padding: 10px 5px;
+    cursor: pointer;
+    color: black;
 }
 
 .list-items:hover {
-  background-color: #e9e7e7;
+    background-color: #e9e7e7;
 }
 
 .list-items:hover {
-   text-decoration: none;
+    text-decoration: none;
 }
 
-ul.list{
-border: none;
+ul.list {
+    border: none;
 }
 
 /* fim dropdown barra de pesquisa*/
@@ -167,7 +183,8 @@ border: none;
 .header-conta {
     gap: 20px;
     display: flex;
-    align-items: center; /* Alinha os itens verticalmente ao centro */
+    align-items: center;
+    /* Alinha os itens verticalmente ao centro */
 }
 
 /* Estilo para o Ícone de Usuário (User) */
@@ -178,7 +195,8 @@ border: none;
     height: 3rem;
     display: flex;
     justify-content: center;
-    align-items: center; /* Centraliza o conteúdo do ícone de usuário */
+    align-items: center;
+    /* Centraliza o conteúdo do ícone de usuário */
 
 }
 
@@ -194,7 +212,8 @@ border: none;
     padding: 0 16% 0 16%;
     white-space: nowrap;
     overflow: hidden;
-    width: 100%; /* Define a largura total para o sub-cabeçalho */
+    width: 100%;
+    /* Define a largura total para o sub-cabeçalho */
 }
 
 .sub-header-item {
@@ -202,149 +221,189 @@ border: none;
     justify-content: center;
     display: flex;
     width: 200px;
-    height: 50px; /* Define a altura para cada item do sub-cabeçalho */
+    height: 50px;
+    /* Define a altura para cada item do sub-cabeçalho */
 }
 
 
 .sub-header-item:hover {
     background-color: rgb(0, 0, 0);
-    transition: .1s; /* Adiciona uma transição rápida ao passar o mouse */
+    transition: .1s;
+    /* Adiciona uma transição rápida ao passar o mouse */
     text-decoration: none;
 }
+
 h2 {
     text-align: center;
     color: white;
     align-items: center;
     display: flex;
-}
-
-.img-slider{
-     position: relative;
-     width: 100%;/* Agora ocupa 100% do contêiner pai */
-      aspect-ratio: 16 / 8; /* Mantém proporção (opcional) */ 
-      max-height: 500px; /* Altura máxima opcional */ 
-      overflow: hidden; /* Evita que a imagem vaze para fora */ 
-      background: #7e7f81; 
-      margin: 0;
- 
-}
-
-.img-slider .slide{
- z-index: 1;
- position: absolute;
- clip-path: circle(0% at 0 50%);
-  width: 100%;
-  height: 100%;
+    margin: 0;
 }
 
 
-.img-slider .slide.active{
- clip-path: circle(150% at 0 50%);
- transition: 2s;
- transition-property: clip-path;
+
+.img-slider {
+    display: flex;
+    position: relative;
+    width: 100%;
+    /* Agora ocupa 100% do contêiner pai */
+    aspect-ratio: 16 / 8;
+    /* Mantém proporção (opcional) */
+    max-height: 500px;
+    /* Altura máxima opcional */
+    overflow: hidden;
+    /* Evita que a imagem vaze para fora */
+    background: #000000;
+    padding-right: 40%;
+    align-items: center;
+    margin: 0;
+}
+
+.image-slider {
+    display: flex;
+    justify-content: center;
+    /* centraliza horizontalmente */
+    align-items: center;
+    /* centraliza verticalmente */
+    height: 100%;
+    /* altura total da tela, ou defina a altura do container */
+}
+
+.img-slider .slide {
+    z-index: 1;
+    position: absolute;
+    clip-path: circle(0% at 0 50%);
+    width: 100%;
+    height: 100%;
+}
+
+
+.img-slider .slide.active {
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+    transition-property: clip-path;
 }
 
 /* Imagens do slide */
 .img-slider .slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Preenche o contêiner sem deformar, pode usar 'contain' se preferir */
-  border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Preenche o contêiner sem deformar, pode usar 'contain' se preferir */
+    border-radius: 5px;
 }
 
 
 /* Informações do slide (título e texto) */
 .img-slider .slide .info {
-  position: absolute;
-  top: 0;
-  padding: 15px 30px; /* Espaçamento interno */
+    position: absolute;
+    top: 0;
+    padding: 15px 30px;
+    /* Espaçamento interno */
 }
 
 /* Título do slide */
 .img-slider .slide .info h2 {
-  color: rgb(255, 255, 255);
-  font-size: 3rem;
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 2px;
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
 }
 
 /* Texto descritivo do slide */
 .img-slider .slide .info p {
-  color: rgb(255, 255, 255);
-  background: rgba(255, 255, 255, 0.295); /* Fundo semi-transparente */
-  font-size: 1rem;
-  width: 60%; /* Largura do texto */
-  padding: 10px;
+    color: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.295);
+    /* Fundo semi-transparente */
+    font-size: 1rem;
+    width: 60%;
+    /* Largura do texto */
+    padding: 10px;
 }
 
 /* Navegação do slider (bolinhas) */
 .img-slider .navigation {
-  z-index: 2;
-  position: absolute;
-  display: flex;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%); /* Centraliza horizontalmente */
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Centraliza horizontalmente */
 }
 
 /* Botões da navegação */
 .img-slider .navigation .btn {
-  background: rgba(255, 255, 255, 0.5); /* Cor com transparência */
-  width: 12px;
-  height: 12px;
-  margin: 10px;
-  border-radius: 50%; /* Formato circular */
-  cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+    /* Cor com transparência */
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    border-radius: 50%;
+    /* Formato circular */
+    cursor: pointer;
 }
 
 /* Botão ativo (slide atual) */
 .img-slider .navigation .btn.active {
-  background: #2696E9; /* Cor azul destaque */
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Sombra leve */
+    background: #2696E9;
+    /* Cor azul destaque */
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    /* Sombra leve */
 }
 
 /*conteudo do site */
 
 .website-content {
-  margin-left: 10%;      
-  margin-right: 10%;
-  height: 100%;
-  padding-top: 3%;
+    margin-left: 28%;
+    margin-right: 28%;
+    height: 100%;
+    padding-top: 3%;
 }
 
-.start-subtitle p{
-  text-align: left;
-  font-size: 1rem;
-  color: black;
-  margin-bottom: 1rem;
+.start-subtitle p {
+    text-align: left;
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 1rem;
 }
 
- .start-subtitle-first p{
-  text-align: left;
-  font-size: 1rem;
-  color: black;
-  margin-bottom: 1rem;
+.start-subtitle-first p {
+    text-align: left;
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 1rem;
 }
 
 .title h1 {
-  margin-bottom: 2%;
+    margin-bottom: 2%;
 }
 
 .start-subtitle-first p:first-of-type {
-  font-weight: bold;
-  font-size: 1.1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 
 
-.img-right {
-  width: 50%;
-  height: 50%;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center;     /* Centraliza verticalmente */
-  text-align: center;
+.img-start {
+    max-width: 100%;
+    /* Nunca ultrapassa o tamanho do container */
+    width: 100%;
+    /* Largura relativa ao texto/conteúdo */
+    height: 100%;
+    /* Mantém a proporção original */
+    max-height: 600px;
+    margin: 0 auto 2rem;
+    /* Centraliza e dá espaço embaixo */
+    display: block;
+    /* Garante que o margin auto funcione */
+    border-radius: 8px;
+    /* (opcional) bordas arredondadas */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    /* (opcional) sombreamento */
 }
-
 
 
 /* Container do dropdown de usuário */
@@ -361,14 +420,15 @@ h2 {
 .user-dropdown-menu {
     display: none;
     position: absolute;
-    top: 120%; /* abaixo do botão do usuário */
+    top: 120%;
+    /* abaixo do botão do usuário */
     right: 0;
     background-color: white;
     color: black;
     border: 1px solid #ddd;
     border-radius: 6px;
     width: 200px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     z-index: 1000;
 }
 
@@ -420,89 +480,89 @@ h2 {
 
 /* Telas até 820px */
 @media (max-width: 820px) {
-  .img-slider {
-    width: 600px;
-    height: 375px;
-  }
+    .img-slider {
+        width: 600px;
+        height: 375px;
+    }
 
-  .img-slider .slide .info {
-    padding: 10px 25px;
-  }
+    .img-slider .slide .info {
+        padding: 10px 25px;
+    }
 
-  .img-slider .slide .info h2 {
-    font-size: 35px;
-  }
+    .img-slider .slide .info h2 {
+        font-size: 35px;
+    }
 
-  .img-slider .slide .info p {
-    width: 70%;
-    font-size: 15px;
-  }
+    .img-slider .slide .info p {
+        width: 70%;
+        font-size: 15px;
+    }
 
-  .img-slider .navigation {
-    bottom: 25px;
-  }
+    .img-slider .navigation {
+        bottom: 25px;
+    }
 
-  .img-slider .navigation .btn {
-    width: 10px;
-    height: 10px;
-    margin: 8px;
-  }
+    .img-slider .navigation .btn {
+        width: 10px;
+        height: 10px;
+        margin: 8px;
+    }
 }
 
 /* Telas até 620px */
 @media (max-width: 620px) {
-  .img-slider {
-    width: 400px;
-    height: 250px;
-  }
+    .img-slider {
+        width: 400px;
+        height: 250px;
+    }
 
-  .img-slider .slide .info {
-    padding: 10px 20px;
-  }
+    .img-slider .slide .info {
+        padding: 10px 20px;
+    }
 
-  .img-slider .slide .info h2 {
-    font-size: 30px;
-  }
+    .img-slider .slide .info h2 {
+        font-size: 30px;
+    }
 
-  .img-slider .slide .info p {
-    width: 80%;
-    font-size: 13px;
-  }
+    .img-slider .slide .info p {
+        width: 80%;
+        font-size: 13px;
+    }
 
-  .img-slider .navigation {
-    bottom: 15px;
-  }
+    .img-slider .navigation {
+        bottom: 15px;
+    }
 
-  .img-slider .navigation .btn {
-    width: 8px;
-    height: 8px;
-    margin: 6px;
-  }
+    .img-slider .navigation .btn {
+        width: 8px;
+        height: 8px;
+        margin: 6px;
+    }
 }
 
 /* Telas até 420px */
 @media (max-width: 420px) {
-  .img-slider {
-    width: 320px;
-    height: 200px;
-  }
+    .img-slider {
+        width: 320px;
+        height: 200px;
+    }
 
-  .img-slider .slide .info {
-    padding: 5px 10px;
-  }
+    .img-slider .slide .info {
+        padding: 5px 10px;
+    }
 
-  .img-slider .slide .info h2 {
-    font-size: 25px;
-  }
+    .img-slider .slide .info h2 {
+        font-size: 25px;
+    }
 
-  .img-slider .slide .info p {
-    width: 90%;
-    font-size: 11px;
-  }
+    .img-slider .slide .info p {
+        width: 90%;
+        font-size: 11px;
+    }
 
-  .img-slider .navigation {
-    bottom: 10px;
-  }
+    .img-slider .navigation {
+        bottom: 10px;
+    }
 }
 
 /* Fim Image Slider */
@@ -515,7 +575,8 @@ h2 {
 
 @media only screen and (max-width: 768px) {
     input {
-        width: 100%; /* Faz com que a barra de pesquisa ocupe a largura total */
+        width: 100%;
+        /* Faz com que a barra de pesquisa ocupe a largura total */
     }
 
 }
@@ -529,7 +590,8 @@ h2 {
     width: 30px;
     height: 25px;
     cursor: pointer;
-    z-index: 20; /* Garante que o ícone esteja acima de outros elementos */
+    z-index: 20;
+    /* Garante que o ícone esteja acima de outros elementos */
 }
 
 /* Estilos das Barras do Menu Hamburguer */
@@ -537,20 +599,24 @@ h2 {
     width: 100%;
     height: 3px;
     background-color: white;
-    transition: all 0.3s ease-in-out; /* Adiciona uma transição suave para as barras */
+    transition: all 0.3s ease-in-out;
+    /* Adiciona uma transição suave para as barras */
 }
 
 /* Animação do Menu Hamburguer para 'X' (Estado Ativo) */
 .hamburger-menu.active .bar:nth-child(1) {
-    transform: translateY(11px) rotate(45deg); /* Move e gira a primeira barra */
+    transform: translateY(11px) rotate(45deg);
+    /* Move e gira a primeira barra */
 }
 
 .hamburger-menu.active .bar:nth-child(2) {
-    opacity: 0; /* Torna a barra do meio transparente */
+    opacity: 0;
+    /* Torna a barra do meio transparente */
 }
 
 .hamburger-menu.active .bar:nth-child(3) {
-    transform: translateY(-11px) rotate(-45deg); /* Move e gira a terceira barra */
+    transform: translateY(-11px) rotate(-45deg);
+    /* Move e gira a terceira barra */
 }
 
 /* --- Navegação Mobile (Menu Hamburguer Aberto) --- */
@@ -567,26 +633,30 @@ h2 {
     padding: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-height: calc(100vh - 5.5rem);
-    overflow-y: auto; /* Adiciona uma barra de rolagem vertical se o conteúdo exceder a altura máxima */
+    overflow-y: auto;
+    /* Adiciona uma barra de rolagem vertical se o conteúdo exceder a altura máxima */
 }
 
 /* Estado Ativo do Menu Mobile */
 .mobile-nav.active {
-    display: block; /* Torna o menu visível */
+    display: block;
+    /* Torna o menu visível */
 }
 
 /* Lista de Itens do Menu Mobile */
 .mobile-nav ul {
     flex-direction: column;
     align-items: center;
-    gap: 15px; /* Define o espaçamento entre os itens da lista */
+    gap: 15px;
+    /* Define o espaçamento entre os itens da lista */
 }
 
 /* Itens de Lista Individual do Menu Mobile */
 .mobile-nav ul li {
     width: 100%;
     text-align: center;
-    padding: 10px 0; /* Adiciona preenchimento interno aos itens da lista */
+    padding: 10px 0;
+    /* Adiciona preenchimento interno aos itens da lista */
 }
 
 /* Links e Input de Pesquisa no Menu Mobile */
@@ -595,7 +665,8 @@ h2 {
     width: 80%;
     margin: 0 auto;
     display: block;
-    text-align: center; /* Centraliza o texto dentro dos links/inputs */
+    text-align: center;
+    /* Centraliza o texto dentro dos links/inputs */
 }
 
 /* --- Sub-cabeçalho no Menu Mobile --- */
@@ -603,11 +674,13 @@ h2 {
     background-color: rgb(48, 48, 48);
     color: white;
     font-size: 0.9rem;
-    padding: 1rem 1rem 1rem 3rem; /* Define o preenchimento para os itens do sub-cabeçalho */
+    padding: 1rem 1rem 1rem 3rem;
+    /* Define o preenchimento para os itens do sub-cabeçalho */
 }
 
 .mobile-nav ul .nav-sub-item:hover {
-    background-color: rgb(0, 0, 0); /* Define a cor de fundo ao passar o mouse */
+    background-color: rgb(0, 0, 0);
+    /* Define a cor de fundo ao passar o mouse */
 }
 
 /* Responsividade */
@@ -618,19 +691,24 @@ h2 {
     .header-navegacao,
     .header-barraPesquisa,
     .header-conta {
-        display: none; /* Esconde os elementos de navegação de desktop */
+        display: none;
+        /* Esconde os elementos de navegação de desktop */
     }
 
     .hamburger-menu {
-        display: flex; /* Mostra o menu hamburguer */
+        display: flex;
+        /* Mostra o menu hamburguer */
     }
 
     .header-content {
-        justify-content: space-between; /* Ajusta o alinhamento do conteúdo do cabeçalho */
+        justify-content: space-between;
+        /* Ajusta o alinhamento do conteúdo do cabeçalho */
+        margin: 0;
     }
 
     .sub-header.desktop-only {
-        display: none; /* Esconde o sub-cabeçalho de desktop */
+        display: none;
+        /* Esconde o sub-cabeçalho de desktop */
     }
 
     .principal {
@@ -638,6 +716,7 @@ h2 {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        margin: 1rem; /* Ajusta a margem da seção principal */
+        margin: 1rem;
+        /* Ajusta a margem da seção principal */
     }
 }
