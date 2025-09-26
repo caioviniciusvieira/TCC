@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Meu Carrinho - MasterPC</title>
+  <style>
+    /* ===== Reset & base ===== */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: rgb(184,184,184);
+      color: #222;
+      line-height: 1.4;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* ===== Header ===== */
+    header {
+      width: 100%;
+      background: rgb(0,74,172);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 40;
+    }
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      gap: 12px;
+    }
+    #logo { display:flex; align-items:center; gap:12px; }
+    #logo h2 { font-size:1.1rem; }
+    .header-navegacao { display:flex; gap:18px; align-items:center; }
+    .header-navegacao a { color: #fff; font-weight:600; }
+    .header-right { display:flex; gap:12px; align-items:center; }
+
+    .header-barraPesquisa input[type="text"] {
+      padding: 8px 36px 8px 12px;
+      border-radius:6px;
+      border: 1px solid rgba(0,0,0,0.15);
+      width: 280px;
+      max-width: 40vw;
+    }
+
+    .user { width:40px; height:40px; border-radius:50%; background:grey; display:flex; align-items:center; justify-content:center; cursor:pointer; }
+    .user img { width:100%; height:100%; object-fit:cover; border-radius:50%; }
+
+    /* user dropdown */
+    .user-dropdown-container { position:relative; }
+    .user-dropdown-menu {
+      display:none;
+      position:absolute;
+      right:0;
+      top:calc(100% + 8px);
+      background: rgb(0,74,172);
+      color:#fff;
+      border-radius:6px;
+      padding:8px 0;
+      min-width:160px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.15);
+      flex-direction: column;
+    }
+    .user-dropdown-menu a { padding:8px 14px; display:block; }
+    .user-dropdown-container:hover .user-dropdown-menu { display:flex; }
+
+    /* mobile nav */
+    .hamburger { display:none; cursor:pointer; }
+    .hamburger .bar { width:26px; height:3px; background:#fff; margin:4px 0; border-radius:3px; }
+
+    /* ===== Layout: wrapper / sidebar / main ===== */
+    .page {
+      max-width: 1200px;
+      margin: 18px auto;
+      padding: 0 16px;
+    }
+    .account-wrapper {
+      display:flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .account-sidebar {
+      width:250px;
+      background:#fff;
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.06);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:12px;
+    }
+    .sidebar-profile img { width:120px; height:120px; border-radius:50%; object-fit:cover; border:3px solid rgb(0,74,172); }
+    .account-menu { width:100%; margin-top:8px; }
+    .account-menu a { display:block; padding:10px; color:#333; border-radius:8px; font-weight:600; }
+    .account-menu a.active { background: #f1f6ff; color: rgb(0,74,172); }
+
+    .account-content {
+      flex:1;
+      background:#fff;
+      border-radius:12px;
+      padding:20px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.06);
+      min-height: 360px;
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+      /* permitimos rolagem interna caso a lista cresça */
+      max-height: calc(100vh - 160px);
+      overflow-y: auto;
+    }
+
+    .account-content h1 { color: rgb(0,74,172); font-size:1.25rem; margin-bottom:6px; }
+
+    /* ===== Cart list ===== */
+    .cart-list { display:flex; flex-direction:column; gap:14px; width:100%; }
+
+    .cart-item {
+      display:grid;
+      grid-template-columns: 100px 1fr auto;
+      gap:12px;
+      align-items:center;
+      background: #fff;
+      padding:12px;
+      border-radius:10px;
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    .cart-item img {
+      width:100px; height:80px; object-fit:cover; border-radius:8px; background:#efefef;
+    }
+    .cart-meta { display:flex; flex-direction:column; gap:6px; }
+    .cart-title { font-weight:700; font-size:1rem; color:#222; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; max-width:100%; }
+    .cart-subtitle { font-size:0.85rem; color:#666; max-width:100%; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; }
+
+    .cart-actions { display:flex; flex-direction:column; gap:8px; align-items:flex-end; min-width:110px; justify-content:center; }
+    .price { font-weight:700; color: rgb(0,74,172); }
+    .item-total { font-size:0.95rem; color:#111; font-weight:700; margin-top:4px; }
+
+    /* qty control */
+    .qty {
+      display:flex;
+      align-items:center;
+      gap:8px;
+      border-radius:8px;
+      background:#f6f7fb;
+      padding:6px;
+    }
+    .qty button {
+      width:30px; height:30px; border-radius:6px; border:none; background:rgb(0,74,172); color:#fff; cursor:pointer; font-weight:700;
+    }
+    .qty span { min-width:22px; text-align:center; font-weight:700; display:inline-block; }
+
+    .remove-btn {
+      background: transparent;
+      border: none;
+      color:#b00;
+      cursor:pointer;
+      font-size:0.9rem;
+    }
+
+    /* cart summary/footer */
+    .cart-footer {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      padding-top:8px;
+      border-top: 1px dashed rgba(0,0,0,0.06);
+    }
+    .cart-summary { font-weight:700; }
+    .checkout-btn {
+      background: rgb(0,74,172);
+      color: #fff; border:none; padding:10px 16px; border-radius:8px; font-weight:800; cursor:pointer;
+    }
+
+    .empty { padding:24px; text-align:center; color:#666; font-weight:600; }
+
+    /* ===== Demo products area (removível) ===== */
+    .demo-products { display:flex; gap:12px; flex-wrap:wrap; margin-top:6px; }
+    .demo-card { background:#fff; border-radius:8px; padding:12px; width:220px; box-shadow:0 4px 12px rgba(0,0,0,0.05); }
+    .demo-card img { width:100%; height:110px; object-fit:cover; border-radius:6px; }
+    .demo-card h4 { font-size:1rem; margin:8px 0 6px; }
+    .demo-card p { font-size:0.9rem; color:#666; margin-bottom:8px; }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 900px) {
+      .header-barraPesquisa input[type="text"] { width: 180px; max-width: 36vw; }
+      .account-wrapper { flex-direction: column; padding-bottom: 18px; }
+      .account-sidebar { width:100%; flex-direction:row; justify-content:space-between; padding:12px 16px; align-items:center; }
+      .sidebar-profile img { width:80px; height:80px; }
+      .account-menu { display:none; } /* compact */
+      .cart-item { grid-template-columns: 90px 1fr; }
+      .cart-actions { align-items:flex-start; flex-direction:row; gap:10px; min-width:0; }
+    }
+    @media (max-width: 520px) {
+      .cart-item { grid-template-columns: 1fr; gap:10px; }
+      .cart-actions { align-items:flex-start; flex-direction:row; justify-content:space-between; }
+      .price { font-size:1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header (mantive estrutura parecida com a sua) -->
+  <header>
+    <div class="header-content">
+      <div id="logo">
+        <img src="/PcMaster/assets/Imagens/pces.png" alt="logo" style="width:44px;height:44px;object-fit:cover">
+        <h2>MasterPC</h2>
+      </div>
+
+      <nav class="header-navegacao" aria-label="principal">
+        <a href="/PcMaster/puplic/">Explorar</a>
+        <a href="/PcMaster/tests/montagem.html">Montagem</a>
+        <a href="/PcMaster/tests/index.html">Loja</a>
+      </nav>
+
+      <div class="header-right">
+        <div class="header-barraPesquisa">
+          <input type="text" placeholder="Pesquisar..." />
+        </div>
+
+        <div class="user-dropdown-container" style="display:flex; align-items:center;">
+          <div class="user" title="Minha conta">
+            <img src="/PcMaster/assets/Imagens/Perfil.png" alt="perfil" />
+          </div>
+          <nav class="user-dropdown-menu" aria-hidden="true">
+            <a href="config.html">Configurações</a>
+            <a href="carrinho.html">Carrinho</a>
+            <a href="endereco.html">Endereço</a>
+            <a href="ajuda.html">Ajuda</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page wrapper -->
+  <div class="page">
+    <div class="account-wrapper">
+
+      <!-- Sidebar -->
+      <aside class="account-sidebar" aria-label="menu da conta">
+        <div class="sidebar-profile">
+          <img src="/PcMaster/assets/Imagens/Perfil.png" alt="foto perfil" />
+        </div>
+        <div style="text-align:center;">
+          <div style="font-weight:700;">João da Silva</div>
+          <div style="font-size:0.9rem;color:#666">Cliente MasterPC</div>
+        </div>
+
+        <nav class="account-menu" style="margin-top:8px;width:100%;">
+          <a href="config.html">Configurações</a>
+          <a class="active" href="carrinho.html">Carrinho</a>
+          <a href="endereco.html">Endereço</a>
+          <a href="pedidos.html">Meus Pedidos</a>
+        </nav>
+      </aside>
+
+      <!-- Main content: Carrinho -->
+      <main class="account-content" role="main">
+        <h1>Meu Carrinho</h1>
+
+        <!-- Cart list -->
+        <div id="cart-list" class="cart-list" aria-live="polite"></div>
+
+        <!-- Footer summary -->
+        <div id="cart-footer" class="cart-footer" style="display:none;">
+          <div class="cart-summary">
+            Total do Carrinho: <span id="cart-total">R$ 0,00</span>
+          </div>
+          <div style="display:flex; gap:12px; align-items:center;">
+            <button id="clear-cart" style="background:#eee;color:#111;padding:8px 12px;border-radius:8px;border:none;cursor:pointer">Limpar</button>
+            <button id="checkout" class="checkout-btn">Finalizar Compra</button>
+          </div>
+        </div>
+
+        <!-- Exemplo (demo): remover se quiser -->
+        <details style="margin-top:12px;">
+          <summary style="cursor:pointer; font-weight:700;">Demo - Adicionar produtos (apenas para testar)</summary>
+          <div class="demo-products" id="demo-products">
+            <!-- cards serão inseridos pelo JS -->
+          </div>
+        </details>
+
+      </main>
+    </div>
+  </div>
+
+  <script>
+    /***** Cart logic using localStorage *****/
+    const CART_KEY = 'masterpc_cart_v1';
+
+    function getCart() {
+      try {
+        return JSON.parse(localStorage.getItem(CART_KEY)) || [];
+      } catch { return []; }
+    }
+    function saveCart(cart) {
+      localStorage.setItem(CART_KEY, JSON.stringify(cart));
+    }
+
+    function formatBRL(value) {
+      return value.toLocaleString('pt-BR', { style:'currency', currency:'BRL' });
+    }
+
+    function renderCart() {
+      const cart = getCart();
+      const list = document.getElementById('cart-list');
+      list.innerHTML = '';
+
+      if (!cart.length) {
+        list.innerHTML = '<div class="empty">Seu carrinho está vazio.</div>';
+        document.getElementById('cart-footer').style.display = 'none';
+        return;
+      }
+
+      cart.forEach(item => {
+        const itemTotal = item.price * item.qty;
+        const node = document.createElement('div');
+        node.className = 'cart-item';
+        node.dataset.id = item.id;
+        node.innerHTML = `
+          <img src="${item.image || ''}" alt="${escapeHtml(item.title)}" onerror="this.onerror=null;this.src='https://via.placeholder.com/300x200?text=Sem+imagem'">
+          <div class="cart-meta">
+            <div class="cart-title" title="${escapeHtml(item.title)}">${escapeHtml(item.title)}</div>
+            <div class="cart-subtitle">${escapeHtml(item.subtitle || '')}</div>
+            <div style="margin-top:8px; display:flex; gap:8px; align-items:center;">
+              <div class="qty" data-id="${item.id}">
+                <button class="qty-minus" aria-label="diminuir">−</button>
+                <span class="qty-value">${item.qty}</span>
+                <button class="qty-plus" aria-label="aumentar">+</button>
+              </div>
+              <button class="remove-btn" data-action="remove" data-id="${item.id}">Remover</button>
+            </div>
+          </div>
+          <div class="cart-actions">
+            <div class="price">${formatBRL(item.price)}</div>
+            <div class="item-total">${formatBRL(itemTotal)}</div>
+          </div>
+        `;
+        list.appendChild(node);
+      });
+
+      updateTotals();
+      document.getElementById('cart-footer').style.display = 'flex';
+    }
+
+    function updateTotals() {
+      const cart = getCart();
+      const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+      document.getElementById('cart-total').textContent = formatBRL(total);
+    }
+
+    // helpers
+    function addToCart(product) {
+      // product: { id, title, subtitle, price (number), image, qty (optional) }
+      const cart = getCart();
+      const idx = cart.findIndex(p => p.id === product.id);
+      if (idx >= 0) {
+        cart[idx].qty += product.qty || 1;
+      } else {
+        cart.push({
+          id: product.id,
+          title: product.title,
+          subtitle: product.subtitle || '',
+          price: Number(product.price) || 0,
+          image: product.image || '',
+          qty: product.qty ? Number(product.qty) : 1
+        });
+      }
+      saveCart(cart);
+      renderCart();
+    }
+
+    function changeQty(id, delta) {
+      const cart = getCart();
+      const idx = cart.findIndex(i => i.id === id);
+      if (idx < 0) return;
+      cart[idx].qty = Math.max(1, cart[idx].qty + delta);
+      saveCart(cart);
+      renderCart();
+    }
+
+    function removeItem(id) {
+      let cart = getCart();
+      cart = cart.filter(i => i.id !== id);
+      saveCart(cart);
+      renderCart();
+    }
+
+    function clearCart() {
+      localStorage.removeItem(CART_KEY);
+      renderCart();
+    }
+
+    // Escape helper for titles/subtitles to avoid injection
+    function escapeHtml(str = '') {
+      return String(str).replaceAll('&', '&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
+    }
+
+    // Event delegation for qty and remove
+    document.getElementById('cart-list').addEventListener('click', (e) => {
+      const minus = e.target.closest('.qty-minus');
+      const plus = e.target.closest('.qty-plus');
+      const remove = e.target.closest('.remove-btn');
+
+      if (minus) {
+        const id = getItemIdFromElement(minus);
+        changeQty(id, -1);
+      } else if (plus) {
+        const id = getItemIdFromElement(plus);
+        changeQty(id, +1);
+      } else if (remove) {
+        const id = remove.dataset.id;
+        if (confirm('Remover este item do carrinho?')) removeItem(id);
+      }
+    });
+
+    function getItemIdFromElement(el) {
+      // busca o ancestor com data-id
+      const ancestor = el.closest('.cart-item');
+      return ancestor ? ancestor.dataset.id : null;
+    }
+
+    // Checkout / clear
+    document.getElementById('checkout').addEventListener('click', () => {
+      const cart = getCart();
+      if (!cart.length) return alert('Carrinho vazio.');
+      // aqui você integraria com processo de pagamento
+      alert('Finalizar compra — total: ' + document.getElementById('cart-total').textContent);
+    });
+    document.getElementById('clear-cart').addEventListener('click', () => {
+      if (confirm('Deseja esvaziar o carrinho?')) clearCart();
+    });
+
+    /* ===== Demo products (apenas para teste) =====
+       Em seu site, nas páginas de produto, chame:
+         addToCart({id:'abc', title:'Produto X', subtitle: 'Detalhe', price: 1999.90, image:'/caminho.jpg'});
+       e o item aparecerá automaticamente aqui.
+    */
+    const demoProducts = [
+      { id: 'gpu-3060', title: 'RTX 3060', subtitle:'Placa de vídeo - 12GB', price: 2500.00, image: '/PcMaster/assets/Imagens/placa-video-exemplo.jpg' },
+      { id: 'cpu-5600', title: 'Ryzen 5 5600X', subtitle:'Processador - 6 núcleos', price: 1200.00, image: '/PcMaster/assets/Imagens/processador-exemplo.jpg' },
+      { id: 'ssd-1tb', title: 'SSD 1TB NVMe', subtitle:'Armazenamento rápido', price: 420.00, image: '/PcMaster/assets/Imagens/ssd-exemplo.jpg' }
+    ];
+
+    // render demo area
+    const demoWrap = document.getElementById('demo-products');
+    demoProducts.forEach(p => {
+      const c = document.createElement('div');
+      c.className = 'demo-card';
+      c.innerHTML = `
+        <img src="${p.image}" alt="${escapeHtml(p.title)}" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x300?text=Sem+imagem'">
+        <h4>${escapeHtml(p.title)}</h4>
+        <p>${escapeHtml(p.subtitle)}</p>
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <strong>${formatBRL(p.price)}</strong>
+          <button class="demo-add" data-id="${p.id}">Adicionar</button>
+        </div>
+      `;
+      demoWrap.appendChild(c);
+    });
+
+    // attach demo add handlers
+    demoWrap.addEventListener('click', (e) => {
+      const btn = e.target.closest('.demo-add');
+      if (!btn) return;
+      const id = btn.dataset.id;
+      const prod = demoProducts.find(x => x.id === id);
+      if (prod) {
+        addToCart(Object.assign({}, prod, { qty: 1 }));
+      }
+    });
+
+    // Inicialização
+    renderCart();
+
+    // Export addToCart para uso global (por exemplo chamado por páginas de produto)
+    window.addToCart = addToCart;
+  </script>
+</body>
+</html>

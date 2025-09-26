@@ -89,7 +89,7 @@ li {
 }
 
 .header-navegacao li {
-    padding: 10px;
+    padding: 5px;
     /* Adiciona preenchimento interno aos itens de navegação */
 }
 
@@ -361,15 +361,13 @@ p2 {
 
 /* Imagem do Banner Principal */
 .imagem-banner {
-    display: block;
-    overflow: hidden;
-    /* Garante que a imagem não vaze do container */
-    height: auto;
     width: 100%;
-    padding-right: 1rem;
-    display: flex;
-    justify-content: center;
+    height: auto;
+    max-width: 600px; /* limite opcional para desktop */
+    object-fit: contain;
+    border-radius: 10px;
 }
+
 
 /* Estilo para Títulos (h1) */
 h1 {
@@ -458,6 +456,64 @@ button:hover {
 .user-dropdown-container.active .user-dropdown-menu {
     display: block;
 }
+
+
+/* Estilo dos itens do menu */
+.logout-index {
+  color: red !important;
+}
+
+/* Estilos gerais permanecem */
+.user-dropdown-menu li {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.user-dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.user-dropdown-menu li a {
+  color: #000;
+  text-decoration: none;
+  display: block;
+}
+
+.user-dropdown-menu li:hover {
+  background-color: #f0f0f0;
+  text-decoration: none;
+}
+
+/* Mostrar menu ao ativar classe */
+.user-dropdown-container.active .user-dropdown-menu {
+  display: block;
+}
+
+.user-logout {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.user-name {
+    color: black;
+    text-decoration: none;
+    cursor: default;
+}
+
+.user-logout a{
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.user-name li{
+    color: black;
+    text-decoration: none;
+}
+
+
+
 
 /* --- Media Queries para Responsividade --- */
 

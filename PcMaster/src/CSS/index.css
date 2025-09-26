@@ -199,12 +199,6 @@ ul.list {
     /* Centraliza o conteúdo do ícone de usuário */
 }
 
-.user-img {
-    width: 50%;
-    height: 50%;
-}
-
-
 
 /* --- Sub-cabeçalho (Desktop) --- */
 
@@ -653,32 +647,65 @@ h2 {
     width: 200px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     z-index: 1000;
+    text-decoration: none;
 }
 
 /* Estilo dos itens do menu */
+.logout-index {
+  color: red !important;
+}
+
+/* Estilos gerais permanecem */
 .user-dropdown-menu li {
-    padding: 12px 16px;
-    border-bottom: 1px solid #eee;
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
 }
 
 .user-dropdown-menu li:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .user-dropdown-menu li a {
-    color: #000;
-    text-decoration: none;
-    display: block;
+  color: #000;
+  text-decoration: none;
+  display: block;
 }
 
 .user-dropdown-menu li:hover {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
+  text-decoration: none;
 }
 
 /* Mostrar menu ao ativar classe */
 .user-dropdown-container.active .user-dropdown-menu {
-    display: block;
+  display: block;
 }
+
+.user-logout {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.user-name {
+    color: black;
+    text-decoration: none;
+    cursor: default;
+}
+
+.user-logout a{
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.user-name li{
+    color: black;
+    text-decoration: none;
+}
+
+
+
 
 /* ---------- RESPONSIVIDADE ---------- */
 
