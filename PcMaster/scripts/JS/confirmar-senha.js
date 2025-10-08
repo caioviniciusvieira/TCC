@@ -1,29 +1,32 @@
-const senha = document.getElementById('senha')
-const ConfirmarSenha = document.getElementById('Confirmar')
-const validacao = document.getElementById('validacao')
+const senha = document.getElementById('senha');
+const confirmar = document.getElementById('Confirmar');
+const validacao = document.getElementById('validacao');
 
-ConfirmarSenha.addEventListener('input', verificar)
-senha.addEventListener('input', verificar)
+// dispara só quando o usuário termina de digitar o confirmar senha
+confirmar.addEventListener('blur', verificar);
 
-function verificar (){
-    value = senha.value
-    value2 = ConfirmarSenha.value
+function verificar() {
+  const valor1 = senha.value.trim();
+  const valor2 = confirmar.value.trim();
 
-    if (value == value2){
-            senha.style.border = '2px solid  green'
-            ConfirmarSenha.style.border = '2px solid  green'
-            validacao.textContent = 'senhas iguais'
-                    
-            if(value == '' && value2 == ''){
-                validacao.textContent=''
-                senha.style.border = '2px solid red'
-                ConfirmarSenha.style.border = '2px solid red'
-            }
-        }
-    else{
-        senha.style.border = '2px solid red'
-        ConfirmarSenha.style.border = '2px solid red'
-        validacao.textContent='Senhas não são iguais'              
-    }
-                    
+  if (!valor2) {
+    validacao.style.visibility = 'hidden';
+    senha.style.border = '';
+    confirmar.style.border = '';
+    return;
+  }
+
+  validacao.style.visibility = 'visible';
+
+  if (valor1 === valor2) {
+    validacao.textContent = 'Senhas iguais';
+    validacao.className = 'mensagem-validacao';
+    senha.style.border = '2px solid green';
+    confirmar.style.border = '2px solid green';
+  } else {
+    validacao.textContent = 'Senhas não são iguais';
+    validacao.className = 'mensagem-validacao erro';
+    senha.style.border = '2px solid red';
+    confirmar.style.border = '2px solid red';
+  }
 }

@@ -1,91 +1,160 @@
-.form-container{
-    padding: 20px;
-    border-radius: 12px;
-    background-color: white;
-    height: 42rem;
-    width: 36rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
-    margin-top: 9rem;
-    margin: 20px;
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-form{
-    align-items: center ;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+/* ===== BODY ===== */
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #c9d6ff, #e2e2e2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden; /* impede scroll */
 }
 
-label{
-    margin-bottom: 0.5rem;
+/* ===== CONTAINER ===== */
+.container {
+  background: #fff;
+  width: 90%;
+  max-width: 850px;
+  border-radius: 16px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+  padding: 2rem 3rem;
+  text-align: center;
+}
+
+/* ===== TÍTULOS ===== */
+h1 {
+  color: #0b74c8;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+p {
+  color: #444;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* ===== GRID DO FORM ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9rem 1.2rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== INPUTS ===== */
+input {
+  padding: 0.7rem 0.9rem;
+  border: 2px solid #c9c9c9;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  width: 100%;
+  transition: 0.25s;
+  background-color: #fafafa;
+}
+
+input:focus {
+  border-color: #0b74c8;
+  background-color: #fff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(11, 116, 200, 0.3);
+}
+
+input::placeholder {
+  color: #888;
+}
+
+/* ===== BOTÃO ===== */
+.btn {
+  background-color: #0b74c8;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.25s;
+}
+
+.btn:hover {
+  background-color: #095fa4;
+}
+
+.logo {
+    width: 80px;     /* ajuste para o tamanho desejado */
+    height: auto;
+    margin-bottom: 1rem; /* espaço entre logo e texto */
 }
 
 
-.input-padrao{
-    margin-bottom: 1.2rem;
-    border-radius: 5px;
-    width: 30rem;
-    height: 1.8rem;
-    margin: 0.5rem;
-    border: solid 2px grey;    
+/* ===== TEXTO FINAL ===== */
+.login-text {
+  margin-top: 1rem;
+  font-size: 0.9rem;
 }
 
-.input-padrao:invalid {
-    border: 2px solid rgb(238, 21, 21);
+.login-text a {
+  color: #0b74c8;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-.input-padrao:valid {
-    border: 2px solid green;
+small {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 0.75rem;
+  color: #666;
 }
 
-.input-padrao:hover{
-    border: solid 2px black;
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 700px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr; /* vira uma coluna só */
+  }
+
+  input {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
 }
 
-.btn-cadastro{
-    color: white;
-    background-color: rgb(0, 153, 255);
-    border-radius: 5px;
-    width: 15rem;
-    height: 2.4rem;
-    border: none;
+/* Mensagem de validação ocupa as duas colunas */
+.mensagem-validacao {
+  grid-column: span 2; /* pega as duas colunas */
+  text-align: center;
+  font-size: 0.85rem;
+  height: 1rem;
+  line-height: 1rem;
+  color: green;
+  visibility: hidden;
+  margin-top: -0.3rem; /* aproxima dos inputs sem empurrar nada */
 }
 
-.btn-cadastro:hover{
-    background-color: rgb(10, 113, 182);
-    transition: 0.5s;
+.mensagem-validacao.erro {
+  color: red;
 }
 
-
-.login, a{
-    text-decoration: none;
-    cursor: pointer;
-    color: rgb(0, 153, 255);
-}
-
-body{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-top: 6rem;
-    background-color: rgb(180, 171, 171);
-    display: flex;
-    justify-content: center;
-    justify-content: center;
-}
-
-.form-container-tittle{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.form-container-input{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
-.form-container-footer{
-    margin-top: 1rem;
+.validacao {
+    color: black;
 }

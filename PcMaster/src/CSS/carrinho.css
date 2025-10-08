@@ -1,457 +1,705 @@
-/* Reset e Box Sizing */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Corpo da Página */
+/* Estilos Globais do Corpo da Página */
 body {
-  background-color: rgb(184, 184, 184);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-    'Helvetica Neue', sans-serif;
+    background-color: rgb(184, 184, 184);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100vh;
+    /* Define a fonte padrão para o corpo do documento */
 }
 
-/* Cabeçalho */
+
+/* Estilos do Cabeçalho Principal (Header) */
 header {
-  width: 100%;
-  height: 5.5rem;
-  background-color: rgb(0, 74, 172);
-  display: flex;
-  justify-content: center;
-  font-size: 1rem;
-  flex-wrap: wrap;
-  position: relative;
+    width: 100%;
+    height: 5.5rem;
+    background-color: rgb(0, 74, 172);
+    display: flex;
+    justify-content: center;
+    font-size: 1.0rem;
+    flex-wrap: wrap;
+    position: relative;
+    /* Define o posicionamento relativo para o cabeçalho */
 }
 
+/* Conteúdo Interno do Cabeçalho */
 .header-content {
-  display: flex;
-  width: 100%;
-  max-width: 1200px;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+    /* Adiciona preenchimento lateral ao conteúdo do cabeçalho */
+
 }
 
-#logo {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
+/* Agrupamento de elementos à direita no cabeçalho */
+.header-right {
+    display: flex;
+    gap: 1rem;
+    /* Define o espaçamento entre os elementos */
 }
 
+/* Efeito de Hover para Itens de Lista (li) */
+li:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para Ícones */
 .icon {
-  width: 3rem;
-  height: 3rem;
+    width: 3rem;
+    height: 3rem;
+    /* Define a altura padrão para elementos com a classe 'icon' */
 }
 
+/* Estilo para a logo da barra de navegação */
+#logo {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Estilo Básico para Links, Listas e Itens de Lista (geral) */
+a,
+ul,
+li {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    /* Remove os marcadores de lista */
+}
+
+/* Navegação Principal no Cabeçalho (Desktop) */
 .header-navegacao {
-  gap: 30px;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
+    gap: 30px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    /* Alinha os itens verticalmente ao centro */
+}
+
+.header-navegacao:hover {
+    text-decoration: underline;
 }
 
 .header-navegacao li {
-  padding: 5px;
+    padding: 5px;
+    /* Adiciona preenchimento interno aos itens de navegação */
 }
 
-.header-navegacao li:hover {
-  text-decoration: underline;
-}
-
-.header-right {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
+/* Barra de Pesquisa no Cabeçalho */
 .header-barraPesquisa {
-  gap: 20px;
-  display: flex;
-  align-items: center;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    /* Alinha os itens verticalmente ao centro */
 }
 
 #input {
-  background-image: url('/PcMaster/assets/Imagens/lupa.png');
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  background-size: 16px 16px;
-  padding-right: 30px;
-}
-
-input[type="text"] {
-  cursor: pointer;
-  width: 30rem;
-  height: 2.3rem;
-  background-color: rgb(255, 255, 255);
-  padding: 10px;
-  border: 1px solid rgb(0, 0, 0);
-  border-radius: 5px;
-}
-
-input[type="text"]:focus,
-input[type="text"]:hover {
-  outline: none;
-}
-
-ul,
-li,
-a {
-  list-style: none;
-  text-decoration: none;
-  cursor: pointer;
-  color: white;
-  align-items: center;
-  display: flex;
-}
-
-li:hover {
-  text-decoration: underline;
-}
-
-.header-conta {
-  gap: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.user {
-  background-color: grey;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background-image: url('/PcMaster/assets/Imagens/lupa.png');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px 16px;
+    padding-right: 30px;
+    /* Espaço para o ícone à direita */
 }
 
 .user img {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
-.carrinho {
-  width: 3rem;
-  height: 3rem;
+
+input[type="text"]:focus,
+input[type="text"], [type="email"], [type="tel"], [type="date"], [type="cellphone"], [type="homephone"]:hover {
+    outline: none;
 }
 
-/* Dropdown do usuário */
+
+/* Estilo Específico para o Input de Pesquisa */
+input[type="text"], [type="email"], [type="tel"], [type="date"], [type="cellphone"], [type="homephone"]{
+    cursor: pointer;
+    width: 30rem;
+    height: 2.3rem;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    /* Adiciona preenchimento interno ao input de pesquisa */
+    border: rgb(0, 0, 0) solid 1px;
+    border-radius: 5px;
+}
+
+/*dropdown barra de pesquisa*/
+
+.autocomplete {
+    position: relative;
+    /* base para o posicionamento absoluto da lista */
+    display: inline-block;
+}
+
+.list {
+    position: absolute;
+    top: 100%;
+    /* aparece logo abaixo do input */
+    left: 0;
+    right: 0;
+    background-color: rgb(175, 175, 175);
+    z-index: 1000;
+    /* fica acima do header */
+    max-height: 200px;
+    /* limite de altura */
+    overflow-y: auto;
+    /* rolagem se tiver muitas opções */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border-radius: 5px;
+}
+
+.list-items {
+    padding: 10px 5px;
+    cursor: pointer;
+    color: black;
+}
+
+.list-items:hover {
+    background-color: #e9e7e7;
+}
+
+.list-items:hover {
+    text-decoration: none;
+}
+
+ul.list {
+    border: none;
+}
+
+/* Container do dropdown de usuário */
 .user-dropdown-container {
-  position: relative;
-  display: flex;
-  align-items: center;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
+/* Menu suspenso oculto por padrão */
 .user-dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: rgb(0, 74, 172);
-  border-radius: 5px;
-  padding: 0.5rem 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  min-width: 150px;
-  z-index: 100;
-  flex-direction: column;
+    display: none;
+    position: absolute;
+    top: 120%;
+    /* abaixo do botão do usuário */
+    right: 0;
+    background-color: white;
+    color: black;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 200px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
 }
-
-.user-dropdown-menu li a {
-  color: white;
-  padding: 0.5rem 1rem;
-  display: block;
-}
-
-.user-dropdown-menu li a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.user-dropdown-container:hover .user-dropdown-menu {
-  display: flex;
-}
-
 
 /* Estilo dos itens do menu */
-.logout-index {
-  color: red !important;
-}
-
-/* Estilos gerais permanecem */
 .user-dropdown-menu li {
-  padding: 12px 16px;
-  border-bottom: 1px solid #eee;
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
 }
 
 .user-dropdown-menu li:last-child {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 .user-dropdown-menu li a {
-  color: #000;
-  text-decoration: none;
-  display: block;
+    color: #000;
+    text-decoration: none;
+    display: block;
 }
 
 .user-dropdown-menu li:hover {
-  background-color: #f0f0f0;
-  text-decoration: none;
+    background-color: #f0f0f0;
 }
 
 /* Mostrar menu ao ativar classe */
 .user-dropdown-container.active .user-dropdown-menu {
-  display: block;
+    display: block;
+}
+/* fim dropdown barra de pesquisa*/
+
+
+/* Seção da Conta no Cabeçalho */
+.header-conta {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    /* Alinha os itens verticalmente ao centro */
 }
 
-.user-logout {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
+/* Estilo para o Ícone de Usuário (User) */
+.user {
+    background-color: grey;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Centraliza o conteúdo do ícone de usuário */
 }
 
-.user-name {
-    color: black;
-    text-decoration: none;
-    cursor: default;
+.user-img {
+    width: 100%;
+    height: 100%;
 }
 
-.user-logout a{
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-}
+/* carrinho */
 
-.user-name li{
-    color: black;
-    text-decoration: none;
-}
-
-
-
-
-/* Hamburger menu (mobile) */
-.hamburger-menu {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.hamburger-menu .bar {
-  height: 3px;
-  width: 25px;
-  background-color: white;
-  margin: 4px 0;
-  border-radius: 3px;
-}
-
-.mobile-nav {
-  display: none;
-  background-color: rgb(0, 74, 172);
-  padding: 10px 0;
-}
-
-.mobile-nav ul {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.mobile-nav ul li {
-  padding: 5px 20px;
+.cart-badge {
+  position: absolute;
+  top: -8px;      /* sobe o número */
+  right: -8px;    /* desloca para a direita */
+  background: red;
   color: white;
-  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+.cart-empty {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin: 20px 0;
 }
 
-.mobile-nav ul li.nav-sub-item {
-  padding-left: 40px;
-}
+/* --- Sub-cabeçalho (Desktop) --- */
 
-/* Sub-header */
+
 .sub-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  list-style: none;
-  margin: 1rem 0;
+    gap: 2px;
+    background-color: rgb(48, 48, 48);
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 0 16% 0 16%;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    /* Define a largura total para o sub-cabeçalho */
 }
 
 .sub-header-item {
-  cursor: pointer;
-  color: black;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
+    width: 200px;
+    height: 50px;
+    /* Define a altura para cada item do sub-cabeçalho */
 }
+
 
 .sub-header-item:hover {
-  text-decoration: underline;
+    background-color: rgb(0, 0, 0);
+    transition: .1s;
+    /* Adiciona uma transição rápida ao passar o mouse */
+    text-decoration: none;
+}
+h2 {
+    text-align: center;
+    color: white;
+    align-items: center;
+    display: flex;
 }
 
-.desktop-only {
-  display: flex;
+
+h3{
+ padding-bottom: 2rem;
+ font-size: 2rem;
 }
 
-/* Account wrapper */
+
+/* ===== Layout ===== */
+
 .account-wrapper {
-  margin-top: 10px;
-  width: 100%;
-  max-width: 1200px;
-  min-height: 500px;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 2rem auto;
+  max-width: 1600px;
+  gap: 2rem;
+  padding: 1rem;
+  margin-top: 2.6rem;
+  margin-bottom: 5%;
+  height: 80vh;
+  display: flex;
 }
 
-/* Sidebar */
-.account-sidebar {
-  width: 250px;
-  background-color: rgb(247, 247, 247);
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgb(196, 196, 196);
+/* ===== Sidebar ===== */
+
+
+.account-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  margin: 2rem auto;
+  max-width: 1600px;
+  gap: 2rem;
+  padding: 1rem;
+  margin-top: 2.6rem;
+  margin-bottom: 5%;
+  height: 80vh;
+  display: flex;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+}
+
+.account-sidebar {
+  background-color: #ffffff;
+  padding: 1rem;
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 70vh;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.sidebar-profile {
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .sidebar-profile img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 3px solid rgb(0, 74, 172);
+  width: 100px;
+  height: 100px;
   object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #3498db;
+  margin-bottom: 0.5rem;
 }
 
-button {
-  border: none;
-  background-color: rgb(0, 74, 172);
-  color: white;
-  border-radius: 8px;
-  padding: 8px 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.change-profile{
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.sidebar-profile h3 {
+  margin-top: 0.5rem;
+  font-size: 1rem;
 }
 
-button:hover {
-  background-color: rgb(0, 55, 130);
-}
-
-/* Menu lateral da conta */
 .account-menu ul {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding-left: 0;
+  list-style: none;
+  padding: 0;
+   text-decoration: none;
 }
 
-.account-menu ul li a {
+.account-menu li {
+  margin-bottom: 10px;
+   text-decoration: none;
+}
+
+.account-menu li a {
+  display: block;
+  padding: 10px;
+  background-color: #f5f5f5;
+  color: #333;
+  border-radius: 5px;
   text-decoration: none;
-  color: rgb(49, 49, 49);
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
+  transition: background 0.2s;
+   text-decoration: none;
 }
 
-.account-menu ul li a:hover,
-.account-menu ul li.active a {
-  color: rgb(0, 74, 172);
+.account-menu li a:hover,
+.account-menu li.active a {
+  background-color: #3498db;
+  color: white;
+   text-decoration: none;
 }
 
-/* Conteúdo principal da conta */
-.account-content {
-  background-color: rgb(247, 247, 247);
-  flex-grow: 1;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgb(196, 196, 196);
-}
 
-.account-content h2 {
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: rgb(0, 74, 172);
-  margin-bottom: 30px;
-}
+/* ===== Carrinho ===== */
 
-.form-group {
+.cart {
+  flex: 1;
+  min-width: 300px;
+  max-width: 100%;       /* evita estourar o wrapper */
+  background-color: white;
+  border: 1rem white solid;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
-  max-width: 500px;
+
+  /* Aqui entra o controle do scroll */
+  overflow-x: auto;      /* scroll horizontal só no conteúdo */
+  overflow-y: auto;      /* se quiser scroll vertical também */
+  max-height: 70vh;      /* limite de altura */
 }
 
-.form-group label {
-  font-weight: 700;
-  color: rgb(49, 49, 49);
+.cart h2 {
+  margin-bottom: 16px;
+}
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: flex-start;
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.cart-item:hover {
+  background: #f1f1f1;
+}
+.cart-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 16px;
+}
+.cart-info {
+  flex: 1;
+}
+.cart-info h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+.cart-info p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 6px;
+}
+.price {
+  font-weight: bold;
+  color: rgb(0, 74, 172);
+  display: block;
   margin-bottom: 8px;
 }
-
-.form-group input {
-  border: 1.5px solid rgb(196, 196, 196);
-  padding: 12px;
-  border-radius: 12px;
-  font-weight: 500;
-  font-size: 1rem;
-  background-color: white;
-  transition: border-color 0.3s ease;
-}
-
-.form-group input:focus {
-  border-color: rgb(0, 74, 172);
-  outline: none;
-}
-
-.form-buttons {
+.cart-controls {
   display: flex;
-  gap: 20px;
-  margin-top: 30px;
+  align-items: center;
+  gap: 8px;
 }
 
-#save-btn[disabled] {
-  opacity: 0.6;
-  cursor: not-allowed;
+.cart-controls .remove {
+  background: crimson;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.cart-controls .remove:hover {
+  background: darkred;
+}
+
+.cart-controls .comprar {
+  background: rgb(4, 163, 31);
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.cart-controls .comprar:hover {
+  background: rgb(3, 90, 15);
+}
+/* ===== Resumo ===== */
+.cart-summary {
+  margin-top: auto;       
+  padding-top: 14px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-summary strong {
+  font-size: 1.2rem;
+  color: rgb(0, 74, 172);
+}
+.checkout {
+  background: rgb(0, 74, 172);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.checkout:hover {
+  background: rgb(0, 60, 140);
+}
+
+.title, .subtitle-item, .title-item {
+  color: black;
+}
+
+.subtitle-item {
+  color: black;
+}
+
+.title-item {
+  color: black;
 }
 
 /* Responsivo */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .account-wrapper {
     flex-direction: column;
+    align-items: center;
   }
 
   .account-sidebar {
     width: 100%;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .sidebar-profile img {
-    width: 100px;
-    height: 100px;
-  }
-
-  .account-menu ul {
-    flex-direction: row;
-    gap: 15px;
-    justify-content: center;
   }
 
   .account-content {
-    padding: 20px;
+    width: 100%;
   }
 }
 
-@media (max-width: 600px) {
-  header {
-    height: auto;
-  }
-
-  .header-navegacao {
+.hamburger-menu {
     display: none;
-  }
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 20;
+    /* Garante que o ícone esteja acima de outros elementos */
+}
 
-  .hamburger-menu {
-    display: flex;
-  }
+/* Estilos das Barras do Menu Hamburguer */
+.hamburger-menu .bar {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    /* Adiciona uma transição suave para as barras */
+}
+
+/* Animação do Menu Hamburguer para 'X' (Estado Ativo) */
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+    /* Move e gira a primeira barra */
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+    /* Torna a barra do meio transparente */
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+    /* Move e gira a terceira barra */
+}
+
+/* --- Navegação Mobile (Menu Hamburguer Aberto) --- */
+
+/* Estilos do Menu de Navegação Mobile */
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 5.5rem;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0, 74, 172);
+    z-index: 10;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: calc(100vh - 5.5rem);
+    overflow-y: auto;
+    /* Adiciona uma barra de rolagem vertical se o conteúdo exceder a altura máxima */
+}
+
+/* Estado Ativo do Menu Mobile */
+.mobile-nav.active {
+    display: block;
+    /* Torna o menu visível */
+}
+
+/* Lista de Itens do Menu Mobile */
+.mobile-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    /* Define o espaçamento entre os itens da lista */
+}
+
+/* Itens de Lista Individual do Menu Mobile */
+.mobile-nav ul li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    /* Adiciona preenchimento interno aos itens da lista */
+}
+
+/* Links e Input de Pesquisa no Menu Mobile */
+.mobile-nav ul li a,
+.mobile-nav ul li input {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    /* Centraliza o texto dentro dos links/inputs */
+}
+
+/* --- Sub-cabeçalho no Menu Mobile --- */
+.mobile-nav ul .nav-sub-item {
+    background-color: rgb(48, 48, 48);
+    color: white;
+    font-size: 0.9rem;
+    padding: 1rem 1rem 1rem 3rem;
+    /* Define o preenchimento para os itens do sub-cabeçalho */
+}
+
+.mobile-nav ul .nav-sub-item:hover {
+    background-color: rgb(0, 0, 0);
+    /* Define a cor de fundo ao passar o mouse */
+}
+
+/* Responsividade */
+
+@media only screen and (max-width: 1200px) {
+
+
+    .header-navegacao,
+    .header-barraPesquisa,
+    .header-conta {
+        display: none;
+        /* Esconde os elementos de navegação de desktop */
+    }
+
+    .hamburger-menu {
+        display: flex;
+        /* Mostra o menu hamburguer */
+    }
+
+    .header-content {
+        justify-content: space-between;
+        /* Ajusta o alinhamento do conteúdo do cabeçalho */
+    }
+
+    .sub-header.desktop-only {
+        display: none;
+        /* Esconde o sub-cabeçalho de desktop */
+    }
+
+    .principal {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+        /* Ajusta a margem da seção principal */
+    }
 }

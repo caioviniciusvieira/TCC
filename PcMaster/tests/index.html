@@ -17,7 +17,7 @@
                 <h2>MasterPC</h2>
             </span>
             <ul class="header-navegacao">
-                <li class="nav-item"><a class="style" href="/PcMaster/puplic/hardware.html">Explorar</a></li>
+                <li><a href="/PcMaster/tests/itemTeste.html">Item</a></li>
                 <li class="nav-item"><a class="style" href="/PcMaster/tests/montagem.html">Montagem</a></li>
                 <li class="nav-item"><a class="style" href="/PcMaster/tests/index.html">Loja</a></li>
             </ul>
@@ -33,6 +33,7 @@
                 
                 <ul class="header-conta">
                     <li><a href="/PcMaster/puplic/cadastro.html">Cadastrar</a></li>
+                    <li><a href="/PcMaster/puplic/login.html">Login</a></li>
                     <li class="user-dropdown-container">
                         <div class="user" id="user-btn">
                          <img src="/PcMaster/assets/Imagens/Perfil.png" alt="perfil">
@@ -47,7 +48,7 @@
                             <li><a href="#">Ajuda</a></li>
                         </li>
                     </ul>
-                    <li><img class="carrinho icon" src="/PcMaster/assets/Imagens/carrinhos.png" alt="Carrinho de compras"></li>
+                    <li><img href="/PcMaster/tests/carrinho.html" class="carrinho icon" src="/PcMaster/assets/Imagens/carrinhos.png" alt="Carrinho de compras"></li>
                 </ul>
             </div>
 
@@ -173,8 +174,14 @@
                                 baixo consumo de energia e resposta imediata para tudo que você precisa.
                                 Compatível com a maioria das placas-mãe modernas, é o upgrade perfeito para dar nova vida ao seu PC.</p>
 
-                            <span class="price">110.99</span>
+                            <span class="price">110.99</span> 
                             <button onclick="comprar()" class="button-buy" href="/PcMaster/tests/dadospagamento.html"> Comprar </button>
+                            <!-- botão na página da loja (ex.: loja.html) -->
+<button onclick='addToCart({"title":"Placa de Vídeo RTX 5060","description":"8GB GDDR6, Ray Tracing, DLSS 3",
+"price":"R$ 3.299,00","image":"/PcMaster/assets/Imagens/5060-windforce.webp"})'>
+  Adicionar ao Carrinho
+</button>
+
                             <script>
                             function comprar() {
                                 window.location.href = "/PcMaster/tests/itemTeste.html";
@@ -473,6 +480,7 @@
             <!-- fim primeira seção item slider  -->
             <script src="/PcMaster/scripts/JS/search-bar2.js"></script>
             <script src="/PcMaster/scripts/JS/dropdown.js"></script>
+            <script src="/PcMaster/scripts/JS/carrinho.js"></script>
 </body>
 
 </html>

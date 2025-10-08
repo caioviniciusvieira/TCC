@@ -1,3 +1,11 @@
+
+/* ---------- HEADER MANTIDO ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +14,7 @@
 
 /* Estilos Globais do Corpo da Página */
 body {
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(255, 255, 255);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     /* Define a fonte padrão para o corpo do documento */
 }
@@ -31,7 +39,6 @@ header {
     max-width: 1200px;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
     /* Adiciona preenchimento lateral ao conteúdo do cabeçalho */
 
 }
@@ -244,7 +251,7 @@ ul.list {
     text-decoration: none;
 }
 
-h2 {
+.titulo-site {
     text-align: center;
     color: white;
     align-items: center;
@@ -254,85 +261,168 @@ h2 {
 
 
 
-.img-slider {
-    display: flex;
-    position: relative;
-    width: 100%;
-    /* Agora ocupa 100% do contêiner pai */
-    aspect-ratio: 16 / 8;
-    /* Mantém proporção (opcional) */
-    max-height: 500px;
-    /* Altura máxima opcional */
-    overflow: hidden;
-    /* Evita que a imagem vaze para fora */
-    background: #000000;
-    padding-right: 40%;
-    align-items: center;
-    margin: 0;
+/* =============================================== */
+/* ======== ESTILO NOVO DA PÁGINA DE MONTAGEM ======== */
+/* =============================================== */
+
+.montagem-page {
+  background: linear-gradient(260deg, #cfddff 0%, #ffffff 100%);
+  color: #1c1c1c;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.image-slider {
-    display: flex;
-    justify-content: center;
-    /* centraliza horizontalmente */
-    align-items: center;
-    /* centraliza verticalmente */
-    height: 100%;
-    /* altura total da tela, ou defina a altura do container */
+/* HERO */
+.hero-montagem {
+  background: linear-gradient(135deg, rgb(0,74,172), rgb(0,110,255));
+  color: white;
+  text-align: center;
+  padding: 5rem 10%;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-.img-slider .slide {
-    z-index: 1;
-    position: absolute;
-    clip-path: circle(0% at 0 50%);
-    width: 100%;
-    height: 100%;
+.hero-montagem h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
 }
 
-
-.img-slider .slide.active {
-    clip-path: circle(150% at 0 50%);
-    transition: 2s;
-    transition-property: clip-path;
+.hero-montagem p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-/* Imagens do slide */
-.img-slider .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Preenche o contêiner sem deformar, pode usar 'contain' se preferir */
-    border-radius: 5px;
+/* ETAPAS */
+.etapas {
+  padding: 4rem 10%;
+  text-align: center;
 }
 
-
-/* Informações do slide (título e texto) */
-.img-slider .slide .info {
-    position: absolute;
-    top: 0;
-    padding: 15px 30px;
-    /* Espaçamento interno */
+.etapas h2 {
+  font-size: 2.2rem;
+  color: rgb(0,74,172);
+  margin-bottom: 3rem;
 }
 
-/* Título do slide */
-.img-slider .slide .info h2 {
-    color: rgb(255, 255, 255);
-    font-size: 3rem;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 2px;
+.etapas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
 }
 
-/* Texto descritivo do slide */
-.img-slider .slide .info p {
-    color: rgb(255, 255, 255);
-    background: rgba(255, 255, 255, 0.295);
-    /* Fundo semi-transparente */
-    font-size: 1rem;
-    width: 60%;
-    /* Largura do texto */
-    padding: 10px;
+.etapa {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  border-top: 6px solid rgb(0,74,172);
 }
+
+.etapa:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,74,172,0.25);
+}
+
+.etapa .emoji {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.etapa h3 {
+  color: rgb(0,74,172);
+  margin-bottom: 0.8rem;
+}
+
+.etapa p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* DICAS */
+.dicas-criativas {
+  background: rgb(0,74,172);
+  color: white;
+  padding: 4rem 10%;
+  text-align: center;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+}
+
+.dicas-criativas h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.dicas-criativas ul {
+  list-style: none;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.dicas-criativas ul li {
+  background: rgba(255,255,255,0.1);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: 0.3s;
+}
+
+.dicas-criativas ul li:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateX(5px);
+}
+
+/* FINAL SECTION */
+.final-section {
+  padding: 5rem 10%;
+  text-align: center;
+  background: #f8faff;
+}
+
+.final-section h2 {
+  color: rgb(0,74,172);
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.final-section p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: #333;
+}
+
+.btn-final {
+  display: inline-block;
+  background: rgb(0,74,172);
+  color: white;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-final:hover {
+  background: rgb(0,110,255);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .hero-montagem h1 {
+    font-size: 2.2rem;
+  }
+  .etapas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* Navegação do slider (bolinhas) */
 .img-slider .navigation {
@@ -365,62 +455,7 @@ h2 {
     /* Sombra leve */
 }
 
-/*conteudo do site */
-
-.website-content {
-    margin-left: 28%;
-    margin-right: 28%;
-    height: 100%;
-    padding-top: 3%;
-}
-
-.start-subtitle p {
-    text-align: left;
-    font-size: 1rem;
-    color: black;
-    margin-bottom: 1rem;
-}
-
-.start-subtitle-first p {
-    text-align: left;
-    font-size: 1rem;
-    color: black;
-    margin-bottom: 1rem;
-}
-
-.title h1 {
-    margin-bottom: 2%;
-}
-
-.start-subtitle-first p:first-of-type {
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-
-
-.img-start {
-    max-width: 100%;
-    /* Nunca ultrapassa o tamanho do container */
-    width: 100%;
-    /* Largura relativa ao texto/conteúdo */
-    height: 100%;
-    /* Mantém a proporção original */
-    max-height: 600px;
-    margin: 0 auto 2rem;
-    /* Centraliza e dá espaço embaixo */
-    display: block;
-    /* Garante que o margin auto funcione */
-    border-radius: 8px;
-    /* (opcional) bordas arredondadas */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    /* (opcional) sombreamento */
-}
-
-
 /* Container do dropdown de usuário */
-
-
-
 .user-dropdown-container {
     position: relative;
     display: flex;
@@ -441,33 +476,8 @@ h2 {
     width: 200px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     z-index: 1000;
-}
-
-/* Estilo dos itens do menu */
-.user-dropdown-menu li {
-    padding: 12px 16px;
-    border-bottom: 1px solid #eee;
-}
-
-.user-dropdown-menu li:last-child {
-    border-bottom: none;
-}
-
-.user-dropdown-menu li a {
-    color: #000;
     text-decoration: none;
-    display: block;
 }
-
-.user-dropdown-menu li:hover {
-    background-color: #f0f0f0;
-}
-
-/* Mostrar menu ao ativar classe */
-.user-dropdown-container.active .user-dropdown-menu {
-    display: block;
-}
-
 
 /* Estilo dos itens do menu */
 .logout-index {
@@ -522,24 +532,6 @@ h2 {
     color: black;
     text-decoration: none;
 }
-
-
-
-/* Responsivo */
-@media (max-width: 768px) {
-    .user-dropdown-menu {
-        right: 0;
-        left: auto;
-        width: 100vw;
-        max-width: 300px;
-    }
-}
-
-
-
-
-
-
 
 
 
@@ -771,7 +763,6 @@ h2 {
     .header-content {
         justify-content: space-between;
         /* Ajusta o alinhamento do conteúdo do cabeçalho */
-        margin: 0;
     }
 
     .sub-header.desktop-only {
@@ -787,4 +778,122 @@ h2 {
         margin: 1rem;
         /* Ajusta a margem da seção principal */
     }
+}
+
+
+ 
+
+    main {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+
+    p {
+      margin-bottom: 1rem;
+      color: #ccc;
+    }
+
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    
+    .cards-container2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+        
+    .cards-container3 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .card {
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      width: 320px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0, 188, 212, 0.3);
+    }
+
+    .card h3 {
+      color: #00bcd4;
+      margin-bottom: 0.5rem;
+    }
+
+    .iframe {
+       width: 100%;
+        max-width: 560px;     /* mesmo limite do vídeo */
+        height: auto;
+        max-height: 315px;    /* evita ficar gigante */
+        object-fit: cover;    /* ajusta a imagem sem deformar */
+      border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        display: block;
+        margin: 0 auto 1rem;  /* centraliza e dá espaço embaixo */
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #111;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        width: 90%;
+      }
+    }
+
+    .etapa-p {
+        color: #000;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .video-placeholder {
+  width: 100%;          /* ocupa toda a largura disponível */
+  aspect-ratio: 18 / 9; /* mantém proporção de vídeo */
+  object-fit: cover;    /* ajusta a imagem sem deformar */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: block;
+  margin: 0 auto 1rem;  /* centraliza e espaço embaixo */
+  border-radius: 5px;
+}
+
+.step-1 {
+  align-items: center;
+  font-size: 2.3rem;
+  text-align: center;
+}
+
+a.link-youtube {
+  color: blue;
+}
+
+.video-placeholder {
+  box-shadow: #0000008a 0px 0px 5px 5px;
 }

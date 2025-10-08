@@ -4,28 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/icon" href="/PcMaster/assets/Imagens/Logo-2 TCC.png">
-    <title>login</title>
+    <title>Login - PcMaster</title>
     <link rel="stylesheet" href="/PcMaster/src/CSS/login.css">
 </head>
 <body>
     <div class="form-container">
         <form method="post" action="/PcMaster/src/backend/login.php">
             <div class="form-container-tittle">
-                <p>Seja bem vindo de volta!<p>
-                <h1>login</h1>
+                <a href="/PcMaster/tests/index.html">
+                <img src="/PcMaster/assets/Imagens/Logo-2 TCC.png" alt="PcMaster Logo" class="logo"  >
+                </a>
+                <p>Seja bem-vindo de volta!</p>
+                <h1>Login</h1>
             </div>
             <div class="form-container-input">
-                <label>E-mail:</label>
-                <input type="email" name="email" class="input-padrao" required>
-                <label>Senha:</label>
-                <input type="password" name="password" class="input-padrao" required>
+                <input type="email" name="email" class="input-padrao" placeholder="E-mail" required>
+                <input type="password" name="password" class="input-padrao" placeholder="Senha" required>
             </div>
             <div class="form-container-footer">
                 <input type="submit" value="Login" class="btn-cadastro">
                 <p>Não possui uma conta?</p>
                 <h2 class="login"><a href="/PcMaster/puplic/cadastro.html">Fazer Cadastro</a></h2>
-                <p>Ao continuar você estará concordando com <br>
-                nossos Termos de Uso de Privacidade.</p>
+                <p>Ao continuar você estará concordando com <br> nossos Termos de Uso e Privacidade.</p>
             </div>
         </form>
     </div>

@@ -33,6 +33,7 @@
                 
                   <ul class="header-conta">
                     <li><a href="/PcMaster/puplic/cadastro.html">Cadastrar</a></li>
+                    <li><a href="/PcMaster/puplic/login.html">Login</a></li>
                     <li class="user-dropdown-container">
                         <div class="user" id="user-btn">
                          <img src="/PcMaster/assets/Imagens/Perfil.png" alt="perfil">
@@ -120,14 +121,11 @@
                     <!-- DADOS DE CONTATO -->
                     <div class="form-section">
                         <h2>Informações de Contato</h2>
-                        <label for="nome">Nome completo:</label>
-                        <input type="text" id="nome" name="nome" required />
 
-                        <label for="telefone">Telefone celular:</label>
+
+                        <label for="telefone">Celular:</label>
                         <input type="tel" id="telefone" name="telefone" required placeholder="(xx) xxxxx-xxxx" />
 
-                        <label for="telefone-residencial">Telefone residencial: <span class="optional">(opcional)</span></label>
-                        <input type="tel" id="telefone-residencial" name="telefone_residencial" placeholder="(xx) xxxx-xxxx" />
 
                         <label for="email">E-mail:</label>
                         <input type="email" id="email" name="email" required />
@@ -210,12 +208,15 @@
                                 <p><strong>Total:</strong> R$ <span id="valorTotal">2.050,00</span></p>
                             </div>
                         </div>
-                        <button type="button" class="btn-submit" onclick="enviarFormulario()">Confirmar</button>
+                        <a href="index.html"></a>
                         <button type="butto" class="btn-submit" onclick="voltar()">Voltar</button>
+                        <a href="confirmacao.html">
+                        <button type="button" class="btn-submit" onclick="enviarFormulario()">Confirmar</button>
+                        </a>
 
                         <script>
                         function voltar() {
-                            window.location.href = "/PcMaster/tests/LojaTeste.html";
+                            window.location.href = "/PcMaster/tests/index.html";
                         }
                         </script>
 
