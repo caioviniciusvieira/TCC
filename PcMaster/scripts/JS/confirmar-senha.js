@@ -6,27 +6,28 @@ const validacao = document.getElementById('validacao');
 confirmar.addEventListener('blur', verificar);
 
 function verificar() {
-  const valor1 = senha.value.trim();
-  const valor2 = confirmar.value.trim();
+    const valor1 = senha.value.trim();
+    const valor2 = confirmar.value.trim();
 
-  if (!valor2) {
-    validacao.style.visibility = 'hidden';
-    senha.style.border = '';
-    confirmar.style.border = '';
-    return;
-  }
+    if (!valor2) {
+        validacao.style.visibility = 'hidden';
+        senha.style.border = '';
+        confirmar.style.border = '';
+        return;
+    }
 
-  validacao.style.visibility = 'visible';
+    validacao.style.visibility = 'visible';
 
-  if (valor1 === valor2) {
-    validacao.textContent = 'Senhas iguais';
-    validacao.className = 'mensagem-validacao';
-    senha.style.border = '2px solid green';
-    confirmar.style.border = '2px solid green';
-  } else {
-    validacao.textContent = 'Senhas não são iguais';
-    validacao.className = 'mensagem-validacao erro';
-    senha.style.border = '2px solid red';
-    confirmar.style.border = '2px solid red';
-  }
+    if (valor1 === valor2) {
+        validacao.textContent = 'Senhas iguais';
+        validacao.className = 'mensagem-validacao';
+        senha.style.border = '2px solid green';
+        confirmar.style.border = '2px solid green';
+    } else {
+        validacao.textContent = 'Senhas não são iguais';
+        validacao.className = 'mensagem-validacao erro';
+        senha.style.border = '2px solid red';
+        confirmar.style.border = '2px solid red';
+    }
 }
+                           

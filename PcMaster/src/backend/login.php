@@ -1,4 +1,4 @@
-<?php
+   <?php
     session_start();
 
     include_once('conexao.php');
@@ -17,8 +17,16 @@
     $_SESSION['senha'] = $senha;
         
     if($usuario['s'] == $usuario['senha']){
-        echo "Login bem-sucedido! Bem-vindo, $email.";
-        header('Location: /Pcmaster/assest/Imagens/Loja.php');
+
+        $sql_nome = $conexao->prepare("SELECT nome_completo FROM Usuarios WHERE email = ?");
+        $sql_nome->bind_param('s',$email);
+        $sql_nome->execute();
+        $result = $sql_nome->get_result();
+        $nome = $result->fetch_assoc();
+        
+        $_SESSION['nome'] = $nome['nome_completo'];
+        $sql_nome->close();
+        header('Location: ../../puplic/index.php');
     }     
     else {
         echo "E-mail ou senha incorretos.";
@@ -28,4 +36,4 @@
     $stmt->close();
     $conexao->close();
 
-?>
+    ?>

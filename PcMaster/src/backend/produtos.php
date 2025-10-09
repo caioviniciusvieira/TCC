@@ -6,13 +6,17 @@
         echo $query_clientes->error;
     }
 
-    $sql_produto = "SELECT codigo_produto, imagem, nome, valor, quantidade FROM Produtos";
+    $sql_produto = "SELECT codigo_produto, imagem, nome, valor, quantidade, descricao FROM Produtos";
     $query_produtos = $conexao->query($sql_produto); // consulta o banco de dados
     $num_produtos = $query_produtos->num_rows; // número de colunas na tabela usuarios
 
-    $tipo = 'video';
-    $sql_placa = $conexao->prepare("SELECT * FROM Produtos WHERE tipo = ?");
-    $sql_placa->bind_param("s", $tipo);
-    $sql_placa->execute();
-    $query = $sql_placa->get_result();
+    $tipo = ['Placa de Vídeo','Processador','Teclado','Cadeira','Monitor','Water Cooler','Memória','Placa-mãe','Gabinete','Fonte','Fans','Aramazanamento'];
+    for($i = 0; $i <= 12; $i++){
+        $sql_[$i] = $conexao->prepare("SELECT * FROM Produtos WHERE tipo = ?");
+        $sql_[$i]->bind_param("s", $tipo[$i]);
+        $sql_[$i]->execute();
+        $query_[$i] = $sql_[$i]->get_result();
+        $num_[$i] = $query_[$i]->num_rows;
+    }
+
 ?>     
